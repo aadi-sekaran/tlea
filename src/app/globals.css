@@ -1796,3 +1796,94 @@ a.chapter-chip { text-decoration: none; }
 
 /* Card as Link */
 a.card { text-decoration: none; }
+
+
+/* ═══ Dictionary of Us — restore v2.2 styling ═══ */
+.dict-shelf { margin-top: 36px; }
+.dict-shelf-head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--display);
+  font-style: italic;
+  font-size: 13px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--rose);
+  margin-bottom: 18px;
+}
+.dict-shelf-head img {
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.dict-shelf-head::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--rule);
+  margin-left: 4px;
+}
+.dict-entries {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 6px;
+  background: var(--cream);
+  border-radius: 16px;
+  padding: 16px 20px;
+}
+.dict-entry {
+  padding: 10px 0;
+  border-bottom: 1px dashed var(--rule-soft);
+}
+.dict-entry:last-child { border-bottom: none; }
+.dict-word {
+  font-family: var(--display);
+  font-weight: 500;
+  font-size: 17px;
+  color: var(--navy);
+  line-height: 1.4;
+}
+.dict-word em {
+  font-style: italic;
+  font-weight: 400;
+  font-size: 14px;
+  color: var(--brown);
+  margin-left: 6px;
+}
+.dict-note {
+  display: block;
+  font-family: var(--hand);
+  font-size: 15px;
+  color: var(--rose);
+  margin-top: 4px;
+  line-height: 1.4;
+}
+.dict-tail {
+  margin-top: 30px;
+  text-align: center;
+  font-family: var(--hand);
+  font-size: 18px;
+  color: var(--brown);
+  opacity: 0.7;
+}
+
+/* ═══ Chapter strip — horizontal touch scroll on iPhone ═══ */
+.chapter-strip {
+  overflow-x: auto !important;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  touch-action: pan-x;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.chapter-strip::-webkit-scrollbar {
+  display: none;
+}
+.chapter-strip > * {
+  scroll-snap-align: start;
+  flex-shrink: 0;
+}
+/* Ensure parent doesn't clip horizontal scroll */
+.chapters-section {
+  overflow: visible;
+}
