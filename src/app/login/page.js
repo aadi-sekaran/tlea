@@ -1,106 +1,101 @@
 'use client';
-import { useState, useRef } from 'react';
-import { useRouter } from 'next/navigation';
-import Image from 'next/image';
 
-export default function Login() {
+import { useState } from 'react';
+import { useRouter } from 'next/navigation';
+
+export default function LoginPage() {
   const router = useRouter();
-  const [selected, setSelected] = useState(null);
+  const [role, setRole] = useState(null);
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   const [attempts, setAttempts] = useState(0);
   const [loading, setLoading] = useState(false);
-  const inputRef = useRef();
-
-  function pick(which) {
-    setSelected(which);
-    setError('');
-    setTimeout(() => inputRef.current?.focus(), 100);
-  }
 
   async function submit(e) {
-    e?.preventDefault();
-    if (!selected) return;
-    if (!password.trim()) { setError('write the date first'); return; }
+    e.preventDefault();
+    if (!role) { setError('pick a dragon first.'); return; }
+    if (!password) { setError('the birthday.'); return; }
     setLoading(true);
-    try {
-      const res = await fetch('/api/auth', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ dragon: selected, password }),
-      });
-      if (res.ok) {
-        router.push('/book');
+    setError('');
+    const res = await fetch('/api/login', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ role, password })
+    });
+    const data = await res.json();
+    if (data.ok) {
+      // Fire-and-forget login notify
+      fetch('/api/login-notify', { method: 'POST' }).catch(() => {});
+      router.push('/book');
+    } else {
+      const newAttempts = attempts + 1;
+      setAttempts(newAttempts);
+      if (newAttempts >= 3) {
+        setError('hint: the other one\'s birthday, day and month, six digits like DDMMYY');
       } else {
-        setAttempts(a => a + 1);
-        setError(attempts >= 2 ? 'hint: month starts with S…' : 'not quite');
-        setPassword('');
+        setError('not that. try again.');
       }
-    } catch {
-      setError('something went wrong. try again.');
-    } finally {
       setLoading(false);
     }
   }
 
-  const hint = selected === 'dark'
-    ? 'her birthday · dd/mm/yyyy'
-    : selected === 'light'
-    ? 'his birthday · dd/mm/yyyy'
-    : 'tap a dragon first';
-
   return (
-    <section className="screen login-screen active">
+    <div className="login">
       <div className="login-inner">
-        <div className="login-eyebrow">who are you</div>
-        <h1 className="login-title">Two <em>Ammus</em></h1>
-        <p className="login-intro">
-          The <strong>dark dragon</strong> is Aadi. The <strong>white dragon</strong> is Krithika. Pick the one that is you.
-        </p>
+        <h1 className="login-title">Choose your Ammu.</h1>
+        <p className="login-hint">and enter the other one's birthday.</p>
 
-        <div className="dragon-pair">
+        <div className="dragon-picker">
           <button
-            className={`dragon-card ${selected === 'dark' ? 'selected' : ''}`}
-            onClick={() => pick('dark')}
             type="button"
+            className={`dragon-choice ${role === 'dark' ? 'selected' : ''}`}
+            onClick={() => setRole('dark')}
+            aria-label="Aadi's dragon"
           >
-            <div className="dragon-image">
-              <Image src="/dragon-dark.webp" alt="dark dragon" width={200} height={200} priority />
-            </div>
-            <div className="dragon-name">Ammu</div>
-            <div className="dragon-sub">the dark one</div>
+            {/* Left half of the login portrait image */}
+            <div style={{
+              width: '100%',
+              height: '100%',
+              backgroundImage: 'url(/dragons/dragons-login.png)',
+              backgroundSize: '200% 100%',
+              backgroundPosition: 'left center',
+              backgroundRepeat: 'no-repeat'
+            }} />
           </button>
           <button
-            className={`dragon-card ${selected === 'light' ? 'selected' : ''}`}
-            onClick={() => pick('light')}
             type="button"
+            className={`dragon-choice ${role === 'light' ? 'selected' : ''}`}
+            onClick={() => setRole('light')}
+            aria-label="Krithika's dragon"
           >
-            <div className="dragon-image">
-              <Image src="/dragon-light.webp" alt="light dragon" width={200} height={200} priority />
-            </div>
-            <div className="dragon-name">Ammu</div>
-            <div className="dragon-sub">the white one</div>
+            {/* Right half */}
+            <div style={{
+              width: '100%',
+              height: '100%',
+              backgroundImage: 'url(/dragons/dragons-login.png)',
+              backgroundSize: '200% 100%',
+              backgroundPosition: 'right center',
+              backgroundRepeat: 'no-repeat'
+            }} />
           </button>
         </div>
 
-        <form onSubmit={submit} className={`password-shell ${selected ? 'active' : ''}`}>
-          <div className="password-hint">{hint}</div>
+        <form onSubmit={submit}>
           <input
-            ref={inputRef}
             type="text"
-            className="password-input"
-            placeholder="dd/mm/yyyy"
-            inputMode="numeric"
+            className="login-input"
+            placeholder="DDMMYY"
             value={password}
             onChange={e => setPassword(e.target.value)}
-            disabled={!selected || loading}
+            autoComplete="off"
+            inputMode="numeric"
           />
-          <button type="submit" className="password-submit" disabled={!selected || loading}>
-            {loading ? '…' : 'Come in'}
+          <button type="submit" className="login-submit" disabled={loading}>
+            {loading ? 'opening...' : 'Open'}
           </button>
-          <div className={`password-error ${error ? 'show' : ''}`}>{error}</div>
         </form>
+        <p className="login-error">{error}</p>
       </div>
-    </section>
+    </div>
   );
 }

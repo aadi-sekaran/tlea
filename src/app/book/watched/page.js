@@ -1,38 +1,42 @@
-'use client';
-import { useState } from 'react';
+import Link from 'next/link';
 import { FILMS, SERIES } from '@/lib/content';
-import BackButton from '@/components/BackButton';
 
-export default function Watched() {
-  const [tab, setTab] = useState('films');
+export default function WatchedPage() {
   return (
-    <section className="screen section-screen active has-back">
-      <BackButton />
-      <div className="section-inner">
-        <div className="section-eyebrow">Watched together</div>
-        <h1 className="section-title">Films &amp; <em>series</em></h1>
-        <p className="section-subtitle">— everything we sat through together —</p>
+    <div className="book-shell">
+      <div className="top-nav">
+        <Link href="/book" className="nav-back">← contents</Link>
+        <span className="nav-title">What We Watched</span>
+        <span />
+      </div>
+      <div className="content-page">
+        <p className="content-eyebrow">films and series we lived inside</p>
+        <h1 className="content-title">What We Watched</h1>
 
-        <div className="watched-tabs">
-          <button className={`watched-tab ${tab === 'films' ? 'active' : ''}`} onClick={() => setTab('films')}>Films</button>
-          <button className={`watched-tab ${tab === 'series' ? 'active' : ''}`} onClick={() => setTab('series')}>Series</button>
+        <h2 style={{ marginTop: '2rem', marginBottom: '1rem', fontFamily: 'var(--font-display)', fontStyle: 'italic', color: 'var(--rose)' }}>
+          Films
+        </h2>
+        <div className="item-list">
+          {FILMS.map(f => (
+            <div key={f.name} className="item">
+              <span className="item-name">{f.name}</span>
+              {f.note && <span className="item-note">{f.note}</span>}
+            </div>
+          ))}
         </div>
 
-        <div className="watched-list active">
-          {tab === 'films' ? (
-            <>
-              {FILMS.map((f, i) => {
-                const isHp = typeof f === 'object' && f.hp;
-                const name = typeof f === 'object' ? f.name : f;
-                return <div key={i} className={`watched-item ${isHp ? 'hp' : ''}`}>{name}</div>;
-              })}
-              <div className="hp-note">✦ all seven, watched together ✦</div>
-            </>
-          ) : (
-            SERIES.map((s, i) => <div key={i} className="watched-item">{s}</div>)
-          )}
+        <h2 style={{ marginTop: '3rem', marginBottom: '1rem', fontFamily: 'var(--font-display)', fontStyle: 'italic', color: 'var(--rose)' }}>
+          Series
+        </h2>
+        <div className="item-list">
+          {SERIES.map(s => (
+            <div key={s.name} className="item">
+              <span className="item-name">{s.name}</span>
+              {s.note && <span className="item-note">{s.note}</span>}
+            </div>
+          ))}
         </div>
       </div>
-    </section>
+    </div>
   );
 }

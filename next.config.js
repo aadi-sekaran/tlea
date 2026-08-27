@@ -2,8 +2,13 @@
 const nextConfig = {
   images: {
     remotePatterns: [
-      { protocol: 'https', hostname: 'res.cloudinary.com' }
+      { protocol: 'https', hostname: 'res.cloudinary.com' },
+      { protocol: 'https', hostname: 'drive.google.com' }
     ]
+  },
+  experimental: {
+    optimizePackageImports: ['jose']
   }
 };
+
 module.exports = nextConfig;

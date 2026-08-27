@@ -1,23 +1,36 @@
-import BackButton from '@/components/BackButton';
-import { FINAL_SONG } from '@/lib/content';
+import Link from 'next/link';
+import { FINAL_SONG, SPOTIFY_PLAYLIST } from '@/lib/content';
 
-export default function FinalSong() {
+export default function FinalSongPage() {
   return (
-    <section className="screen final-song-screen active has-back">
-      <BackButton />
-      <div className="final-song-eyebrow">— the closing note —</div>
-      <h2 className="final-song-title" dangerouslySetInnerHTML={{ __html: FINAL_SONG.title }} />
-      <div className="final-song-embed">
-        <div className="spotify-embed">
-          <iframe
-            src={`https://open.spotify.com/embed/track/${FINAL_SONG.trackId}?utm_source=generator&theme=0`}
-            height="152"
-            allow="encrypted-media"
-            loading="lazy"
-          />
+    <div className="book-shell">
+      <div className="top-nav">
+        <Link href="/book" className="nav-back">← contents</Link>
+        <span className="nav-title">The Final Song</span>
+        <span />
+      </div>
+      <div className="finalsong">
+        <p className="finalsong-eyebrow">{FINAL_SONG.eyebrow}</p>
+        <h1 className="finalsong-title">{FINAL_SONG.title}</h1>
+        <p className="finalsong-artist">
+          {FINAL_SONG.from ? `from "${FINAL_SONG.from}" · ` : ''}{FINAL_SONG.artist}
+        </p>
+        <p className="finalsong-time">at {FINAL_SONG.timestamp}</p>
+        <p className="finalsong-note">{FINAL_SONG.note}</p>
+        <div className="finalsong-buttons">
+          <a
+            href={SPOTIFY_PLAYLIST}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="playlist-btn spotify"
+          >
+            Play on Spotify
+          </a>
+          <Link href="/book/songs" className="playlist-btn">
+            ← all songs
+          </Link>
         </div>
       </div>
-      <p className="final-song-note">— I&apos;ll write this one on the morning of the reveal, after thirty days of building its meaning with you.</p>
-    </section>
+    </div>
   );
 }

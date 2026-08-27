@@ -1,25 +1,32 @@
-'use client';
-import { useState } from 'react';
-import BackButton from '@/components/BackButton';
+import Link from 'next/link';
+import { readSession } from '@/lib/session';
+import { getReleaseStatus, daysRemaining } from '@/lib/release-timer';
+import ReleaseTimer from '@/components/ReleaseTimer';
 
-export default function Release() {
-  const [confirming, setConfirming] = useState(null);
+export default async function ReleasePage() {
+  const session = await readSession();
+  const author = session?.role;
+  const timer = author ? await getReleaseStatus(author) : null;
+  const days = timer ? daysRemaining(timer) : null;
+
   return (
-    <section className="screen release-screen active has-back">
-      <BackButton />
-      <div className="release-inner">
-        <h3>You can keep this. You can also let it go.</h3>
-        <p className="release-body">
-          Both are okay. Choose the timer and two reminder emails will come during the countdown.
-          You can cancel any time. Only your profile is removed. The book itself stays for me, always.
-        </p>
-        <div className="release-buttons">
-          <button className="release-btn keep">Keep this</button>
-          <button className="release-btn timer">Erase my profile in 30 days</button>
-          <button className="release-btn let-go">Let this go, now</button>
-        </div>
-        <p className="release-footnote">These buttons are wired in the next update.</p>
+    <div className="book-shell">
+      <div className="top-nav">
+        <Link href="/book" className="nav-back">← contents</Link>
+        <span className="nav-title">Release</span>
+        <span />
       </div>
-    </section>
+      <div className="release-shell">
+        <p className="content-eyebrow">the way out, if you want it</p>
+        <h1 className="content-title">Release</h1>
+        <p className="release-explain">
+          You do not have to keep this. If you want it gone, start the countdown. Thirty days.
+          You can cancel it at any point. Two reminders will come to you before the day.
+          When the timer ends, your profile is erased. Mine is not. This site stays as mine to look at.
+          If that's not what you want either, tell me, and I will take it all down that day.
+        </p>
+        <ReleaseTimer initialStatus={timer} initialDays={days} />
+      </div>
+    </div>
   );
 }

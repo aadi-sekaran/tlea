@@ -1,151 +1,112 @@
 'use client';
+
+import { useEffect, useState } from 'react';
 import Link from 'next/link';
-import { useState, useEffect } from 'react';
-import { CHAPTERS } from '@/lib/content';
+import { CHAPTERS, SECTIONS, ON_THIS_DAY } from '@/lib/content';
+import { CHAPTER_POSTER_FALLBACKS } from '@/lib/dragons';
 
-const POSTER_TITLES = [
-  'THE MEETING',
-  'FIRSTS',
-  'BUILDING',
-  'HUSTLE',
-  'HALF & HALF',
-  'ANYWAY',
-  'THE FINAL',
-];
-
-const SECTIONS = [
-  {
-    label: 'THE BOOK',
-    cards: [
-      { href: '/book/foreword', tint: 'cream', motif: '✉', title: 'The <em>Foreword</em>', sub: 'why this book' },
-      { href: '/book/cast', tint: 'lavender', motif: '✦', title: 'The <em>Cast</em>', sub: 'two Ammus' },
-    ],
-  },
-  {
-    label: 'THE WORLD',
-    cards: [
-      { href: '/book/songs', tint: 'blush', motif: '♪', title: 'Thirteen <em>Songs</em>', sub: 'ours, with meanings' },
-      { href: '/book/watched', tint: 'butter', motif: '▷', title: 'Watched <em>Together</em>', sub: 'films & series' },
-      { href: '/book/places', tint: 'powder', motif: '◉', title: 'Our <em>Places</em>', sub: 'a Dublin map' },
-      { href: '/book/trips', tint: 'sage', motif: '✈', title: 'The <em>Trips</em>', sub: 'four we took' },
-    ],
-  },
-  {
-    label: 'US, IN PIECES',
-    cards: [
-      { href: '/book/dictionary', tint: 'lavender', motif: 'A', title: 'Dictionary <em>of us</em>', sub: 'only we know' },
-      { href: '/book/firsts', tint: 'peach', motif: '§', title: 'Firsts &amp; <em>Lasts</em>', sub: 'two columns' },
-      { href: '/book/ledger', tint: 'cream', motif: '№', title: 'Ledger of <em>Numbers</em>', sub: 'what we counted' },
-      { href: '/book/ontd', tint: 'blush', motif: '◐', title: 'On this <em>day</em>', sub: 'across three years' },
-      { href: '/book/quiz', tint: 'butter', motif: '?', title: 'A little <em>quiz</em>', sub: 'only we know' },
-      { href: '/book/polaroids', tint: 'peach', motif: '▢', title: 'The <em>Polaroids</em>', sub: 'the real ones' },
-    ],
-  },
-  {
-    label: 'FOR LATER',
-    cards: [
-      { href: '/book/timecapsule', tint: 'powder', motif: '✉', title: 'Time <em>Capsule</em>', sub: 'until Sept 19, 2027', badge: 'Sealed' },
-      { href: '/book/finalsong', tint: 'rose', motif: '♥', title: 'The Final <em>Song</em>', sub: 'the closing note' },
-    ],
-  },
-];
-
-export default function Contents() {
+export default function BookHome() {
   const [heroIdx, setHeroIdx] = useState(0);
 
   useEffect(() => {
     const t = setInterval(() => {
-      setHeroIdx(i => (i + 1) % 7);
-    }, 5500);
+      setHeroIdx(i => (i + 1) % CHAPTERS.length);
+    }, 7000);
     return () => clearInterval(t);
   }, []);
 
-  const currentHero = CHAPTERS[heroIdx];
+  const today = new Date();
+  const mm = String(today.getMonth() + 1).padStart(2, '0');
+  const dd = String(today.getDate()).padStart(2, '0');
+  const todayKey = `${mm}-${dd}`;
+  const todaysMemory = ON_THIS_DAY.find(m => m.date === todayKey);
 
   return (
-    <section className="contents-screen">
-      <div className="contents-inner">
+    <div className="book-shell">
+      <div className="top-nav">
+        <span className="nav-title">The Last Ever Apology, Truly</span>
+        <div className="nav-actions">
+          <Link href="/book/release" className="nav-back">release</Link>
+        </div>
+      </div>
 
-        {/* ─── ROTATING HERO ─── */}
-        <div className="hero">
-          {CHAPTERS.map((ch, i) => (
-            <Link
-              key={ch.num}
-              href={`/book/ch/${ch.num}`}
-              className={`hero-slide palette-${ch.palette} ${i === heroIdx ? 'active' : ''}`}
-            >
-              <div className="hero-content">
-                <div className="hero-eyebrow">Chapter {ch.roman} · {ch.date}</div>
-                <h1 className="hero-title" dangerouslySetInnerHTML={{ __html: ch.title }} />
-                <div className="hero-meta">a chapter from The Last Ever Apology, Truly</div>
-                <div className="hero-cta">
-                  <span className="hero-cta-play">
-                    <svg width="14" height="14" viewBox="0 0 14 14" fill="currentColor">
-                      <path d="M3 2 L12 7 L3 12 Z" />
-                    </svg>
-                  </span>
-                  Open chapter
+      {/* Hero rotator */}
+      <div className="hero-rotator">
+        {CHAPTERS.map((ch, i) => (
+          <div key={ch.num} className={`hero-slide ${i === heroIdx ? 'active' : ''}`}>
+            <div
+              className="hero-slide-bg"
+              style={{
+                backgroundImage: `url(${ch.heroImg || CHAPTER_POSTER_FALLBACKS[ch.num]})`
+              }}
+            />
+            <div className="hero-slide-overlay" />
+            <div className="hero-slide-content">
+              <div className="hero-slide-chapter">Chapter {ch.romanNum}</div>
+              <h1 className="hero-slide-title">{ch.title}</h1>
+              <p className="hero-slide-teaser">{ch.teaser}</p>
+              <Link href={`/book/ch/${ch.num}`} className="hero-slide-cta">
+                Open chapter →
+              </Link>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      {todaysMemory && (
+        <div className="content-page" style={{ paddingBottom: '2rem' }}>
+          <div className="otd-today-card">
+            <div className="otd-year">on this day, {todaysMemory.year}</div>
+            <p className="otd-memory">{todaysMemory.body}</p>
+          </div>
+        </div>
+      )}
+
+      {/* Chapter carousel */}
+      <div>
+        <p className="section-eyebrow">The chapters</p>
+        <div className="chapter-carousel">
+          {CHAPTERS.map(ch => (
+            <Link key={ch.num} href={`/book/ch/${ch.num}`} className="chapter-poster">
+              <div
+                className="chapter-poster-bg"
+                style={{
+                  backgroundImage: `url(${ch.posterImg || CHAPTER_POSTER_FALLBACKS[ch.num]})`
+                }}
+              />
+              <div className="chapter-poster-overlay">
+                <div>
+                  <div className="chapter-poster-num">CHAPTER {ch.romanNum}</div>
+                  <div className="chapter-poster-title">{ch.shortTitle}</div>
                 </div>
               </div>
             </Link>
           ))}
-          <div className="hero-dots">
-            {CHAPTERS.map((_, i) => (
-              <button
-                key={i}
-                className={`hero-dot ${i === heroIdx ? 'active' : ''}`}
-                onClick={() => setHeroIdx(i)}
-                aria-label={`Chapter ${i + 1}`}
-              />
-            ))}
-          </div>
         </div>
+      </div>
 
-        {/* ─── CHAPTER POSTER ROW ─── */}
-        <div className="row-header">
-          <div className="row-title">The Chapters</div>
-        </div>
-        <div className="chapter-row">
-          {CHAPTERS.map((ch, i) => (
-            <Link
-              key={ch.num}
-              href={`/book/ch/${ch.num}`}
-              className={`chapter-poster palette-${ch.palette}`}
-            >
-              <div className="poster-num">{ch.roman}</div>
-              <div className="poster-title">{POSTER_TITLES[i]}</div>
+      {/* Section grid */}
+      <div>
+        <p className="section-eyebrow">Every corner of us</p>
+        <div className="section-grid">
+          {SECTIONS.map(s => (
+            <Link key={s.slug} href={`/book/${s.slug}`} className="section-tile">
+              <div>
+                <div className="section-tile-title">{s.title}</div>
+                <div className="section-tile-sub">{s.sub}</div>
+              </div>
+              <div
+                className="section-tile-bg-dragon"
+                style={{
+                  backgroundImage: 'url(/dragons/pack-main.svg)',
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center'
+                }}
+              />
             </Link>
           ))}
         </div>
-
-        {/* ─── OTHER SECTIONS (vertical stacked) ─── */}
-        <div className="sections-grid">
-          {SECTIONS.map(section => (
-            <div key={section.label}>
-              <div className="row-header">
-                <div className="row-title">{section.label}</div>
-              </div>
-              <div className="section-block">
-                {section.cards.map(card => (
-                  <Link key={card.href} href={card.href} className={`nav-card tint-${card.tint}`}>
-                    <div>
-                      <div className="nav-card-motif">{card.motif}</div>
-                      <div className="nav-card-title" dangerouslySetInnerHTML={{ __html: card.title }} />
-                      {card.badge && <span className="nav-card-badge">{card.badge}</span>}
-                    </div>
-                    <div className="nav-card-sub">{card.sub}</div>
-                  </Link>
-                ))}
-              </div>
-            </div>
-          ))}
-        </div>
-
-        <div className="contents-footer">
-          <div className="contents-footer-note">— when you are ready —</div>
-          <Link href="/book/release" className="release-link">letting this go</Link>
-        </div>
       </div>
-    </section>
+    </div>
   );
 }

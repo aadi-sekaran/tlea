@@ -1,33 +1,26 @@
+import Link from 'next/link';
 import { PLACES } from '@/lib/content';
-import BackButton from '@/components/BackButton';
 
-export default function Places() {
+export default function PlacesPage() {
   return (
-    <section className="screen section-screen active has-back">
-      <BackButton />
-      <div className="section-inner">
-        <div className="section-eyebrow">Places</div>
-        <h1 className="section-title">A map of <em>us</em></h1>
-        <p className="section-subtitle">— in Dublin, mostly —</p>
-
-        <div className="map-frame">
-          {[[45,40],[30,55],[55,60],[65,45],[40,65]].map(([t,l], i) => (
-            <div key={i} className="map-pin" style={{ top: `${t}%`, left: `${l}%` }} />
-          ))}
-          <div className="map-note">an illustrated Dublin map with pins<br />coming in the next build</div>
-        </div>
-
-        <ul className="places-list">
-          {PLACES.map(p => (
-            <li key={p.name} className="place">
-              {p.name}
-              {p.note && <span className="place-note">{p.note}</span>}
-            </li>
-          ))}
-        </ul>
-
-        <p className="places-tail">and so much more that we don&apos;t even remember</p>
+    <div className="book-shell">
+      <div className="top-nav">
+        <Link href="/book" className="nav-back">← contents</Link>
+        <span className="nav-title">Our Places</span>
+        <span />
       </div>
-    </section>
+      <div className="content-page">
+        <p className="content-eyebrow">the map of Dublin, ours</p>
+        <h1 className="content-title">Our Places</h1>
+        <div className="item-list">
+          {PLACES.map(p => (
+            <div key={p.name} className="item">
+              <span className="item-name">{p.name}</span>
+              {p.note && <span className="item-note">{p.note}</span>}
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
   );
 }

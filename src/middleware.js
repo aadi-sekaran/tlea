@@ -1,16 +1,34 @@
 import { NextResponse } from 'next/server';
-import { verifySession } from '@/lib/session';
+import { readSessionFromRequest } from '@/lib/session';
+
+const PUBLIC_PATHS = ['/', '/login', '/api/login'];
 
 export async function middleware(request) {
-  const path = request.nextUrl.pathname;
-  if (path.startsWith('/book')) {
-    const cookie = request.cookies.get('tlea_session');
-    const session = cookie ? await verifySession(cookie.value) : null;
-    if (!session) {
-      return NextResponse.redirect(new URL('/login', request.url));
-    }
+  const { pathname } = request.nextUrl;
+
+  if (
+    PUBLIC_PATHS.includes(pathname) ||
+    pathname.startsWith('/_next') ||
+    pathname.startsWith('/fonts') ||
+    pathname.startsWith('/dragons') ||
+    pathname.startsWith('/audio') ||
+    pathname.startsWith('/paintings') ||
+    pathname.startsWith('/polaroids') ||
+    pathname.startsWith('/api/cron')
+  ) {
+    return NextResponse.next();
   }
+
+  const session = await readSessionFromRequest(request);
+  if (!session) {
+    const url = request.nextUrl.clone();
+    url.pathname = '/login';
+    return NextResponse.redirect(url);
+  }
+
   return NextResponse.next();
 }
 
-export const config = { matcher: ['/book/:path*'] };
+export const config = {
+  matcher: ['/((?!_next/static|_next/image|favicon.ico).*)']
+};

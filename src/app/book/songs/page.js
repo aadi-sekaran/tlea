@@ -1,51 +1,52 @@
-import { SONGS } from '@/lib/content';
-import BackButton from '@/components/BackButton';
-import Image from 'next/image';
+import Link from 'next/link';
+import { SONGS, SPOTIFY_PLAYLIST, SONGLINK_PLAYLIST } from '@/lib/content';
 
-export default function Songs() {
+export default function SongsPage() {
   return (
-    <section className="screen section-screen active has-back">
-      <BackButton />
-      <div className="section-inner">
-        <div className="section-eyebrow">Ours</div>
-        <h1 className="section-title">Thirteen <em>songs</em></h1>
-        <p className="section-subtitle">— the ones we own —</p>
-
-        {SONGS.map(s => (
-          <div key={s.trackId} className="song-card">
-            <div className="song-title">
-              {s.title}{s.subtitle && <em>— {s.subtitle}</em>}
-            </div>
-            {s.badge && <span className="song-badge">{s.badge}</span>}
-            <div className="spotify-embed">
-              <iframe
-                src={`https://open.spotify.com/embed/track/${s.trackId}?utm_source=generator&theme=0`}
-                height="80"
-                allow="encrypted-media"
-                loading="lazy"
-              />
-            </div>
-            <div className="annotations">
-              <div className="annotation">
-                <div className="who">
-                  <span className="inline-dragon"><Image src="/dragon-dark.webp" alt="" width={18} height={18} /></span>
-                  Ammu says
-                </div>
-                <p className="body">{s.aadi}</p>
-              </div>
-              <div className="annotation her empty">
-                <div className="who">
-                  <span className="inline-dragon"><Image src="/dragon-light.webp" alt="" width={18} height={18} /></span>
-                  Ammu says
-                </div>
-                <p className="body">— she&apos;ll write hers here —</p>
-              </div>
-            </div>
-          </div>
-        ))}
-
-        <p className="songs-footnote">The thirteenth has its own page. Find it in the contents.</p>
+    <div className="book-shell">
+      <div className="top-nav">
+        <Link href="/book" className="nav-back">← contents</Link>
+        <span className="nav-title">Songs</span>
+        <span />
       </div>
-    </section>
+      <div className="content-page">
+        <p className="content-eyebrow">thirteen songs, one for each part</p>
+        <h1 className="content-title">Songs</h1>
+        <p className="content-intro">
+          Each of these has a moment. A single second where I would want you to stop and listen.
+          Not because the whole song is not good, but because those seconds are the ones that mean us.
+        </p>
+
+        <div className="songs-list" style={{ padding: 0, maxWidth: 'unset' }}>
+          {SONGS.map(s => (
+            <div key={s.n} className="song-card">
+              <div className="song-num">Song {s.n}</div>
+              <div className="song-title">
+                {s.title}
+                {s.timestamp && (
+                  <span className="song-timestamp-badge">at {s.timestamp}</span>
+                )}
+              </div>
+              <div className="song-artist">
+                {s.from ? `from "${s.from}" · ` : ''}{s.artist}
+              </div>
+              <p className="song-note">{s.note}</p>
+            </div>
+          ))}
+        </div>
+
+        <div className="playlist-buttons">
+          <a href={SPOTIFY_PLAYLIST} target="_blank" rel="noopener noreferrer" className="playlist-btn spotify">
+            Listen on Spotify
+          </a>
+          <a href={SONGLINK_PLAYLIST} target="_blank" rel="noopener noreferrer" className="playlist-btn">
+            Or open in your app
+          </a>
+          <Link href="/book/finalsong" className="playlist-btn">
+            → the final song
+          </Link>
+        </div>
+      </div>
+    </div>
   );
 }

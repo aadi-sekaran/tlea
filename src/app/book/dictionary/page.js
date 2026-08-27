@@ -1,50 +1,29 @@
+import Link from 'next/link';
 import { DICTIONARY } from '@/lib/content';
-import BackButton from '@/components/BackButton';
-import Image from 'next/image';
 
-function Shelf({ head, icon, entries, twoDragons = false }) {
+export default function DictionaryPage() {
   return (
-    <div className="dict-shelf">
-      <div className="dict-shelf-head">
-        {twoDragons ? (
-          <span className="dragon-pair-inline">
-            <Image src="/dragon-dark.webp" alt="" width={22} height={22} />
-            <Image src="/dragon-light.webp" alt="" width={22} height={22} />
-          </span>
-        ) : (
-          <Image src={icon} alt="" width={26} height={26} />
-        )}
-        {head}
+    <div className="book-shell">
+      <div className="top-nav">
+        <Link href="/book" className="nav-back">← contents</Link>
+        <span className="nav-title">The Dictionary</span>
+        <span />
       </div>
-      <div className="dict-entries">
-        {entries.map((e, i) => (
-          <div key={i} className="dict-entry">
-            <div className="dict-word">
-              {e.word}{e.extra && <em>· {e.extra}</em>}
-            </div>
-            {e.note && <span className="dict-note">{e.note}</span>}
+      <div className="content-page">
+        <p className="content-eyebrow">words only we use</p>
+        <h1 className="content-title">The Dictionary</h1>
+        {DICTIONARY.map(shelf => (
+          <div key={shelf.shelf} className="dict-shelf">
+            <h2 className="dict-shelf-title">{shelf.shelf}</h2>
+            {shelf.entries.map(entry => (
+              <div key={entry.term} className="dict-entry">
+                <div className="dict-term">{entry.term}</div>
+                {entry.def && <div className="dict-def">{entry.def}</div>}
+              </div>
+            ))}
           </div>
         ))}
       </div>
     </div>
-  );
-}
-
-export default function Dictionary() {
-  return (
-    <section className="screen section-screen active has-back">
-      <BackButton />
-      <div className="section-inner">
-        <div className="section-eyebrow">Dictionary of us</div>
-        <h1 className="section-title">Words only <em>we</em> know</h1>
-        <p className="section-subtitle">— every name, in every direction —</p>
-
-        <Shelf head="From him, to her" icon="/dragon-dark.webp" entries={DICTIONARY.fromHim} />
-        <Shelf head="From her, to him" icon="/dragon-light.webp" entries={DICTIONARY.fromHer} />
-        <Shelf head="Shared — either direction" entries={DICTIONARY.shared} twoDragons />
-
-        <p className="dict-tail">— she adds any she remembers, on her side —</p>
-      </div>
-    </section>
   );
 }
