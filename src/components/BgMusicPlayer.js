@@ -4,19 +4,34 @@ import { useEffect, useRef, useState } from 'react';
 
 export default function BgMusicPlayer() {
   const audioRef = useRef(null);
+  const playingRef = useRef(false);
   const [playing, setPlaying] = useState(false);
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
     setMounted(true);
-    // Do not autoplay. Wait for user tap.
-    // Restore last choice from localStorage.
-    try {
-      const stored = localStorage.getItem('tlea_bgmusic');
-      if (stored === 'on') {
-        // Still need a user gesture to actually start on mobile. We hint but do not force.
-      }
-    } catch {}
+
+    // Exposed for pages (e.g. the v3.5 envelope cover) that want to start
+    // music on the user's first real gesture, which browsers require anyway.
+    // Skipped if the listener already explicitly muted before.
+    window.__tleaAutoplayMusic = () => {
+      const audio = audioRef.current;
+      if (!audio || playingRef.current) return;
+      let stored = null;
+      try { stored = localStorage.getItem('tlea_bgmusic'); } catch {}
+      if (stored === 'off') return;
+      audio.volume = 0.35;
+      audio.loop = true;
+      audio.play().then(() => {
+        playingRef.current = true;
+        setPlaying(true);
+        try { localStorage.setItem('tlea_bgmusic', 'on'); } catch {}
+      }).catch(err => {
+        console.warn('audio autoplay blocked', err);
+      });
+    };
+
+    return () => { delete window.__tleaAutoplayMusic; };
   }, []);
 
   function toggle() {
@@ -24,12 +39,14 @@ export default function BgMusicPlayer() {
     if (!audio) return;
     if (playing) {
       audio.pause();
+      playingRef.current = false;
       setPlaying(false);
       try { localStorage.setItem('tlea_bgmusic', 'off'); } catch {}
     } else {
       audio.volume = 0.35;
       audio.loop = true;
       audio.play().then(() => {
+        playingRef.current = true;
         setPlaying(true);
         try { localStorage.setItem('tlea_bgmusic', 'on'); } catch {}
       }).catch(err => {

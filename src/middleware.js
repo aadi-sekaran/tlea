@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server';
 import { readSessionFromRequest } from '@/lib/session';
 
-const PUBLIC_PATHS = ['/', '/login', '/api/login'];
+const PUBLIC_PATHS = ['/', '/login', '/api/login', '/preview-v35', '/preview-v35/login'];
 
 export async function middleware(request) {
   const { pathname } = request.nextUrl;
