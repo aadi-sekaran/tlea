@@ -1,25 +1,55 @@
+'use client';
+
+import { useRef, useState } from 'react';
 import Link from 'next/link';
 
 export default function CoverPage() {
+  const [stage, setStage] = useState('closed'); // closed -> opening -> open
+  const letterRef = useRef(null);
+
+  function open() {
+    if (stage !== 'closed') return;
+    setStage('opening');
+  }
+
+  function handleLetterTransitionEnd(e) {
+    if (e.target !== letterRef.current) return;
+    if (e.propertyName !== 'transform') return;
+    if (stage === 'opening') setStage('open');
+  }
+
   return (
     <div className="cover">
-      <div className="cover-inner">
-        <div className="cover-envelope">
-          <svg viewBox="0 0 240 180" xmlns="http://www.w3.org/2000/svg">
-            {/* Envelope body */}
-            <rect x="10" y="30" width="220" height="140" rx="6" fill="#F7EEDF" stroke="#8A6F61" strokeWidth="2" />
-            {/* Flap */}
-            <path d="M 10 36 L 120 110 L 230 36" fill="none" stroke="#8A6F61" strokeWidth="2" />
-            {/* Wax seal */}
-            <circle cx="120" cy="110" r="24" fill="#DFA6AE" stroke="#8A6F61" strokeWidth="2" />
-            <text x="120" y="118" textAnchor="middle" fontFamily="Fraunces, Georgia, serif" fontStyle="italic" fontSize="16" fill="#FFF8EE">A + K</text>
-          </svg>
+      <span className="brand-mark">the last ever apology, truly</span>
+
+      <div className="cover-scene">
+        <div
+          className={`envelope stage-${stage}`}
+          role="button"
+          tabIndex={stage === 'closed' ? 0 : -1}
+          aria-label="Open the envelope"
+          onClick={open}
+          onKeyDown={e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(); } }}
+        >
+          <div className="envelope-body" />
+          <div
+            className="envelope-letter"
+            ref={letterRef}
+            onTransitionEnd={handleLetterTransitionEnd}
+          >
+            <div className="letter-content">
+              <p className="eyebrow">a private book, written for one</p>
+              <h1 className="cover-title">The Last Ever Apology, Truly</h1>
+              <Link href="/login" className="cover-cta" tabIndex={stage === 'open' ? 0 : -1}>
+                Enter →
+              </Link>
+            </div>
+          </div>
+          <div className="envelope-flap" />
+          <div className="envelope-seal">A+K</div>
         </div>
-        <h1 className="cover-title">The Last Ever Apology, Truly</h1>
-        <p className="cover-sub">a private book, written for one</p>
-        <Link href="/login" className="cover-cta">
-          Open →
-        </Link>
+
+        <p className={`cover-hint ${stage !== 'closed' ? 'is-hidden' : ''}`}>tap the envelope</p>
       </div>
     </div>
   );
