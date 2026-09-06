@@ -833,6 +833,7 @@ input, textarea { font-family: inherit; }
   display: block;
   width: 100%;
   height: auto;
+  border-radius: 10px;
   margin-bottom: 0.5rem;
 }
 .polaroid-caption {
@@ -871,6 +872,7 @@ input, textarea { font-family: inherit; }
   height: auto;
   max-height: 70vh;
   object-fit: contain;
+  border-radius: 10px;
   margin-bottom: 1rem;
 }
 .lightbox-caption {
