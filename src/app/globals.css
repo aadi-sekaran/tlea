@@ -808,33 +808,31 @@ input, textarea { font-family: inherit; }
 .polaroids-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  align-items: start;
   gap: 1.5rem;
   padding: 2rem;
   max-width: 960px;
   margin: 0 auto;
 }
 .polaroid {
-  background: white;
-  padding: 0.75rem 0.75rem 2rem;
-  box-shadow: var(--shadow);
-  border-radius: 4px;
+  background: none;
+  padding: 0;
   cursor: pointer;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  filter: drop-shadow(0 8px 16px rgba(46, 59, 84, 0.18));
+  transition: transform 0.25s ease, filter 0.25s ease;
 }
 .polaroid:nth-child(3n) { transform: rotate(-2deg); }
 .polaroid:nth-child(3n+1) { transform: rotate(1.5deg); }
 .polaroid:nth-child(3n+2) { transform: rotate(-0.5deg); }
 .polaroid:hover {
   transform: rotate(0) translateY(-4px);
-  box-shadow: var(--shadow-lg);
+  filter: drop-shadow(0 14px 24px rgba(46, 59, 84, 0.24));
   z-index: 2;
 }
 .polaroid-img {
+  display: block;
   width: 100%;
-  aspect-ratio: 4/5;
-  background: var(--cream);
-  background-size: cover;
-  background-position: center;
+  height: auto;
   margin-bottom: 0.5rem;
 }
 .polaroid-caption {
@@ -868,11 +866,11 @@ input, textarea { font-family: inherit; }
   position: relative;
 }
 .lightbox-img {
+  display: block;
   width: 100%;
-  aspect-ratio: 4/5;
-  background: var(--cream);
-  background-size: cover;
-  background-position: center;
+  height: auto;
+  max-height: 70vh;
+  object-fit: contain;
   margin-bottom: 1rem;
 }
 .lightbox-caption {
