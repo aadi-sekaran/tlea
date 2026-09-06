@@ -11,6 +11,8 @@ export default function WatchedPage() {
         <NavAvatar />
       </div>
       <div className="content-page">
+        {/* asset: public/dragons/01_Main_Pack/main_099.png */}
+        <img className="content-header-art" src="/dragons/01_Main_Pack/main_099.png" alt="" />
         <p className="content-eyebrow">films and series we lived inside</p>
         <h1 className="content-title">What We Watched</h1>
 

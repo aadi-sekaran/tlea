@@ -30,6 +30,8 @@ export default function LineAndReplyCard({ exchanges }) {
 
   return (
     <div className="lineandreply-shell">
+      {/* asset: public/dragons/01_Main_Pack/main_064.png */}
+      <img className="content-header-art" src="/dragons/01_Main_Pack/main_064.png" alt="" />
       <div className="lar-progress">{idx + 1} of {exchanges.length}</div>
       <div className="lar-date">{current.date}</div>
 

@@ -246,6 +246,10 @@ input, textarea { font-family: inherit; }
 .book-shell {
   min-height: 100vh;
   padding-bottom: 6rem;
+  background:
+    radial-gradient(ellipse 900px 480px at 50% 0%, rgba(244, 212, 210, 0.4), transparent 65%),
+    radial-gradient(ellipse 700px 420px at 100% 100%, rgba(199, 221, 233, 0.3), transparent 60%);
+  background-attachment: fixed;
 }
 .top-nav {
   position: sticky;
@@ -483,13 +487,16 @@ input, textarea { font-family: inherit; }
 }
 .section-tile-bg-dragon {
   position: absolute;
-  right: -20px;
-  bottom: -20px;
-  width: 130px;
-  height: 130px;
-  opacity: 0.09;
+  right: -8px;
+  bottom: -8px;
+  width: 108px;
+  height: auto;
+  opacity: 0.92;
+  filter: drop-shadow(0 4px 10px rgba(46, 59, 84, 0.12));
   pointer-events: none;
+  transition: transform 0.25s ease;
 }
+.section-tile:hover .section-tile-bg-dragon { transform: scale(1.06) rotate(-2deg); }
 
 /* ---- Chapter detail ---- */
 .chapter-hero {
@@ -1341,6 +1348,13 @@ input, textarea { font-family: inherit; }
   color: var(--brown);
   letter-spacing: -0.025em;
   margin-bottom: 0.5rem;
+}
+.content-header-art {
+  display: block;
+  width: 76px;
+  height: auto;
+  margin: 0 0 1rem;
+  filter: drop-shadow(0 4px 10px rgba(46, 59, 84, 0.1));
 }
 .content-eyebrow {
   font-family: var(--font-body);

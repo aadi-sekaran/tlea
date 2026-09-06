@@ -11,6 +11,8 @@ export default function DictionaryPage() {
         <NavAvatar />
       </div>
       <div className="content-page">
+        {/* asset: public/dragons/01_Main_Pack/main_017.png */}
+        <img className="content-header-art" src="/dragons/01_Main_Pack/main_017.png" alt="" />
         <p className="content-eyebrow">words only we use</p>
         <h1 className="content-title">The Dictionary</h1>
         {DICTIONARY.map(shelf => (

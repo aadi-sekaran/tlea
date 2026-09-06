@@ -18,6 +18,8 @@ export default async function ReleasePage() {
         <NavAvatar />
       </div>
       <div className="release-shell">
+        {/* asset: public/dragons/02_Flying_Poses/flying_012.png */}
+        <img className="content-header-art" src="/dragons/02_Flying_Poses/flying_012.png" alt="" />
         <p className="content-eyebrow">the way out, if you want it</p>
         <h1 className="content-title">Release</h1>
         <p className="release-explain">

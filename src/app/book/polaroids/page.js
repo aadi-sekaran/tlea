@@ -40,6 +40,8 @@ export default function PolaroidsPage() {
         <NavAvatar />
       </div>
       <div className="content-page">
+        {/* asset: public/dragons/03_Stickers_Pack/stickers_050.png */}
+        <img className="content-header-art" src="/dragons/03_Stickers_Pack/stickers_050.png" alt="" />
         <p className="content-eyebrow">moments printed</p>
         <h1 className="content-title">Polaroids</h1>
         {polaroids.length === 0 ? (

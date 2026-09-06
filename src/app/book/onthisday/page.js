@@ -27,6 +27,8 @@ export default function OnThisDayPage() {
         <span />
       </div>
       <div className="content-page">
+        {/* asset: public/dragons/01_Main_Pack/main_062.png */}
+        <img className="content-header-art" src="/dragons/01_Main_Pack/main_062.png" alt="" />
         <p className="content-eyebrow">today, one year ago (or two, or three)</p>
         <h1 className="content-title">On This Day</h1>
 

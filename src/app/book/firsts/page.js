@@ -17,6 +17,8 @@ export default function FirstsPage() {
         <span />
       </div>
       <div className="content-page">
+        {/* asset: public/dragons/02_Flying_Poses/flying_004.png */}
+        <img className="content-header-art" src="/dragons/02_Flying_Poses/flying_004.png" alt="" />
         <p className="content-eyebrow">a timeline of us</p>
         <h1 className="content-title">Firsts & Lasts</h1>
 

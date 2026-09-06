@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { CHAPTERS, SECTIONS, ON_THIS_DAY } from '@/lib/content';
-import { CHAPTER_POSTER_FALLBACKS } from '@/lib/dragons';
+import { CHAPTER_POSTER_FALLBACKS, SECTION_TILE_ART } from '@/lib/dragons';
 
 export default function BookHome() {
   const [heroIdx, setHeroIdx] = useState(0);
@@ -95,13 +95,10 @@ export default function BookHome() {
                 <div className="section-tile-title">{s.title}</div>
                 <div className="section-tile-sub">{s.sub}</div>
               </div>
-              <div
+              <img
                 className="section-tile-bg-dragon"
-                style={{
-                  backgroundImage: 'url(/dragons/pack-main.svg)',
-                  backgroundSize: 'cover',
-                  backgroundPosition: 'center'
-                }}
+                src={SECTION_TILE_ART[s.dragon]}
+                alt=""
               />
             </Link>
           ))}

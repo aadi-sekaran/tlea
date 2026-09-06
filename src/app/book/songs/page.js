@@ -11,6 +11,8 @@ export default function SongsPage() {
         <NavAvatar />
       </div>
       <div className="content-page">
+        {/* asset: public/dragons/03_Stickers_Pack/stickers_060.png */}
+        <img className="content-header-art" src="/dragons/03_Stickers_Pack/stickers_060.png" alt="" />
         <p className="content-eyebrow">thirteen songs, one for each part</p>
         <h1 className="content-title">Songs</h1>
         <p className="content-intro">
