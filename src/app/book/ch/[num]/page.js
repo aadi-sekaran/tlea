@@ -2,6 +2,8 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { CHAPTERS } from '@/lib/content';
 import { CHAPTER_POSTER_FALLBACKS } from '@/lib/dragons';
+import { getChapterPortraits } from '@/lib/chapterPhotos';
+import ChapterHero from '@/components/ChapterHero';
 
 export function generateStaticParams() {
   return CHAPTERS.map(ch => ({ num: String(ch.num) }));
@@ -15,6 +17,9 @@ export default function ChapterDetail({ params }) {
   const prev = CHAPTERS.find(c => c.num === num - 1);
   const next = CHAPTERS.find(c => c.num === num + 1);
 
+  // Chapter VII uses the dragon sunset scene, not the photo rotation (no Ch VII photos in the plan).
+  const portraits = num === 7 ? [] : getChapterPortraits(num);
+
   return (
     <div className="book-shell">
       <div className="top-nav">
@@ -24,9 +29,9 @@ export default function ChapterDetail({ params }) {
       </div>
 
       <div className="chapter-hero">
-        <div
-          className="chapter-hero-bg"
-          style={{ backgroundImage: `url(${ch.heroImg || CHAPTER_POSTER_FALLBACKS[num]})` }}
+        <ChapterHero
+          images={portraits}
+          fallback={ch.heroImg || CHAPTER_POSTER_FALLBACKS[num]}
         />
         <div className="chapter-hero-overlay" />
         <div className="chapter-hero-content">
