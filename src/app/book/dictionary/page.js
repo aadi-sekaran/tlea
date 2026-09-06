@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import NavAvatar from '@/components/NavAvatar';
 import { DICTIONARY } from '@/lib/content';
 
 export default function DictionaryPage() {
@@ -7,7 +8,7 @@ export default function DictionaryPage() {
       <div className="top-nav">
         <Link href="/book" className="nav-back">← contents</Link>
         <span className="nav-title">The Dictionary</span>
-        <span />
+        <NavAvatar />
       </div>
       <div className="content-page">
         <p className="content-eyebrow">words only we use</p>

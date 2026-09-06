@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import NavAvatar from '@/components/NavAvatar';
 import PolaroidLightbox from '@/components/PolaroidLightbox';
 import fs from 'fs';
 import path from 'path';
@@ -36,15 +37,19 @@ export default function PolaroidsPage() {
       <div className="top-nav">
         <Link href="/book" className="nav-back">← contents</Link>
         <span className="nav-title">Polaroids</span>
-        <span />
+        <NavAvatar />
       </div>
       <div className="content-page">
         <p className="content-eyebrow">moments printed</p>
         <h1 className="content-title">Polaroids</h1>
         {polaroids.length === 0 ? (
-          <p style={{ fontFamily: 'var(--font-hand)', color: 'var(--text-soft)', textAlign: 'center', padding: '3rem 1rem' }}>
-            The polaroids are being photographed. Come back soon.
-          </p>
+          <div className="empty-state">
+            {/* asset: public/dragons/01_Main_Pack/main_001.png */}
+            <img className="empty-state-art" src="/dragons/01_Main_Pack/main_001.png" alt="" />
+            <p className="empty-state-text">
+              The polaroids are being photographed. Come back soon.
+            </p>
+          </div>
         ) : (
           <PolaroidLightbox polaroids={polaroids} />
         )}

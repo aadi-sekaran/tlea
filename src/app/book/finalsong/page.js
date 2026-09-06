@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import NavAvatar from '@/components/NavAvatar';
 import { FINAL_SONG, SPOTIFY_PLAYLIST } from '@/lib/content';
 
 export default function FinalSongPage() {
@@ -7,7 +8,7 @@ export default function FinalSongPage() {
       <div className="top-nav">
         <Link href="/book" className="nav-back">← contents</Link>
         <span className="nav-title">The Final Song</span>
-        <span />
+        <NavAvatar />
       </div>
       <div className="finalsong">
         <p className="finalsong-eyebrow">{FINAL_SONG.eyebrow}</p>

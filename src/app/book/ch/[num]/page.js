@@ -4,11 +4,10 @@ import { CHAPTERS } from '@/lib/content';
 import { CHAPTER_POSTER_FALLBACKS } from '@/lib/dragons';
 import { getChapterPortraits } from '@/lib/chapterPhotos';
 import ChapterHero from '@/components/ChapterHero';
+import NavAvatar from '@/components/NavAvatar';
 
-export function generateStaticParams() {
-  return CHAPTERS.map(ch => ({ num: String(ch.num) }));
-}
-
+// No generateStaticParams: NavAvatar reads the session per-request, which
+// static generation would otherwise bake in empty forever.
 export default function ChapterDetail({ params }) {
   const num = parseInt(params.num, 10);
   const ch = CHAPTERS.find(c => c.num === num);
@@ -25,7 +24,7 @@ export default function ChapterDetail({ params }) {
       <div className="top-nav">
         <Link href="/book" className="nav-back">← contents</Link>
         <span className="nav-title">Chapter {ch.romanNum}</span>
-        <span />
+        <NavAvatar />
       </div>
 
       <div className="chapter-hero">

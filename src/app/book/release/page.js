@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import NavAvatar from '@/components/NavAvatar';
 import { readSession } from '@/lib/session';
 import { getReleaseStatus, daysRemaining } from '@/lib/release-timer';
 import ReleaseTimer from '@/components/ReleaseTimer';
@@ -14,7 +15,7 @@ export default async function ReleasePage() {
       <div className="top-nav">
         <Link href="/book" className="nav-back">← contents</Link>
         <span className="nav-title">Release</span>
-        <span />
+        <NavAvatar />
       </div>
       <div className="release-shell">
         <p className="content-eyebrow">the way out, if you want it</p>

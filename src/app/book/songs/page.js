@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import NavAvatar from '@/components/NavAvatar';
 import { SONGS, SPOTIFY_PLAYLIST, SONGLINK_PLAYLIST } from '@/lib/content';
 
 export default function SongsPage() {
@@ -7,7 +8,7 @@ export default function SongsPage() {
       <div className="top-nav">
         <Link href="/book" className="nav-back">← contents</Link>
         <span className="nav-title">Songs</span>
-        <span />
+        <NavAvatar />
       </div>
       <div className="content-page">
         <p className="content-eyebrow">thirteen songs, one for each part</p>

@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import NavAvatar from '@/components/NavAvatar';
 import { FILMS, SERIES } from '@/lib/content';
 
 export default function WatchedPage() {
@@ -7,7 +8,7 @@ export default function WatchedPage() {
       <div className="top-nav">
         <Link href="/book" className="nav-back">← contents</Link>
         <span className="nav-title">What We Watched</span>
-        <span />
+        <NavAvatar />
       </div>
       <div className="content-page">
         <p className="content-eyebrow">films and series we lived inside</p>

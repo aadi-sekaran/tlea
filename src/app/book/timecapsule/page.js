@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import NavAvatar from '@/components/NavAvatar';
 import { readSession } from '@/lib/session';
 import { getMyLetter } from '@/lib/timecapsule';
 import TimeCapsuleSeal from '@/components/TimeCapsuleSeal';
@@ -13,7 +14,7 @@ export default async function TimeCapsulePage() {
       <div className="top-nav">
         <Link href="/book" className="nav-back">← contents</Link>
         <span className="nav-title">Time Capsule</span>
-        <span />
+        <NavAvatar />
       </div>
       <div className="tc-shell">
         <p className="content-eyebrow">a letter for a year from now</p>

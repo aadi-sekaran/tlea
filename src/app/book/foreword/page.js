@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import NavAvatar from '@/components/NavAvatar';
 import { FOREWORD } from '@/lib/content';
 
 export default function ForewordPage() {
@@ -7,7 +8,7 @@ export default function ForewordPage() {
       <div className="top-nav">
         <Link href="/book" className="nav-back">← contents</Link>
         <span className="nav-title">Foreword</span>
-        <span />
+        <NavAvatar />
       </div>
       <div className="reader reader-tint-1">
         <div className="reader-inner">
@@ -17,6 +18,12 @@ export default function ForewordPage() {
             {FOREWORD.body.map((p, i) => <p key={i}>{p}</p>)}
           </div>
           <div className="reader-signoff">{FOREWORD.signoff}</div>
+          {/* asset: public/dragons/01_Main_Pack/main_007.png (sitting-together pair) */}
+          <img
+            src="/dragons/01_Main_Pack/main_007.png"
+            alt=""
+            className="foreword-accent"
+          />
         </div>
       </div>
     </div>

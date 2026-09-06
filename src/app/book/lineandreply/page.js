@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import NavAvatar from '@/components/NavAvatar';
 import LineAndReplyCard from '@/components/LineAndReplyCard';
 import { LINE_AND_REPLY } from '@/lib/content';
 
@@ -8,7 +9,7 @@ export default function LineAndReplyPage() {
       <div className="top-nav">
         <Link href="/book" className="nav-back">← contents</Link>
         <span className="nav-title">The Line and the Reply</span>
-        <span />
+        <NavAvatar />
       </div>
       <LineAndReplyCard exchanges={LINE_AND_REPLY} />
     </div>

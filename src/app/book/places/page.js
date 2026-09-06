@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import NavAvatar from '@/components/NavAvatar';
 import { PLACES } from '@/lib/content';
 
 export default function PlacesPage() {
@@ -7,7 +8,7 @@ export default function PlacesPage() {
       <div className="top-nav">
         <Link href="/book" className="nav-back">← contents</Link>
         <span className="nav-title">Our Places</span>
-        <span />
+        <NavAvatar />
       </div>
       <div className="content-page">
         <p className="content-eyebrow">the map of Dublin, ours</p>
