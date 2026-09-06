@@ -47,8 +47,8 @@ export const CHAPTERS = [
     title: 'Everything for the first time',
     dates: 'October 2023 — Early 2024',
     teaser: 'First Diwali. First Christmas. First snow. First house. Everything happening at once, and none of it feeling like it could have happened any other way.',
-    heroImg: '/paintings/chapter-02-hero.jpg',
-    posterImg: '/paintings/chapter-02-hero.jpg',
+    heroImg: '/photos/ch-02/1-portrait.jpg',
+    posterImg: '/photos/ch-02/1-portrait.jpg',
     tint: 'reader-tint-2',
     prose: [
       "Chapter II is being written."
@@ -62,8 +62,8 @@ export const CHAPTERS = [
     title: 'Building a room',
     dates: '2024',
     teaser: '26 Woodbine. Then 18 Potters Hill. Cooking, groceries, the rented cycle to Aldi, the projector, the couch nobody sat on properly.',
-    heroImg: '/paintings/chapter-03-hero.jpg',
-    posterImg: '/paintings/chapter-03-hero.jpg',
+    heroImg: '/photos/ch-03/1-portrait.jpg',
+    posterImg: '/photos/ch-03/1-portrait.jpg',
     tint: 'reader-tint-3',
     prose: [
       "Chapter III is being written."
@@ -77,8 +77,8 @@ export const CHAPTERS = [
     title: 'The hustle year',
     dates: 'January — June 2025',
     teaser: 'Both hunting jobs. Both stretched thin. Edinburgh in April as the reward that came before the win. And then the win.',
-    heroImg: '/paintings/chapter-04-hero.jpg',
-    posterImg: '/paintings/chapter-04-hero.jpg',
+    heroImg: '/photos/ch-04/1-portrait.jpg',
+    posterImg: '/photos/ch-04/1-portrait.jpg',
     tint: 'reader-tint-4',
     prose: [
       "Chapter IV is being written."
@@ -92,8 +92,8 @@ export const CHAPTERS = [
     title: 'Half here, half there',
     dates: 'July — December 2025',
     teaser: 'The airport pickup ritual. Bouquet every landing. Distance that felt smaller than it should have. And a Cork trip we did not know was the last.',
-    heroImg: '/paintings/chapter-05-hero.jpg',
-    posterImg: '/paintings/chapter-05-hero.jpg',
+    heroImg: '/photos/ch-05/1-portrait.jpg',
+    posterImg: '/photos/ch-05/1-portrait.jpg',
     tint: 'reader-tint-5',
     prose: [
       "Chapter V is being written."
@@ -107,8 +107,8 @@ export const CHAPTERS = [
     title: 'Inevitable, but anyway',
     dates: 'January — June 2026',
     teaser: 'A Valentine spent apart. A pottery painting day that felt like a stolen afternoon. A rule set in February that turned long distance from a logistics word into a threat.',
-    heroImg: '/paintings/chapter-06-hero.jpg',
-    posterImg: '/paintings/chapter-06-hero.jpg',
+    heroImg: '/photos/ch-06/1-portrait.jpg',
+    posterImg: '/photos/ch-06/1-portrait.jpg',
     tint: 'reader-tint-6',
     prose: [
       "Chapter VI is being written."
@@ -122,8 +122,8 @@ export const CHAPTERS = [
     title: 'The last ever apology, truly',
     dates: 'July — September 2026',
     teaser: 'Cork was the last road trip. iPhones swapped SIM slots. And an Iceland cabin, and this book, and this apology.',
-    heroImg: '/dragons/pack-main.svg',
-    posterImg: '/dragons/pack-main.svg',
+    heroImg: '/dragons/01_Main_Pack/main_065.png',
+    posterImg: '/dragons/01_Main_Pack/main_065.png',
     tint: 'reader-tint-7',
     prose: [
       "Chapter VII is being written."

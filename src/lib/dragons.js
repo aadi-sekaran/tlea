@@ -12,15 +12,17 @@ export const DRAGON_ASSETS = {
   packStickers: '/dragons/pack-stickers.svg'
 };
 
-// Chapter poster fallbacks (when a chapter has no painted hero yet)
+// Chapter poster fallbacks (when a chapter has no heroImg/posterImg set at all).
+// Single illustrations, not the raw multi-icon sprite sheets (pack-*.svg) —
+// those are contact-sheet-style source files, not usable as one image.
 export const CHAPTER_POSTER_FALLBACKS = {
-  1: '/dragons/pack-main.svg',
-  2: '/dragons/pack-story.svg',
-  3: '/dragons/pack-stickers.svg',
-  4: '/dragons/pack-flying.svg',
-  5: '/dragons/pack-main.svg',
-  6: '/dragons/pack-story.svg',
-  7: '/dragons/pack-main.svg'
+  1: '/dragons/01_Main_Pack/main_007.png',
+  2: '/dragons/01_Main_Pack/main_007.png',
+  3: '/dragons/01_Main_Pack/main_007.png',
+  4: '/dragons/01_Main_Pack/main_007.png',
+  5: '/dragons/01_Main_Pack/main_007.png',
+  6: '/dragons/01_Main_Pack/main_007.png',
+  7: '/dragons/01_Main_Pack/main_065.png'
 };
 
 // Iconic scenes for section-tile decorations
