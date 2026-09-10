@@ -26,9 +26,11 @@ export default function PolaroidLightbox({ polaroids }) {
             onClick={() => setOpenIdx(i)}
             aria-label={`Open polaroid ${i + 1}`}
           >
-            <div
+            <img
               className="polaroid-img"
-              style={{ backgroundImage: `url(${p.src})` }}
+              src={p.src}
+              alt={p.caption || `Polaroid ${i + 1}`}
+              loading={i < 4 ? 'eager' : 'lazy'}
             />
             <div className="polaroid-caption">{p.caption || ''}</div>
           </button>
@@ -58,9 +60,10 @@ export default function PolaroidLightbox({ polaroids }) {
                 ‹
               </button>
             )}
-            <div
+            <img
               className="lightbox-img"
-              style={{ backgroundImage: `url(${polaroids[openIdx].src})` }}
+              src={polaroids[openIdx].src}
+              alt={polaroids[openIdx].caption || `Polaroid ${openIdx + 1}`}
             />
             <div className="lightbox-caption">
               {polaroids[openIdx].caption || ''}

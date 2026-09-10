@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import NavAvatar from '@/components/NavAvatar';
 import { NUMBERS, LEDGER } from '@/lib/content';
 
 export default function LedgerPage() {
@@ -7,9 +8,11 @@ export default function LedgerPage() {
       <div className="top-nav">
         <Link href="/book" className="nav-back">← contents</Link>
         <span className="nav-title">The Ledger</span>
-        <span />
+        <NavAvatar />
       </div>
       <div className="content-page">
+        {/* asset: public/dragons/01_Main_Pack/main_047.png */}
+        <img className="content-header-art" src="/dragons/01_Main_Pack/main_047.png" alt="" />
         <p className="content-eyebrow">the shape of us, in numbers and small acts</p>
         <h1 className="content-title">The Ledger</h1>
 

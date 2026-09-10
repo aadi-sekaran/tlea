@@ -12,7 +12,8 @@ export default function TimeCapsuleSeal({ author, existingLetter, unlocksOn }) {
   if (sealed) {
     return (
       <div className="tc-status">
-        <div style={{ fontSize: '4rem', marginBottom: '1rem' }}>✉︎</div>
+        {/* asset: public/dragons/01_Main_Pack/main_067.png (sleeping pair, tent scene) */}
+        <img className="tc-icon" src="/dragons/01_Main_Pack/main_067.png" alt="" />
         <p className="tc-lock-msg">Your letter is sealed.</p>
         <p className="tc-lock-sub">Unlocks {unlocksOn}.</p>
         {photoUrls.length > 0 && (
@@ -50,6 +51,13 @@ export default function TimeCapsuleSeal({ author, existingLetter, unlocksOn }) {
 
   return (
     <>
+      {/* asset: public/dragons/03_Stickers_Pack/stickers_018.png (awake, sitting-up pair) */}
+      <img
+        className="tc-icon"
+        src="/dragons/03_Stickers_Pack/stickers_018.png"
+        alt=""
+        style={{ marginBottom: '1rem' }}
+      />
       <p className="tc-lock-sub" style={{ marginBottom: '1.5rem' }}>
         Write once. Save = sealed. Read next Sept 19.
       </p>

@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import NavAvatar from '@/components/NavAvatar';
 import { CAST } from '@/lib/content';
 
 export default function CastPage() {
@@ -7,9 +8,11 @@ export default function CastPage() {
       <div className="top-nav">
         <Link href="/book" className="nav-back">← contents</Link>
         <span className="nav-title">The Cast</span>
-        <span />
+        <NavAvatar />
       </div>
       <div className="content-page">
+        {/* asset: public/dragons/03_Stickers_Pack/stickers_012.png */}
+        <img className="content-header-art" src="/dragons/03_Stickers_Pack/stickers_012.png" alt="" />
         <p className="content-eyebrow">two dragons, one story</p>
         <h1 className="content-title">The Cast</h1>
         <div className="cast-grid">

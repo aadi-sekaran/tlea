@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
+import DragonLoader from '@/components/DragonLoader';
 
 export default function LoginPage() {
   const router = useRouter();
@@ -94,6 +95,7 @@ export default function LoginPage() {
             {loading ? 'opening...' : 'Open'}
           </button>
         </form>
+        {loading && <DragonLoader />}
         <p className="login-error">{error}</p>
       </div>
     </div>
