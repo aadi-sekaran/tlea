@@ -17,8 +17,7 @@ export default function ChapterDetail({ params }) {
   const prev = CHAPTERS.find(c => c.num === num - 1);
   const next = CHAPTERS.find(c => c.num === num + 1);
 
-  // Chapter VII has no photo folder (dragon scene instead, per the plan).
-  const { hero, rotation } = num === 7 ? { hero: null, rotation: [] } : getChapterPhotos(num);
+  const { hero, rotation } = getChapterPhotos(num);
   const heroSrcs = [hero, ch.heroImg, CHAPTER_POSTER_FALLBACKS[num]].filter(Boolean);
 
   return (
