@@ -47,7 +47,7 @@ export const SECTION_TILE_ART = {
 };
 
 // ═══════════════════════════════════════════════════════════════════
-// Dragon batch 2 — public/dragons/scenes/. 18 delivered so far, 28 more
+// Dragon batch 2, in public/dragons/scenes/. 18 delivered so far, 28 more
 // trickling in over the next 48 hours. Every lookup below is a candidate
 // list: use with <SafeImg srcs={...} /> so a missing file just falls
 // back down the chain instead of breaking the page.

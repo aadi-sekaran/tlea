@@ -83,7 +83,7 @@ export default function BookHome({ chapterPhotos }) {
         </div>
       </div>
 
-      {/* Farewell letter — between the Ch VII apology card above and the final song section below */}
+      {/* Farewell letter, between the Ch VII apology card above and the final song section below */}
       <div className="farewell-feature-wrap">
         <Link href="/book/farewell" className="farewell-feature-card">
           <p className="farewell-feature-eyebrow">Chapter VII+1 · A farewell letter</p>
