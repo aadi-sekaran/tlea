@@ -1,6 +1,8 @@
 import Link from 'next/link';
 import NavAvatar from '@/components/NavAvatar';
+import SafeImg from '@/components/SafeImg';
 import { FILMS, SERIES } from '@/lib/content';
+import { HEADER_ART } from '@/lib/dragons';
 
 export default function WatchedPage() {
   return (
@@ -11,8 +13,7 @@ export default function WatchedPage() {
         <NavAvatar />
       </div>
       <div className="content-page">
-        {/* asset: public/dragons/01_Main_Pack/main_099.png */}
-        <img className="content-header-art" src="/dragons/01_Main_Pack/main_099.png" alt="" />
+        <SafeImg srcs={HEADER_ART.watched} alt="" className="content-header-art" />
         <p className="content-eyebrow">films and series we lived inside</p>
         <h1 className="content-title">What We Watched</h1>
 

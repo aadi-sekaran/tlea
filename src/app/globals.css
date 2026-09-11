@@ -65,6 +65,7 @@
   --butter: #F3DFA3;
   --brown: #8A6F61;
   --navy: #35445C;
+  --wine: #7A3B4A;
 
   --bg: var(--ivory);
   --bg-soft: var(--cream);
@@ -525,6 +526,58 @@ input, textarea { font-family: inherit; }
   transition: transform 0.25s ease;
 }
 .section-tile:hover .section-tile-bg-dragon { transform: scale(1.06) rotate(-2deg); }
+.section-tile-icon {
+  position: absolute;
+  top: 0.75rem;
+  left: 0.75rem;
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  opacity: 0.9;
+  pointer-events: none;
+}
+
+/* ---- Farewell feature card (browse home, between Ch VII and Final Song) ---- */
+.farewell-feature-wrap {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 2rem 2.5rem;
+}
+.farewell-feature-card {
+  display: block;
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  background: linear-gradient(135deg, var(--wine), var(--rose));
+  box-shadow: var(--shadow-lg);
+  transition: transform 0.25s ease;
+}
+.farewell-feature-card:hover { transform: translateY(-3px); }
+.farewell-feature-eyebrow {
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 0.6rem;
+}
+.farewell-feature-title {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 300;
+  font-size: clamp(1.4rem, 3.4vw, 1.9rem);
+  color: white;
+  line-height: 1.3;
+  margin-bottom: 1.25rem;
+}
+.farewell-feature-cta {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: white;
+  opacity: 0.9;
+}
 
 /* ---- Chapter detail ---- */
 .chapter-hero {
@@ -663,6 +716,45 @@ input, textarea { font-family: inherit; }
   transition: background 0.2s ease;
 }
 .chapter-nav-btn:hover { background: var(--cream); }
+.chapter-mark {
+  display: block;
+  width: 200px;
+  max-width: 60%;
+  height: auto;
+  margin: 2.5rem auto;
+  opacity: 0.9;
+}
+.chapter-carousel-below {
+  position: relative;
+  width: 100%;
+  max-width: 420px;
+  aspect-ratio: 2/3;
+  margin: 0 auto 2.5rem;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+.chapter-carousel-slide,
+.chapter-carousel-still {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.chapter-carousel-slide {
+  opacity: 0;
+  transform: scale(1) translate(0, 0);
+  transition-property: opacity;
+  transition-timing-function: ease-in-out;
+  will-change: transform, opacity;
+}
+.chapter-carousel-slide.active {
+  opacity: 1;
+  animation-name: chapterKenBurns;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
 
 /* ---- Immersive reader ---- */
 .reader {
@@ -681,6 +773,16 @@ input, textarea { font-family: inherit; }
     linear-gradient(rgba(251, 246, 236, 0.65), rgba(251, 246, 236, 0.65)),
     url('/dragons/01_Main_Pack/main_065.png') center 30% / cover no-repeat,
     linear-gradient(180deg, var(--tint-7), var(--bg) 20%);
+}
+.reader-tint-farewell {
+  background: linear-gradient(180deg, var(--wine) 0%, var(--blush) 12%, var(--bg) 26%);
+}
+.reader-tint-farewell .reader-eyebrow,
+.reader-tint-farewell .reader-title {
+  color: white;
+}
+.reader-tint-farewell .reader-body p:first-of-type::first-letter {
+  color: var(--wine);
 }
 .reader-inner {
   max-width: 640px;
@@ -739,6 +841,14 @@ input, textarea { font-family: inherit; }
   height: auto;
   margin: 3rem 0 0 auto;
   opacity: 0.9;
+}
+.farewell-signoff-mark {
+  display: block;
+  width: 160px;
+  max-width: 50%;
+  height: auto;
+  margin: 3.5rem auto 0;
+  opacity: 0.92;
 }
 .reader-tobcontinued {
   margin-top: 4rem;
@@ -895,10 +1005,10 @@ input, textarea { font-family: inherit; }
   justify-content: center;
   padding: 3rem 2rem;
   text-align: center;
-  /* asset: public/dragons/01_Main_Pack/main_066.png (dragons under night sky) */
+  /* asset: public/dragons/scenes/finalsong-cliff.png, warm overlay for readability */
   background:
-    linear-gradient(rgba(251, 246, 236, 0.7), rgba(251, 246, 236, 0.7)),
-    url('/dragons/01_Main_Pack/main_066.png') center 30% / cover no-repeat,
+    linear-gradient(rgba(244, 201, 170, 0.55), rgba(251, 246, 236, 0.82)),
+    url('/dragons/scenes/finalsong-cliff.png') center 30% / cover no-repeat,
     radial-gradient(ellipse at center, var(--peach), var(--ivory) 70%);
 }
 .finalsong-eyebrow {
@@ -980,7 +1090,6 @@ input, textarea { font-family: inherit; }
   display: block;
   width: 100%;
   height: auto;
-  border-radius: 10px;
   margin-bottom: 0.5rem;
 }
 .polaroid-caption {
@@ -1116,6 +1225,7 @@ input, textarea { font-family: inherit; }
   font-family: var(--font-body);
   font-size: 1rem;
   line-height: 1.5;
+  white-space: pre-line;
 }
 .lar-reveal-btn {
   padding: 0.75rem 1.75rem;

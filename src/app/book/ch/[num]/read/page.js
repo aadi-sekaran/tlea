@@ -2,7 +2,9 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import NavAvatar from '@/components/NavAvatar';
 import SectionDivider from '@/components/SectionDivider';
-import { CHAPTERS, APOLOGY } from '@/lib/content';
+import SafeImg from '@/components/SafeImg';
+import { CHAPTERS } from '@/lib/content';
+import { CHAPTER_MARKS } from '@/lib/dragons';
 
 // No generateStaticParams: NavAvatar reads the session per-request, which
 // static generation would otherwise bake in empty forever.
@@ -13,7 +15,7 @@ export default function ChapterReader({ params }) {
 
   const prev = CHAPTERS.find(c => c.num === num - 1);
   const next = CHAPTERS.find(c => c.num === num + 1);
-  const isUnwritten = ch.prose.length === 1 && ch.prose[0].includes('is being written');
+  const isUnwritten = ch.prose.length === 0;
 
   return (
     <div className="book-shell">
@@ -26,11 +28,14 @@ export default function ChapterReader({ params }) {
         <div className="reader-inner">
           <p className="reader-eyebrow">chapter {ch.romanNum}</p>
           <h1 className="reader-title">{ch.title}</h1>
+
+          <SafeImg srcs={CHAPTER_MARKS[num] || []} alt="" className="chapter-mark" />
+
           {isUnwritten ? (
             <div className="empty-state">
               {/* asset: public/dragons/01_Main_Pack/main_001.png */}
               <img className="empty-state-art" src="/dragons/01_Main_Pack/main_001.png" alt="" />
-              <p className="empty-state-text">{ch.prose[0]}</p>
+              <p className="empty-state-text">{ch.tobcontinued || 'Coming soon.'}</p>
             </div>
           ) : (
             <div className="reader-body">
@@ -38,7 +43,7 @@ export default function ChapterReader({ params }) {
             </div>
           )}
 
-          {ch.tobcontinued && (
+          {ch.tobcontinued && !isUnwritten && (
             <>
               <SectionDivider />
               <div className="reader-tobcontinued">{ch.tobcontinued}</div>
@@ -47,22 +52,22 @@ export default function ChapterReader({ params }) {
 
           {ch.hasApology && (
             <div className="reveal-note">
-              <div className="reveal-note-lead">and then, the apology</div>
               <div style={{ padding: '1rem 0', color: 'var(--brown)' }}>
-                {APOLOGY.body.map((p, i) => (
-                  <p key={i} style={{ marginBottom: '1rem', fontFamily: 'var(--font-display)', fontStyle: 'italic', lineHeight: '1.7' }}>
-                    {p}
-                  </p>
+                {(ch.signoff || '').split('\n').map((line, i) => (
+                  line ? (
+                    <p key={i} style={{ marginBottom: '0.5rem', fontFamily: 'var(--font-hand)', fontSize: '1.3rem', color: 'var(--rose)' }}>
+                      {line}
+                    </p>
+                  ) : null
                 ))}
-                <p style={{ fontFamily: 'var(--font-hand)', fontSize: '1.4rem', color: 'var(--rose)', marginTop: '1.5rem' }}>
-                  {APOLOGY.signoff}
-                </p>
-                <p style={{ marginTop: '1rem', fontSize: '0.9rem', opacity: 0.75 }}>
-                  {APOLOGY.ps}
-                </p>
+                {ch.ps && (
+                  <p style={{ marginTop: '1rem', fontSize: '0.9rem', opacity: 0.75 }}>
+                    {ch.ps}
+                  </p>
+                )}
               </div>
-              <Link href="/book/finalsong" className="reveal-note-btn">
-                → the final song
+              <Link href="/book/farewell" className="reveal-note-btn">
+                → a farewell letter
               </Link>
             </div>
           )}

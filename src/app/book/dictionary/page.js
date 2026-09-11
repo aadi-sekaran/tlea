@@ -1,6 +1,8 @@
 import Link from 'next/link';
 import NavAvatar from '@/components/NavAvatar';
+import SafeImg from '@/components/SafeImg';
 import { DICTIONARY } from '@/lib/content';
+import { HEADER_ART } from '@/lib/dragons';
 
 export default function DictionaryPage() {
   return (
@@ -11,8 +13,7 @@ export default function DictionaryPage() {
         <NavAvatar />
       </div>
       <div className="content-page">
-        {/* asset: public/dragons/01_Main_Pack/main_017.png */}
-        <img className="content-header-art" src="/dragons/01_Main_Pack/main_017.png" alt="" />
+        <SafeImg srcs={HEADER_ART.dictionary} alt="" className="content-header-art" />
         <p className="content-eyebrow">words only we use</p>
         <h1 className="content-title">The Dictionary</h1>
         {DICTIONARY.map(shelf => (

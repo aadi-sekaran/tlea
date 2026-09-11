@@ -1,7 +1,9 @@
 'use client';
 
 import Link from 'next/link';
+import SafeImg from '@/components/SafeImg';
 import { ON_THIS_DAY } from '@/lib/content';
+import { HEADER_ART } from '@/lib/dragons';
 
 const MONTHS = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
 
@@ -27,8 +29,7 @@ export default function OnThisDayPage() {
         <span />
       </div>
       <div className="content-page">
-        {/* asset: public/dragons/01_Main_Pack/main_062.png */}
-        <img className="content-header-art" src="/dragons/01_Main_Pack/main_062.png" alt="" />
+        <SafeImg srcs={HEADER_ART.onthisday} alt="" className="content-header-art" />
         <p className="content-eyebrow">today, one year ago (or two, or three)</p>
         <h1 className="content-title">On This Day</h1>
 

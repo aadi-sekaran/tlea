@@ -2,9 +2,10 @@
 
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
-import { CHAPTERS, SECTIONS, ON_THIS_DAY } from '@/lib/content';
-import { CHAPTER_POSTER_FALLBACKS, SECTION_TILE_ART } from '@/lib/dragons';
+import { CHAPTERS, SECTIONS, ON_THIS_DAY, FAREWELL } from '@/lib/content';
+import { CHAPTER_POSTER_FALLBACKS, SECTION_TILE_ART, TILE_ICON_ART } from '@/lib/dragons';
 import ChapterHero from '@/components/ChapterHero';
+import SafeImg from '@/components/SafeImg';
 
 export default function BookHome({ chapterPhotos }) {
   const [heroIdx, setHeroIdx] = useState(0);
@@ -82,12 +83,26 @@ export default function BookHome({ chapterPhotos }) {
         </div>
       </div>
 
+      {/* Farewell letter — between the Ch VII apology card above and the final song section below */}
+      <div className="farewell-feature-wrap">
+        <Link href="/book/farewell" className="farewell-feature-card">
+          <p className="farewell-feature-eyebrow">Chapter VII+1 · A farewell letter</p>
+          <h2 className="farewell-feature-title">{FAREWELL.title}</h2>
+          <span className="farewell-feature-cta">Read the letter →</span>
+        </Link>
+      </div>
+
       {/* Section grid */}
       <div>
         <p className="section-eyebrow">Every corner of us</p>
         <div className="section-grid">
           {SECTIONS.map(s => (
             <Link key={s.slug} href={`/book/${s.slug}`} className="section-tile">
+              <SafeImg
+                srcs={TILE_ICON_ART[s.slug]}
+                alt=""
+                className="section-tile-icon"
+              />
               <div>
                 <div className="section-tile-title">{s.title}</div>
                 <div className="section-tile-sub">{s.sub}</div>

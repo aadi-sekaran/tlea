@@ -1,6 +1,8 @@
 import Link from 'next/link';
 import NavAvatar from '@/components/NavAvatar';
+import SafeImg from '@/components/SafeImg';
 import { TRIPS } from '@/lib/content';
+import { HEADER_ART } from '@/lib/dragons';
 
 export default function TripsPage() {
   return (
@@ -13,8 +15,7 @@ export default function TripsPage() {
       <div className="content-page">
         <p className="content-eyebrow">four before, one to come</p>
         <h1 className="content-title">Our Trips</h1>
-        {/* asset: public/dragons/01_Main_Pack/main_080.png (adventure box scene) */}
-        <img className="trips-header-art" src="/dragons/01_Main_Pack/main_080.png" alt="" />
+        <SafeImg srcs={HEADER_ART.trips} alt="" className="trips-header-art" />
         {TRIPS.map((t, i) => (
           <div key={i} className={`trip-card ${t.special ? 'trip-special' : ''}`}>
             <div className="trip-header">
