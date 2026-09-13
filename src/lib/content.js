@@ -398,8 +398,8 @@ export const SONGLINK_PLAYLIST = 'https://song.link/https://open.spotify.com/pla
 export const FILMS = [
   { name: 'Eternal Sunshine of the Spotless Mind', note: null },
   { name: 'Aaromaley', note: null },
-  { name: 'Dheeran', note: null },
-  { name: 'Vikram Vedha', note: 'we paused this to argue about who was Vikram' },
+  { name: 'Theeran Adhigaaram Ondru', note: null },
+  { name: 'Saba Nayagan', note: null },
   { name: 'Harry Potter and the Philosopher\'s Stone', note: null },
   { name: 'Harry Potter and the Chamber of Secrets', note: null },
   { name: 'Harry Potter and the Prisoner of Azkaban', note: null },
@@ -462,6 +462,7 @@ export const FILMS = [
   { name: 'Dude', note: null },
   { name: 'With Love', note: null },
   { name: 'DNA', note: null },
+  { name: 'Nilavuku En Mel Ennadi Kobam', note: null },
   { name: '12th Fail', note: null },
   { name: 'Oh My Kadavule', note: null },
   { name: 'Dragon', note: null },

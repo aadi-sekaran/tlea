@@ -356,8 +356,8 @@ export const watched = {
   films: [
     "Eternal Sunshine of the Spotless Mind",
     "Aaromaley",
-    "Dheeran",
-    "Vikram Vedha",
+    "Theeran Adhigaaram Ondru",
+    "Saba Nayagan",
     "Harry Potter and the Philosopher's Stone",
     "Harry Potter and the Chamber of Secrets",
     "Harry Potter and the Prisoner of Azkaban",
@@ -420,6 +420,7 @@ export const watched = {
     "Dude",
     "With Love",
     "DNA",
+    "Nilavuku En Mel Ennadi Kobam",
     "12th Fail",
     "Oh My Kadavule",
     "Dragon",
