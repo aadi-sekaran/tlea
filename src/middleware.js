@@ -14,6 +14,8 @@ export async function middleware(request) {
     pathname.startsWith('/audio') ||
     pathname.startsWith('/paintings') ||
     pathname.startsWith('/polaroids') ||
+    pathname.startsWith('/opening') ||
+    pathname.startsWith('/images') ||
     pathname.startsWith('/api/cron')
   ) {
     return NextResponse.next();
