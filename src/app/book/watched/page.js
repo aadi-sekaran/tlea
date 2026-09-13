@@ -3,6 +3,45 @@ import NavAvatar from '@/components/NavAvatar';
 import SafeImg from '@/components/SafeImg';
 import { FILMS, SERIES } from '@/lib/content';
 import { HEADER_ART } from '@/lib/dragons';
+import posters from '@/lib/posters.generated.json';
+
+const TMDB_IMG = 'https://image.tmdb.org/t/p/w342';
+
+// Prefer Aadi's own note when he wrote one; otherwise fall back to TMDB's
+// real overview, trimmed to roughly one line. Nothing here is invented.
+function oneLiner(entry, poster) {
+  if (entry.note) return entry.note;
+  if (!poster || !poster.overview) return null;
+  const firstSentence = poster.overview.split(/(?<=[.!?])\s/)[0];
+  const text = firstSentence.length <= 140 ? firstSentence : `${poster.overview.slice(0, 137)}...`;
+  return text;
+}
+
+function PosterGrid({ items, kind }) {
+  return (
+    <div className="watched-grid">
+      {items.map(entry => {
+        const poster = posters[kind][entry.name];
+        const posterUrl = poster && poster.posterPath ? `${TMDB_IMG}${poster.posterPath}` : null;
+        const line = oneLiner(entry, poster);
+        return (
+          <div key={entry.name} className="watched-card">
+            <div className="watched-poster">
+              <SafeImg
+                srcs={posterUrl ? [posterUrl] : []}
+                alt={`${entry.name} poster`}
+                className="watched-poster-img"
+                textFallback={entry.name}
+              />
+            </div>
+            <div className="watched-card-title">{entry.name}</div>
+            {line && <div className="watched-card-line">{line}</div>}
+          </div>
+        );
+      })}
+    </div>
+  );
+}
 
 export default function WatchedPage() {
   return (
@@ -17,29 +56,11 @@ export default function WatchedPage() {
         <p className="content-eyebrow">films and series we lived inside</p>
         <h1 className="content-title">What We Watched</h1>
 
-        <h2 style={{ marginTop: '2rem', marginBottom: '1rem', fontFamily: 'var(--font-display)', fontStyle: 'italic', color: 'var(--rose)' }}>
-          Films
-        </h2>
-        <div className="item-list">
-          {FILMS.map(f => (
-            <div key={f.name} className="item">
-              <span className="item-name">{f.name}</span>
-              {f.note && <span className="item-note">{f.note}</span>}
-            </div>
-          ))}
-        </div>
+        <h2 className="watched-section-title">Films</h2>
+        <PosterGrid items={FILMS} kind="films" />
 
-        <h2 style={{ marginTop: '3rem', marginBottom: '1rem', fontFamily: 'var(--font-display)', fontStyle: 'italic', color: 'var(--rose)' }}>
-          Series
-        </h2>
-        <div className="item-list">
-          {SERIES.map(s => (
-            <div key={s.name} className="item">
-              <span className="item-name">{s.name}</span>
-              {s.note && <span className="item-note">{s.note}</span>}
-            </div>
-          ))}
-        </div>
+        <h2 className="watched-section-title" style={{ marginTop: '3rem' }}>Series</h2>
+        <PosterGrid items={SERIES} kind="series" />
       </div>
     </div>
   );
