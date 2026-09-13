@@ -1279,6 +1279,44 @@ input, textarea { font-family: inherit; }
 }
 .lar-next-btn:hover { background: var(--cream); }
 
+/* ---- Voice notes ---- */
+.voicenotes-player {
+  max-width: 480px;
+  margin: 2rem auto 0;
+  padding: 2rem;
+  background: white;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  text-align: center;
+}
+.voicenotes-progress {
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--rose);
+  margin-bottom: 0.5rem;
+}
+.voicenotes-speaker {
+  font-family: var(--font-display);
+  font-style: italic;
+  color: var(--brown);
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+.voicenotes-audio {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+.voicenotes-caption {
+  font-family: var(--font-body);
+  color: var(--text);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
 /* ---- Time capsule ---- */
 .tc-shell {
   max-width: 640px;

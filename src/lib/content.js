@@ -834,6 +834,7 @@ export const SECTIONS = [
   { slug: 'onthisday', title: 'On This Day', sub: 'today, one year ago', dragon: 'moon' },
   { slug: 'lineandreply', title: 'The Line and the Reply', sub: 'a conversation, replayed', dragon: 'bubble2' },
   { slug: 'polaroids', title: 'Polaroids', sub: 'moments printed', dragon: 'stamp' },
+  { slug: 'voicenotes', title: 'Voice Notes', sub: 'random recordings, hers and mine', dragon: 'mic' },
   { slug: 'timecapsule', title: 'Time Capsule', sub: 'a letter for a year from now', dragon: 'jar' },
   { slug: 'finalsong', title: 'The Final Song', sub: 'the final one', dragon: 'sunset' },
   { slug: 'release', title: 'Release', sub: 'the way out, if you want it', dragon: 'sleeping' }

@@ -50,7 +50,8 @@ export const SECTION_TILE_ART = {
   stamp: '/dragons/03_Stickers_Pack/stickers_050.png',    // Polaroids — polaroid-shaped sticker
   jar: '/dragons/03_Stickers_Pack/stickers_030.png',      // Time Capsule — jar of stars
   sunset: '/dragons/01_Main_Pack/main_066.png',           // Final Song — night sky scene
-  sleeping: '/dragons/02_Flying_Poses/flying_012.png'     // Release — a dragon flying off
+  sleeping: '/dragons/02_Flying_Poses/flying_012.png',    // Release — a dragon flying off
+  mic: '/dragons/03_Stickers_Pack/stickers_060.png'       // Voice Notes — reuses the music-note sticker, no dedicated art yet
 };
 
 // ═══════════════════════════════════════════════════════════════════
@@ -104,7 +105,8 @@ export const HEADER_ART = {
   onthisday: ['/dragons/scenes/ontd-header.png', '/dragons/01_Main_Pack/main_062.png'],
   watched: ['/dragons/scenes/watched-header.png', '/dragons/01_Main_Pack/main_099.png'],
   dictionary: ['/dragons/scenes/dictionary-header.png', '/dragons/01_Main_Pack/main_017.png'],
-  trips: ['/dragons/scenes/trips-header.png', '/dragons/01_Main_Pack/main_080.png']
+  trips: ['/dragons/scenes/trips-header.png', '/dragons/01_Main_Pack/main_080.png'],
+  voicenotes: ['/dragons/scenes/voicenotes-header.png', '/dragons/03_Stickers_Pack/stickers_060.png']
 };
 
 export const ERROR_ART = ['/dragons/scenes/error-oops.png'];
