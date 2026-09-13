@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
-import { CHAPTERS, SECTIONS, ON_THIS_DAY, FAREWELL } from '@/lib/content';
+import { CHAPTERS, SECTIONS, ON_THIS_DAY, LAST_APOLOGY, FAREWELL } from '@/lib/content';
 import { CHAPTER_POSTER_FALLBACKS, SECTION_TILE_ART, TILE_ICON_ART } from '@/lib/dragons';
 import ChapterHero from '@/components/ChapterHero';
 import SafeImg from '@/components/SafeImg';
@@ -83,10 +83,17 @@ export default function BookHome({ chapterPhotos }) {
         </div>
       </div>
 
-      {/* Farewell letter, between the Ch VII apology card above and the final song section below */}
+      {/* The last apology and the farewell letter, between Ch VII above and the final song section below */}
+      <div className="farewell-feature-wrap">
+        <Link href="/book/apology" className="farewell-feature-card apology-feature-card">
+          <p className="farewell-feature-eyebrow">Chapter VII+1 · The last apology</p>
+          <h2 className="farewell-feature-title">{LAST_APOLOGY.title}</h2>
+          <span className="farewell-feature-cta">Read it →</span>
+        </Link>
+      </div>
       <div className="farewell-feature-wrap">
         <Link href="/book/farewell" className="farewell-feature-card">
-          <p className="farewell-feature-eyebrow">Chapter VII+1 · A farewell letter</p>
+          <p className="farewell-feature-eyebrow">Chapter VII+2 · A farewell letter</p>
           <h2 className="farewell-feature-title">{FAREWELL.title}</h2>
           <span className="farewell-feature-cta">Read the letter →</span>
         </Link>

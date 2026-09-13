@@ -440,6 +440,6 @@ export const watched = {
     "The Neighborhood",
     "Suzhal – The Vortex",
     "Vadhandhi – The Fable of Velonie",
-    "Kutram Purindhavan",
+    "Kuttram Purindhavan",
   ],
 };

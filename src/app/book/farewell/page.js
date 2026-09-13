@@ -8,7 +8,7 @@ export default function FarewellPage() {
   return (
     <div className="book-shell">
       <div className="top-nav">
-        <Link href="/book/ch/7/read" className="nav-back">← chapter VII</Link>
+        <Link href="/book/apology" className="nav-back">← the last apology</Link>
         <span className="nav-title">A Farewell Letter</span>
         <NavAvatar />
       </div>
@@ -23,8 +23,8 @@ export default function FarewellPage() {
           <SafeImg srcs={FAREWELL_SIGNOFF_ART} alt="" className="farewell-signoff-mark" />
 
           <div className="chapter-next-prev" style={{ marginTop: '3rem' }}>
-            <Link href="/book/ch/7/read" className="chapter-nav-btn">
-              ← Ch VII
+            <Link href="/book/apology" className="chapter-nav-btn">
+              ← the last apology
             </Link>
             <Link href="/book/finalsong" className="chapter-nav-btn">
               the final song →

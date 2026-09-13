@@ -40,8 +40,8 @@ const sleep = ms => new Promise(r => setTimeout(r, ms));
 const OVERRIDES = {
   'Tamizh Padam': { kind: 'film', query: 'Thamizh Padam' },
   'Velaiilla Pattadhari': { kind: 'film', query: 'Velaiyilla Pattathari' },
-  'With Love': { kind: 'series', query: 'With Love' }, // TMDB has this as a 2021 TV series, not a film
-  'Panchathanthiram': null // not findable on TMDB under any spelling tried; left posterless
+  'With Love': { kind: 'film', query: 'With Love', year: 2026 }, // the 2026 Tamil film, not the 2021 US series or the Bond films
+  'Panchathanthiram': null // Aadi confirmed the 2002 Kamal Haasan film; not findable on TMDB under any spelling tried, left posterless
 };
 
 function normalize(str) {
@@ -54,9 +54,10 @@ function normalize(str) {
 // that happens to share the name.
 const PREFERRED_LANGS = ['ta', 'ml', 'te', 'hi', 'kn'];
 
-async function tmdbSearch(kind, title) {
+async function tmdbSearch(kind, title, year) {
   const endpoint = kind === 'film' ? 'movie' : 'tv';
-  const url = `https://api.themoviedb.org/3/search/${endpoint}?query=${encodeURIComponent(title)}&include_adult=false&language=en-US&page=1`;
+  const yearParam = year ? `&${kind === 'film' ? 'year' : 'first_air_date_year'}=${year}` : '';
+  const url = `https://api.themoviedb.org/3/search/${endpoint}?query=${encodeURIComponent(title)}&include_adult=false&language=en-US&page=1${yearParam}`;
   const res = await fetch(url, {
     headers: {
       Authorization: `Bearer ${TOKEN}`,
@@ -95,8 +96,9 @@ async function fetchFor(kind, titles) {
     const override = OVERRIDES[title];
     const searchKind = override ? override.kind : kind;
     const searchQuery = override ? override.query : title;
+    const searchYear = override ? override.year : undefined;
     try {
-      const result = await tmdbSearch(searchKind, searchQuery);
+      const result = await tmdbSearch(searchKind, searchQuery, searchYear);
       if (result) {
         const matchedTitle = result.title || result.name;
         const year = (result.release_date || result.first_air_date || '').slice(0, 4);

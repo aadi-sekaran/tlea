@@ -50,24 +50,10 @@ export default function ChapterReader({ params }) {
             </>
           )}
 
-          {ch.hasApology && (
+          {!next && (
             <div className="reveal-note">
-              <div style={{ padding: '1rem 0', color: 'var(--brown)' }}>
-                {(ch.signoff || '').split('\n').map((line, i) => (
-                  line ? (
-                    <p key={i} style={{ marginBottom: '0.5rem', fontFamily: 'var(--font-hand)', fontSize: '1.3rem', color: 'var(--rose)' }}>
-                      {line}
-                    </p>
-                  ) : null
-                ))}
-                {ch.ps && (
-                  <p style={{ marginTop: '1rem', fontSize: '0.9rem', opacity: 0.75 }}>
-                    {ch.ps}
-                  </p>
-                )}
-              </div>
-              <Link href="/book/farewell" className="reveal-note-btn">
-                → a farewell letter
+              <Link href="/book/apology" className="reveal-note-btn">
+                → the last apology
               </Link>
             </div>
           )}

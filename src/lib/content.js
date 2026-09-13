@@ -20,7 +20,21 @@ export const APOLOGY = {
   ps: "PS. If you ever want this taken down, tell me, and it comes down that day. This is yours."
 };
 
-// Goes between Chapter VII (the apology) and the Final Song.
+// Its own page now, between Chapter VII and the farewell letter.
+export const LAST_APOLOGY = {
+  title: 'The last ever apology, truly',
+  eyebrow: 'the last apology',
+  paragraphs: [
+    `I am sorry for making you go through so many things you never thought would come from me. I fell from the high pedestal you kept me on, and I think that says everything about how far I've fallen. You had kept me somewhere near the sky. Funnily, I am not even on the ground now. I'm down under.`,
+    `I am sorry for everything I have done. I am going to be sorry for the rest of my life for being foolish enough to lose a diamond I had in my hand.`,
+    `I know now what I would do and how I would be, if I got to do it all over again. But life doesn't work that way. And if it did, if it came around again, you would have to be with me again, and that sucks. I definitely don't like saying this. In fact, I hate it. But I know your life with someone else is going to be as beautiful as you are. You are soon going to be very happy. You are going to have a peaceful life with all the love in the world I was not able to give you the way you wanted.`,
+    `I want the best, and only the best, for you.`
+  ],
+  signoff: `Signing off as tears roll from my eyes for losing the beauty, and emptying my life.\n\nForever yours, and only yours,\nYour Ammu`,
+  ps: `PS. This site will be here for us as long as you want. If you want it taken down, just let me know.`
+};
+
+// Goes between the last apology and the Final Song.
 export const FAREWELL = {
   title: 'So, this is more like a farewell letter to you.',
   eyebrow: 'A farewell letter',
@@ -51,21 +65,20 @@ export const CHAPTERS = [
     romanNum: 'I',
     shortTitle: 'THE MEETING',
     title: 'How it began',
-    dates: 'February 2023 — October 2023',
-    teaser: 'A Facebook message. A Chennai coffee. A rain-soaked Dublin walk. Three months of getting to know you before Ireland ever entered the picture.',
+    dates: 'February 2023 — September 18, 2023',
+    teaser: 'A Facebook message. A closed coffee shop. A drive home the wrong way. And months of daily talk that built into something neither of them could name yet, until September 18th.',
     heroImg: '/paintings/chapter-01-hero.jpg',
     posterImg: '/paintings/chapter-01-hero.jpg',
     tint: 'reader-tint-1',
     prose: [
-      `There was this guy who did not know what was going to happen to him in Ireland. All he wanted to do was study there, live there for a couple of years, maybe more, and come back to India. Or even get settled there. He did not know. He was out of a long-term relationship, and he was not hoping to find anybody. He just wanted to be alone. He just wanted to live alone. One of the reasons why he took Proby.`,
-      `Then there was this girl who he had met on February 18th, 2023, on Facebook. Randomly scrolling through the timeline of the newly created Facebook group for the UCD 2023 intake, out of nowhere, he sees a girl who has posted something about being in Chennai and going to study UCD HRM. That moment, he did not know. He did not have any idea why he texted that person. But that's when the journey started. That's when everything started.`,
-      `He just started talking, and nothing much went on. He just felt like he had someone he knew in the college before he even went to the college. By June, they made a plan to meet. And finally, avaa vandhu meet pannalaam appadinnu sollumbodhu, ivanukku orey nadukkam. Ivala meet pannalama, illa panna vendama? Ivan Silentro friend-ah koottittu pogalama? Enna na, ivan oru pudhu ponnoada pesi romba naal aachu. Enna panradhu-nu theriyala. Sari, okay. Vera vazhi illa. Meet pannalaam.`,
-      `Appadinnu ninaikkumbodhu, andha ponnu oru moonu options kuduthu, indha paiyankitta kekkura, edhu okay appadinnu sollittu. Kadaisila avanga rendu perum serndhu oru coffee shop decide pannuraanga. Andha coffee shop-ku aaru manikku polaam-nu mudivu pannuraanga. Aana indha paiyan aare kaalukkulaam andha idathukku vandhuttan. Vandhu paatha, andha idam closed. Ennada idhu closed-ah irukke? Appadinnu visaarichu paatha, andha idam close aagi romba naal aagudhu.`,
-      `Sari-nu indha ponnu-kku call panni sollalaam. Paavam vandhuttu poga pora, appadinnu call panna, andha ponnu call edukala. Innoru thadava try panna, andha ponnu call eduthu, "Naan ippothaan veetla irundhu kelamburen," appadinnu solra. Sari. Udane decide panni, avanga kitta irundha second option-ah select panni, avanga ponaanga. Pona, konja neram wait panna, andha ponnu vara.`,
-      `Ivanum thonodane edho pesikkitte irukaan. Ivanukku nervousness jaasthi. Andha ponnu enna ninaichiruvaalo-nu oru padattam. Romba naalaikku appuram oru pudhu aala paakrom. Enna pesuradhu-nu theriyala. Edhuvum pesikkitte iruppom. Pesitte irukaan. Vaaya moodave illa. Aana andha ponnu konjam strict-ah irundha. Paarka appadithaan irundha. Aanaalum andha ponnukitta pesittu irundhaan.`,
-      `Pesi mudichuttu veettukku kilambalaam appadinnu pogumbodhu, paatha, indha ponnu, "Drop pannuren," appadinnu solra. Romba naalaikku appuram oru ponnu vandi otti paakra. Andha ponnu drop pannavaanu kekkura. Idhellaam avanukku romba pudhusaa irundhuchu. Romba naal aachu.`,
-      `Sari-nu, ava drop pannuradhukku Vadapalani station-la irakki viduvaannu paatha, ava Vadapalani flyover-ah thaandi Ashok Nagar-la irakki vidura. Idhellaam nadakkumbodhu, ivanukku oru vithiyasamaana oru yosana. Enna indha ponnu varaen-nu sollittu late-ah vara. Nammala drop pannuraen-nura. Drop panna thappaavum drop pannura. Ivan konjam strict-ahvum irukka. Adhe samayathula funny-ahvum irukkaale. Idhu enna oru aachariyamaana combination-ah irukku, appadinnu yosichittu poiduraan veettukku.`,
-      `Poyittu avanga pesuradha continue pannuraanga. Angathaan aarambikkudhu. Ivanukku annaikku raathiri Chennai-la bayangara veyil. Thideernu naalu manikku mazhai pogudhu. Eduthu paatha, andha ponnu text pannirukka. Reply panna, andha ponnum reply pannura. "Ennada idhu? Ippadi reply pannirukka?" Sari-nu solli pesa aarambikkuraanga. Andha ponnu kekkura, "Enna aachu?" "AC over-ah work aagi romba kuliri naan ezhinchiten" apdi indha payyan solraan.`,
+      `There was a guy who genuinely didn't know what was coming for him in Ireland. All he wanted, going in, was to study there, live there a couple of years, maybe more, and figure the rest out later, India or Ireland, he hadn't decided. He'd just come out of a long relationship and wasn't looking for another one. He wanted to be alone, actually alone, and that was a real part of why he took the room at Proby in the first place.`,
+      `Then there was a girl he met on February 18th, 2023, on Facebook. He was scrolling through a newly created group for the UCD 2023 intake, not looking for anything in particular, when he came across a post from someone in Chennai who was going to study HRM at UCD. He never really understood, even after, why he messaged her. But that was the start of it. That was where everything began.`,
+      `They just started talking. Nothing much happened at first, no big spark, just the strange comfort of already knowing someone before he'd even set foot in the college he was moving countries for. By June, they made a plan to meet.`,
+      `He was nervous about it in a way that surprised him. Should he even go. Should he bring a friend along just in case, or go alone. He'd been talking to this girl for a while now and had no idea what he was actually supposed to do about it. In the end there wasn't really another option. He'd go.`,
+      `She gave him three places to choose from, left the decision to him, and he picked one. They settled on a coffee shop and agreed on six in the evening. He showed up an hour early, keyed up in the way you are before something you've been thinking about for weeks, and found the place shut. Closed for good, as it turned out, closed long before that day. He called her to let her know, feeling a little foolish standing outside a shuttered coffee shop. She didn't pick up the first time. He tried again, and this time she answered, telling him she'd only just left home. So they switched to her second option instead, and he went and waited there.`,
+      `When she finally arrived, he couldn't stop talking. Nerves, mostly, the specific kind that comes from meeting someone new after weeks of only knowing their voice and their texts, wondering the whole time what she made of him. He talked and talked. She was a little reserved in person, more guarded than he'd expected, but he kept going anyway, and she stayed and listened.`,
+      `When it was time to head home, she offered to drop him. He hadn't had a girl drive him anywhere in a long time, and something about it caught him off guard, in a good way. She was meant to drop him at Vadapalani station. Instead she drove past the flyover and let him off in Ashok Nagar, further than she needed to. He noticed that, filed it away, this strange, funny contradiction in her, someone who came across strict and serious and was, underneath that, quietly thoughtful in a way that didn't match the first impression at all. An unusual combination, he thought, heading home that night.`,
+      `They kept talking after that. That's really where it started. That same night, Chennai had been brutally hot all day, and then out of nowhere, around four, it poured. He checked his phone and found a text from her. He replied, and she replied back almost immediately, which surprised him enough that he said something like, since when do you actually reply this fast. She asked what had happened on his end. He told her his AC had stopped working and he'd woken up freezing, which wasn't really true, he just wanted an excuse to keep talking to her.`,
       `From June 3rd, they just started talking every day. Not the kind of talking two people do when they're being polite about staying in touch. Every single night he'd wake up at some random hour and grab his phone, and she'd already be there. Online. He never had to check if she was up. She just was. So they'd talk, at 2am, at 4am, whenever his body decided to wake him, because some part of him already knew she was worth losing sleep over.`,
       `Somewhere in those weeks, her dog died. Kaizen. It hit her hard, harder than she let on at first. One night she wanted to talk about him, needed to, and Aadi changed the subject. He meant well. He thought he was protecting her from sitting in it any longer than she had to. It didn't land that way. She wanted to be heard, not redirected, and it turned into a small fight. Not a big one. But real. It taught him something. How much she'd loved that dog, and how much more emotionally grounded she was than he'd given her credit for.`,
       `A few weeks later a mutual friend planned an evening at Phoenix Mall. Krithika showed up late, she was shopping somewhere else, unbothered by the time the way she usually was. When she got there it was fun, and then their friend had to leave early. First time it was just the two of them. Four in the evening turned into ten at night before either of them noticed. He felt good that day. Like nothing was in the way.`,
@@ -94,8 +107,8 @@ export const CHAPTERS = [
     romanNum: 'II',
     shortTitle: 'FIRSTS',
     title: 'Everything for the first time',
-    dates: 'October 2023 — Early 2024',
-    teaser: 'First Diwali. First Christmas. First snow. First house. Everything happening at once, and none of it feeling like it could have happened any other way.',
+    dates: 'September 18, 2023 — February 14, 2024',
+    teaser: 'The morning after the kiss, and everything that followed for the first time. First I love you. First Christmas nursed through fever. First official date. And the ask.',
     heroImg: null,
     posterImg: null,
     tint: 'reader-tint-2',
@@ -127,17 +140,33 @@ export const CHAPTERS = [
     romanNum: 'III',
     shortTitle: 'BUILDING',
     title: 'Building a room',
-    dates: '2024',
-    teaser: '26 Woodbine. Then 18 Potters Hill. Cooking, groceries, the rented cycle to Aldi, the projector, the couch nobody sat on properly.',
+    dates: 'February 14 — October 31, 2024',
+    teaser: 'Moving into Woodbine, first snow, a trip home to India, and the slow build of a real shared life in Dublin, good days and one very bad night, right up to finding Potters Hill.',
     heroImg: null,
     posterImg: null,
     tint: 'reader-tint-3',
     prose: [
       `Not long after Valentine's Day, they started actually house hunting for real. In between all of it, there were still their part-time jobs to juggle, his and hers running on different schedules. More than a couple of times, once his own shift ended, he'd go straight over to visit her at hers before heading home. Around then he also had a big presentation coming up, and she showed up to cheer him on, brought along a chocolate bar for him, and then ended up eating it herself on the way there before he ever got a bite. That was the kind of thing that kept happening between them, small and a little silly and somehow always sweet.`,
-      `Eventually they settled on a place in Woodbine. Decided on it, put down the advance, and had everything squared away by February 26th, with the move itself set to happen between March 1st and 7th.`,
+      `Eventually they settled on a place in Woodbine. Decided on it, put down the advance, and had everything squared away by February 26th, with the move itself set to happen between March 1st and 7th. Around this same stretch Krithika lost her job at Eddie Rockets, they wouldn't give her the holidays she needed, so she picked up work at McDonald's instead, all of it happening before the India trip they already had booked.`,
       `On the morning of March 1st, around ten, they got their first snow together. First snow either of them had ever seen in their lives. It's hard to describe how strange and beautiful that moment was without sounding like every other person who's ever talked about their first snow, but for them it really was something else. They went out and played in it for over an hour, took photo after photo. The one thing that still bothers him, even now, is that somehow, in all of that, they never once got a photo of the two of them together in the snow.`,
       `By March 7th, they'd fully moved out of her place and into the new one. 26 Woodbine. Their address now. With flights to India booked for March 9th, those two days in between were just packing, nothing else, since all the shopping had already been done ahead of time. They were beyond excited to finally be heading home after seven months away.`,
-      `That last night before the flight was a long one. Twenty four hours in the air, landing in India on the evening of March 9th. It was the first night in a long while that they slept apart from each other, and it hit harder than either of them expected. Genuinely hard on both of them.`
+      `That last night before the flight was a long one. Twenty four hours in the air, landing in India on the evening of March 9th. It was the first night in a long while that they slept apart from each other, and it hit harder than either of them expected. Genuinely hard on both of them.`,
+      `Being back in the same country but not the same house meant they had to get creative about seeing each other. Two or three days after landing, they met up to eat soya chops and ice cream, just the two of them, stealing whatever time they could. Within two days of that, they met again near Express Avenue Mall and snuck into an OYO for the evening, not for any reason beyond wanting to be near each other without an audience.`,
+      `On March 15th, Aadi, Krithika and her friend Kavin went to a fair together, rode the giant wheel, had a genuinely fun evening. After that there was a stretch with no meetups at all.`,
+      `Then came March 19th, when Aadi's parents happened to be out of Chennai. It was also their six month anniversary. The night before, Krithika stayed over at Kavin's, and Aadi used that window to plan a surprise with Kavin's help, a bouquet, meeting her before the evening properly started, a car ride, time at the beach. As romantic as he could make it. They ended up spending the whole night together at their favorite beach, and it turned into one of the best nights they'd had together in India, not the first time they'd been intimate, but one of the best.`,
+      `March 22nd, they went and bought her first iPhone. He picked her up from her house, more than a little awkward with her mom standing right there wanting a photo of the two of them, one of those funny, cringing moments neither of them will forget.`,
+      `Then came his birthday. They celebrated two days early, on the 26th, since the actual day was meant to be spent with his parents at home. That day was foot massages, then dressing up for a long drive, and a slow, easy stretch after, food ordered in, face masks, sleeping in late. But the actual day, his twenty fifth birthday, brought one of the worst fights they'd had up to that point. They didn't speak the entire day. He spent it just wanting to know she was okay. That evening she called him over to her place, meant to be a quick visit, and it turned into one of the best moments between them, the kind he still thinks back on during his best nights.`,
+      `On April 1st they flew back to Dublin, and life picked back up. Same house, work, skipping college more than either of them probably should have, talking until five or six in the morning even with his eight o'clock shifts waiting for them. In between, they went to Hansang a few times, always fun no matter how little money they had. They ordered in, they played around, they fought sometimes, and that's just how those weeks went.`,
+      `In May they picked up a projector and a Chromecast, so movie nights became a thing they could actually settle into without any fuss. There was also their first proper night out with a rented car, down to Bray Beach with their roommates Divyesh and Sanjana, coffee, a lot of photos, and it felt like a real milestone, having a car of their own to take out again after so long without one. They kept up regular day trips and evenings out to Dun Laoghaire too, even with their shifts working against them, him mornings, her evenings, never much overlap. Some of their best memories from this stretch are with Divyesh and Sanjana, in a house that was falling apart in places but that they loved anyway. Aadi had promised, before they moved in, that he'd clean the bathroom if they took the house, and eventually he did, messily, but he did it.`,
+      `June 5th brought their first picnic, completely spontaneous. She'd gone to college on an unremarkable day, the weather was good, so he packed everything up and met her at Herbert Park. Simple, playful afternoon. Somewhere around here he also did the Jai meme dance and sent her the video just to make her laugh.`,
+      `June 10th, their first swim together, at the UCD pool. Neither of them actually swam much, just floated around together, then moved on to the jacuzzi, steam room, and sauna, all firsts for both of them.`,
+      `Then came a harder night. A fight that ran until four or five in the morning. She left the room, and instead of going after her the way he usually would, he was too tired and fell asleep instead. She cried for hours. Looking back, he calls this the start of everything that came after, and he knows she still hasn't fully forgiven him for it.`,
+      `College ended in July. Life settled into a rhythm of Musashi, his part-time shifts, groceries afterward when she'd meet him, cooking, ordering in, just being around each other as much as the schedules allowed. She left McDonald's for Subway when the hours there stopped being enough to live on. One night the four of them, Aadi, Krithika, Divyesh and Sanjana, drank together for the first time as a group, and there was a trip to the rainforest mini golf course in Dundrum, just the two of them, fighting the entire way there.`,
+      `Then a harder stretch when Kavin came to visit. Aadi got in his own head about not getting enough attention while she was around, let it turn into a tantrum, and ended up cutting into time Krithika wanted to spend with her friend. She eventually let it go and forgave him, though it's stayed with her as one of the harder memories from that year.`,
+      `Her birthday came in September, her first as a couple with him. He rented a car and took her up to the Killakee viewpoint, brought the same style of cake as the year before with rose bouquets, then home to a surprise waiting for her, a candlelit carpet with a two kilogram cake and every one of her favorite snacks laid out. The next morning, Momos and a cooked breakfast, though she skipped the breakfast and just had the Momos. Then out for the rest of her actual birthday, where her mom had a surprise cake planned with Aadi's help, a lot of walking through the day, and King's Biryani for the birthday dinner.`,
+      `The evening before their anniversary they went to Milano in Dundrum, and the plan was Cosmo, the multi cuisine buffet, on the day itself, September 19th. They never made it. A big fight got in the way, and looking back, this is the point he marks as the beginning of the relationship's harder chapter. Fights started coming more often from here, even while the good days, including the closeness between them, were still very real.`,
+      `Not long after, Divyesh and Sanjana told them they were moving out to Dun Laoghaire. All four of them had been house hunting together, hoping to find something to share, but nothing came through in time. That same night, Aadi and Krithika started looking on their own, and within two days they found a place in Leopardstown, Potters Hill. The fighting kept going through the whole process, even as they signed on for it.`,
+      `Their last month living with Divyesh and Sanjana was still a good one, full of nights together before the split. A Polaroid camera night. A day out in Kildare, a Rajini movie first, then a full day out in a rented car. They just wanted to hold onto what they had with them for as long as they could.`
     ],
     tobcontinued: 'To be continued.'
   },
@@ -146,59 +175,87 @@ export const CHAPTERS = [
     romanNum: 'IV',
     shortTitle: 'HUSTLE',
     title: 'The hustle year',
-    dates: 'January — June 2025',
-    teaser: 'Both hunting jobs. Both stretched thin. Edinburgh in April as the reward that came before the win. And then the win.',
+    dates: 'November 1, 2024 — June 2025',
+    teaser: 'Potters Hill, graduation day, her new job at Aon, Edinburgh, and the biggest fight yet, the one that never quite stopped echoing.',
     heroImg: null,
     posterImg: null,
     tint: 'reader-tint-4',
-    prose: [],
-    tobcontinued: 'Coming as I write it.'
+    prose: [
+      `They moved into Potters Hill on November 1st, 2024. Did it all themselves, no real help, and they fought through most of it, even the first night in the new place. That was the shape of things from the start there, laughing one minute and at each other's throats the next.`,
+      `Once they were settled enough, Krithika had to get ready for her interview at Aon. It landed on November 5th, the same day Aadi had a LinkedIn event to go to. She almost didn't go, told him she felt underprepared, but he pushed her to show up anyway. She made it on time and she nailed it. Heard back within a couple of days. It was one of the happiest moments she'd had in a long while.`,
+      `Graduation shopping started around then too, for the ceremony set for December 4th. Her parents were flying in, her mom on the 28th of November, her dad the day after. In between all that Aadi finally bought a PS5, something he'd wanted since he was a kid. For the first time since they'd been together, they spent a stretch apart while still in the same city, five to ten nights, him staying with his own parents at his cousin's place, her staying with hers at the Stay City Hotel in the centre. They'd both applied for UK visas for a side trip to London. His came through. Hers didn't, and she had to miss the whole London leg with her parents, which weighed on her a lot at the time. He went on to London anyway, came back, and then they bought a television together, with a fair amount of back and forth over how it should be set up. Nothing serious, just two people figuring out how to share a living room.`,
+      `Graduation day, December 4th, both sets of parents there at the same ceremony, same time, lots of photos. Even mid quarrel, Aadi stepped away at one point just to grab a picture with her. After that his brother Pavi came to visit, and the two of them went off to London together for a few days before Christmas, leaving her alone in Dublin for a stretch.`,
+      `Their second New Year came after Christmas. By then she'd started her new job, December 9th, desk and laptop delivered and everything. She wanted to work from the living room since she was fully remote, so she had Aadi check with their housemates, Vidya and Vishanth, and they were fine with it. On New Year's they went out to Daata in Bray, which they just call Daata Bray, and she discovered a pistachio milk cake there that she still, to this day, can't get enough of. He's made that drive out for it more times than either of them could count since.`,
+      `That's when the hustle really started. Aadi's hours at the deli kept shrinking, not even enough to cover rent, and even though he'd told himself he wouldn't switch jobs inside the first year, he had no choice but to start applying elsewhere. By February 3rd he landed something at Pennys. Krithika, meanwhile, was genuinely into her new role at Aon. They celebrated their first Pongal together in January, Vidya cooked, everyone gathered around. On the whole, life was good, but the working hours had them barely overlapping, her five days a week during the day, him five evenings, with almost no time left over for each other.`,
+      `Valentine's Day that year brought two gifts each, actually. He got her thigh length boots and headphones. She got him the Lego set he'd been wanting for ages. Around this time he started noticing something, that they weren't taking as many photos together as they used to. This was February, March of 2025. Still plenty of good days, movies, grocery runs, time out together, but the fights were creeping in more often underneath it all. A trip to Encha in the city centre before his birthday. On their eighteen month anniversary he tried making her the pistachio milk cake himself, got most of the way there alone, finished it together with her, and it actually turned out delicious.`,
+      `Then his birthday. She gave him a guitar, made him a cake, cooked noodles and gulab jamun, and they went to Anjappar that night for dinner. A good day, all around.`,
+      `April 5th brought their first international trip together, three days in Edinburgh. They'd saved up and put it together fairly last minute, he had four days off in a row, she had three. They'd already worked through a few Harry Potter films together and loved being somewhere that felt like it came out of them. They fought once, during a sunset, and it soured that night, but they went back the next evening and watched the same sunset again, and it was beautiful. The fight didn't really follow them past that.`,
+      `Back home, it was straight back to the grind, almost no time together at all. His Pennys contract ended April 28th, and he flew to India on the 30th for his best friend Rishan's wedding, originally meant to stay until May 30th but ended up staying until June 12th. Krithika couldn't stand being apart from him the whole stretch, so she flew out too for two to three weeks. While she was there, they had one of the biggest fights of the relationship, real breakup talk, ugly in a way that neither of them had let it get before. That's the point he marks, looking back, as where things really started to shift and never fully came back. Even on the good days after that there was something underneath it now. They barely spoke for a week or two. On May 23rd they tried to reset, went down to the beach together, watched the sunrise in Chennai. It helped, a little. Still broken, but not past fixing. Not yet.`,
+      `She flew back to Ireland first. He stayed on another two or three weeks. They missed each other, but it wasn't the same pull it used to be, the conversations had lost some of their old strength. By early June, he came back too, with no job waiting for him, burning through what savings he had left, applying to anything he could find.`
+    ],
+    tobcontinued: 'To be continued.'
   },
   {
     num: 5,
     romanNum: 'V',
-    shortTitle: 'HALF & HALF',
-    title: 'Half here, half there',
-    dates: 'July — December 2025',
-    teaser: 'The airport pickup ritual. Bouquet every landing. Distance that felt smaller than it should have. And a Cork trip we did not know was the last.',
+    shortTitle: 'THE STRETCH',
+    title: 'The long stretch',
+    dates: 'June — December 6, 2025',
+    teaser: 'A hike that left something behind. A stretch of low grade fighting that never let up. A second anniversary in Waterford. And finally, a place of their own: Laurel Hall.',
     heroImg: null,
     posterImg: null,
     tint: 'reader-tint-5',
-    prose: [],
-    tobcontinued: 'Coming as I write it.'
+    prose: [
+      `On June 21st they went on the Bray hike, and it turned into one of the worst fights they'd had. The kind that doesn't just pass, the kind that leaves something behind. He said things that day, and things happened after it, that he's never forgiven himself for, and that she's never fully let go of either. Looking back, this is the point they both quietly understood that things weren't going to get better anytime soon, even if neither of them said it out loud yet. Around this same stretch they started working out together, trying to build something steady in the middle of everything else falling apart. He was in a genuinely bad place then. No full-time job, no part-time job, savings running thin, applying anywhere he could.`,
+      `By July he finally landed something at Spar in Blackrock. The fighting kept going regardless, frequent, exhausting. They still made it to the beach together fairly often, actual swims, not just sitting on the sand, and sometimes Boojum for food. Money was tight enough that Aadi stopped planning dates altogether, which became its own quiet wound between them. They did make it out properly a couple of times, Jury's for a theatre performance, an Italian place after, evenings that reminded them both of what things used to feel like. But the stretch overall was rough. Constant, low grade fighting that never really let up. By August, Krithika told him outright that she resented him, that things were never going to go back to how they used to be. He held onto hope anyway. It didn't really pan out.`,
+      `There were good pockets in there too. Some weekends she'd go dog sitting, and he'd come by after his shift just to be with her there, away from everything else. Her second birthday together as a couple, he planned it carefully, bowling in Bray, then Daata for food and that pistachio cake she loves so much. A good day, even if it didn't manage to pull the bigger picture back together. Around this time he introduced her to How to Train Your Dragon: The Light Fury for the first time, and it became one of their things.`,
+      `September 19th, their second anniversary, they went to Waterford and Wexford for kayaking. A high end dinner that night, her treat, both of them dressed up, a cozy Airbnb in Waterford, a drive, real closeness that night, kayaking the next morning. A beautiful date on paper. The arguments kept finding their way in anyway, even around days like that one.`,
+      `Toward the end of September, Vidya and Vishanth told them they'd be moving out. This time, when Krithika brought up breaking up, her third or fourth time saying it, she meant it differently. She started actually looking for places, and asked Aadi to do the same. They couldn't find anything for weeks. Tried for temporary places too, in case nothing came through in time, and came up empty there as well. All through the search, the fighting continued, and Krithika was worn down most days, just wanting some distance from him, which broke something in him to watch happening and know he couldn't fix quickly.`,
+      `Finally, on November 15th, they got their own place. Laurel Hall, in the same Clay Farm community they'd been living in at Potters Hill. Move in was set for December 6th. It was a hard, fight filled stretch right up to and through the day itself, even as they moved.`
+    ],
+    tobcontinued: 'To be continued.'
   },
   {
     num: 6,
     romanNum: 'VI',
     shortTitle: 'ANYWAY',
     title: 'Inevitable, but anyway',
-    dates: 'January — June 2026',
-    teaser: 'A Valentine spent apart. A pottery painting day that felt like a stolen afternoon. A rule set in February that turned long distance from a logistics word into a threat.',
+    dates: 'December 6, 2025 — July 2026',
+    teaser: 'Laurel Hall, her surgery and recovery, a new job, a pottery afternoon, and a fight bad enough that they started taking photos separately again.',
     heroImg: null,
     posterImg: null,
     tint: 'reader-tint-6',
-    prose: [],
-    tobcontinued: 'Coming as I write it.'
+    prose: [
+      `Right around the move, Spar stopped giving Aadi enough hours too, so he switched over to SuperValu, and ended up having to move house the exact same weekend he started the new job. Hectic doesn't quite cover it. Lots of fighting, lots of laughing in between the fighting, and somehow they got through the move itself. Even after they were in, he still had things to bring over from the old place, and it dragged. She kept asking him, over and over, when he was actually going to finish moving out, because he'd promised her once they had their own place he'd be the one to go, not make her wait on him. By then he knew, without needing to be told, that she'd been resenting him for a long while.`,
+      `Christmas at Laurel Hall was one of the better nights. They planned a proper cooking night together, parottas, salna, chicken roast with Bellies on the side, exchanged gifts, laughed a lot. A good day, simple and warm.`,
+      `Then came a trip built around her friend's wedding in India, two to three weeks, and Aadi couldn't stand the idea of being apart that long, so he planned his own Pongal trip around the same window. They flew separately. Once there, they barely talked, she was busy with the wedding, he was busy with his own short trip. Still, they managed something sweet in the middle of it, their third Valentine's Day, celebrated early in Chennai on January 25th, since Krithika was scheduled for achalasia surgery and wasn't sure she'd be back in time for the real date. It was a good, low conflict stretch while they were both away.`,
+      `Aadi flew home January 29th. She stayed behind for her surgery and recovery, three months in total, which was genuinely difficult for him, being apart that long again. She came back March 20th. In between, he leaned hard into work, it was really the only thing keeping him steady. They talked every night, and there was almost no fighting, except for one night when she sank into a real low, questioning what she was doing with her life, telling him she didn't want to be with him anymore, that he wasn't the right person for her, that she was certain by then he wasn't going to change. He tried to talk her back from it. It didn't really work. Things felt stuck after that, good conversations that never quite turned into good momentum.`,
+      `By the time she was back in Dublin, Aadi had landed a full-time job at Teleperformance. They wanted to celebrate properly but he didn't have the money for it, so they folded the celebration into his birthday instead, since the two landed close together. She gave him a custom newspaper she'd written herself, entirely about him and their life together, something he still calls one of the most meaningful things anyone's ever given him. At the time, though, he didn't show her how much it meant the way she needed him to, and she told him later it had hurt her that he hadn't. When she finally brought it up, it broke something in him to realize he had appreciated it deeply and just never let her see that. She made him biryani that day, dressed up beautifully that evening, and they went to a Lebanese place, her treat, marking both his birthday and the new job. Even with the relationship worn thin by then, she still worked hard to make that day feel good for him. As for the job itself, it paid better than anything he'd had before, but the schedule was random, no fixed days off, which meant even less real time together than they'd already been losing.`,
+      `Life kept moving after that, still full of fights, still together, but never settled. Underneath it all, Aadi knew, had known for a while, that this wasn't going to be the one that made it all the way. Even so, there were good days. A pottery class they spent an entire afternoon on. Dinner at Big Fan, a Michelin recommended spot. A café after with mango, raspberry, strawberry, and pistachio shaped desserts. A Thai massage before all of it. Days where they could spend freely and enjoy themselves without thinking too hard. He tried to change the things she'd complained about, the lack of planning, the lack of effort on dates, and he did try. But she never fully believed it, never came back around to feeling like things were the way they were supposed to be. From that point on, some part of her stayed convinced of that. They went to Shasta by the City in Central Park. They went to Pantry in the Leopardstown shopping centre. Good dates, some of the best on paper, but neither of them could picture the two of them together a year or two out anymore.`,
+      `By May, things hadn't improved. If anything, they'd both quietly settled into being sure they weren't right for each other, even without saying it plainly. There was a picnic, more drinks, and then a dinner at Vanilla Pod in Carrickmines, meant as a treat for her bonus. That night ended in one of the worst fights yet, bad enough that she was ready to move out right then. He remembers that night vividly, partly because of something small and painful, they still took photos, just separately now, him taking hers, her taking his, instead of together like they used to. It was getting harder and harder to keep going, but they kept going anyway, still on borrowed time, because there was already a plan in motion, he was heading to Chennai for a friend's wedding and his mom's fiftieth birthday.`,
+      `The two weeks he spent in Chennai were genuinely good. They didn't fight much. He was enjoying himself, she was focused on her own work back home, and when they did disagree it passed quickly. She flew out to join him near the end of the trip because he had a Salesforce interview coming up, and she understood that fighting in that window would hurt his chances, so she put her own feelings aside to be there for him instead. He's deeply grateful to her for that, even now. He came back to Dublin on June 29th, and for a little while it felt like things might actually turn a corner, like the break had given them both something they badly needed.`
+    ],
+    tobcontinued: 'To be continued.'
   },
   {
     num: 7,
     romanNum: 'VII',
-    shortTitle: 'THE FINAL',
-    title: 'The last ever apology, truly',
-    dates: 'July — September 2026',
-    teaser: 'Cork was the last road trip. iPhones swapped SIM slots. And an Iceland cabin, and this book, and this apology.',
+    shortTitle: 'THE END',
+    title: 'Where it ends',
+    dates: 'July 2026 — present',
+    teaser: 'The fight that finally settled it. Cork, and the conversation that said what neither of them could take back. Still sharing a home, still waiting on Iceland, before it ends for real.',
     heroImg: '/dragons/scenes/chapter-07-mark.png',
     posterImg: '/dragons/scenes/chapter-07-mark.png',
     tint: 'reader-tint-7',
     prose: [
-      `I am sorry for making you go through so many things you never thought would come from me. I fell from the high pedestal you kept me on, and I think that says everything about how far I've fallen. You had kept me somewhere near the sky. Funnily, I am not even on the ground now. I'm down under.`,
-      `I am sorry for everything I have done. I am going to be sorry for the rest of my life for being foolish enough to lose a diamond I had in my hand.`,
-      `I know now what I would do and how I would be, if I got to do it all over again. But life doesn't work that way. And if it did, if it came around again, you would have to be with me again, and that sucks. I definitely don't like saying this. In fact, I hate it. But I know your life with someone else is going to be as beautiful as you are. You are soon going to be very happy. You are going to have a peaceful life with all the love in the world I was not able to give you the way you wanted.`,
-      `I want the best, and only the best, for you.`
-    ],
-    signoff: `Signing off as tears roll from my eyes for losing the beauty, and emptying my life.\n\nForever yours, and only yours,\nYour Ammu`,
-    ps: `PS. This site will be here for us as long as you want. If you want it taken down, just let me know.`,
-    hasApology: true
+      `By the second week of July, whatever hope had come back with him from Chennai was gone again. They had a fight that week unlike the others, not louder necessarily, but final in a way the earlier ones hadn't been. It was the fight that actually settled it, the one where the decision stopped being something they circled around and became something they'd both said out loud and couldn't take back. They knew, from that point, that this was ending.`,
+      `They didn't move out right away. There was too much already set in motion to walk away from cleanly, an Iceland trip they'd been planning since March, already booked and paid for, and a trip to Cork on the 20th and 21st of July that had been on the calendar for a while too. So they set a timeline instead. They'd stay together, in the same place, until after their third anniversary, and then it would be over. The ending was decided long before it actually arrived.`,
+      `They went ahead with Cork anyway. It wasn't a trip either of them enjoyed, not really. But the first night there, they drank more than usual, and somewhere in that they had one of the most honest conversations they'd had in a long time. They agreed, plainly, that they weren't good for each other. Aadi told her he wasn't going to be the right person for her, not the version of him she needed, not the version he'd tried and failed to become. It wasn't one conversation. It stretched over two or three days, the same ground covered again and again, until it settled into something neither of them could argue with anymore. Staying together was only going to hurt her more. Whatever changing he'd tried to do, it wasn't enough, and it wasn't going to be enough going forward either. Something in her had changed too, by then, past the point of coming back. The resentment had built into something closer to genuine dislike, and he could feel it even when she wasn't saying it directly.`,
+      `The conversation in Cork was deep, and in its own strange way it was good, one of those talks that lets two people finally say the true thing after months of circling it. But it wasn't a fight that fixed anything. It was bittersweet more than anything else, a chance to look back on the whole relationship and see clearly, for the first time in a while, how much better it could have been if he'd changed sooner, changed more, changed in the ways that actually mattered to her.`,
+      `After Cork, it was mostly downhill. Not much going out anymore. She took a trip to Turkey not long after, and strangely, the time apart was good again, the way it always seemed to be when they weren't actually in the same room. They messaged, missed each other, started to feel like maybe they wanted to try being together after all. And then they were together again, in person, and the fighting came right back with them, like it had just been waiting.`,
+      `That's where things sit now. They are still, technically, together, sharing a home, because the practical shape of their lives hasn't allowed for anything else yet. The Iceland trip is still coming. There's a trip to Italy already planned. A Pradeep Kumar concert they're both going to. Krithika has her own trip to India coming up too, and between all of it, and not yet having found a new place to live, there hasn't been room to actually separate. So they don't bring things up. They try to be kind to each other, careful with each other, the way you are with someone you still love but know you can't stay with. It isn't the relationship continuing. It's two people trying to make the most of what's left of it before it has to end for real.`,
+      `The truth underneath all of it is simple and it's not easy to say. The love never went anywhere. It's still there, on both sides, even now. It just isn't enough anymore to make the day to day work, and they both know it, and neither of them is pretending otherwise. The home they've built together carries a kind of sadness in it these days that wasn't always there, a quiet the size of the plans still ahead of them, plans that were once about a future together and are now just the last things they'll do as two people who loved each other completely, before they finally let each other go.`
+    ]
   }
 ];
 
@@ -331,7 +388,7 @@ export const FINAL_SONG = {
   artist: 'Mithoon, Manoj Muntashir, Arijit Singh, Shashaa Tirupati',
   timestamp: '2:06',
   trackId: '3oNVqllTnz7bHrY3f0nICg',
-  note: "This is my 13th songs apex song. Every other song was for a season. This one is for after. Whichever way this ends, whichever address you land at, whichever heart you choose next, at 2:06 of this song I want you to know: phir bhi tumko chaahunga.",
+  note: "This is my final song. Every other song was for a season. This one is for after. Whichever way this ends, whichever address you land at, whichever heart you choose next, at 2:06 of this song I want you to know: phir bhi tumko chaahunga.",
   eyebrow: 'the last one'
 };
 
@@ -426,7 +483,7 @@ export const SERIES = [
   { name: 'The Neighborhood', note: null },
   { name: 'Suzhal – The Vortex', note: null },
   { name: 'Vadhandhi – The Fable of Velonie', note: null },
-  { name: 'Kutram Purindhavan', note: null }
+  { name: 'Kuttram Purindhavan', note: null }
 ];
 
 export const PLACES = [
@@ -767,7 +824,7 @@ export const LINE_AND_REPLY = [
 export const SECTIONS = [
   { slug: 'foreword', title: 'Foreword', sub: 'a note before you begin', dragon: 'letter' },
   { slug: 'cast', title: 'The Cast', sub: 'two dragons, one story', dragon: 'hug' },
-  { slug: 'songs', title: 'Songs', sub: 'thirteen songs, one for each part', dragon: 'note' },
+  { slug: 'songs', title: 'Songs', sub: 'eleven songs, one for each part', dragon: 'note' },
   { slug: 'watched', title: 'What We Watched', sub: 'films and series we lived inside', dragon: 'stars' },
   { slug: 'places', title: 'Our Places', sub: 'the map of Dublin, ours', dragon: 'nest' },
   { slug: 'trips', title: 'Our Trips', sub: 'four before, one to come', dragon: 'adventure' },
@@ -778,6 +835,6 @@ export const SECTIONS = [
   { slug: 'lineandreply', title: 'The Line and the Reply', sub: 'a conversation, replayed', dragon: 'bubble2' },
   { slug: 'polaroids', title: 'Polaroids', sub: 'moments printed', dragon: 'stamp' },
   { slug: 'timecapsule', title: 'Time Capsule', sub: 'a letter for a year from now', dragon: 'jar' },
-  { slug: 'finalsong', title: 'The Final Song', sub: 'the 13th', dragon: 'sunset' },
+  { slug: 'finalsong', title: 'The Final Song', sub: 'the final one', dragon: 'sunset' },
   { slug: 'release', title: 'Release', sub: 'the way out, if you want it', dragon: 'sleeping' }
 ];
