@@ -6,7 +6,8 @@
 /* ---- SF Pro Text (variable) — body copy ---- */
 @font-face {
   font-family: 'SF Pro';
-  src: url('/fonts/SF-Pro.ttf') format('truetype-variations'),
+  src: url('/fonts/SF-Pro.woff2') format('woff2-variations'),
+       url('/fonts/SF-Pro.ttf') format('truetype-variations'),
        url('/fonts/SF-Pro.ttf') format('truetype');
   font-weight: 100 900;
   font-style: normal;
@@ -14,7 +15,8 @@
 }
 @font-face {
   font-family: 'SF Pro';
-  src: url('/fonts/SF-Pro-Italic.ttf') format('truetype-variations'),
+  src: url('/fonts/SF-Pro-Italic.woff2') format('woff2-variations'),
+       url('/fonts/SF-Pro-Italic.ttf') format('truetype-variations'),
        url('/fonts/SF-Pro-Italic.ttf') format('truetype');
   font-weight: 100 900;
   font-style: italic;
@@ -22,35 +24,35 @@
 }
 
 /* ---- SF Pro Display — headings / display type (replaces Fraunces) ---- */
-@font-face { font-family: 'SF Pro Display'; src: url('/fonts/SF-Pro-Display-Ultralight.otf') format('opentype'); font-weight: 100; font-style: normal; font-display: swap; }
-@font-face { font-family: 'SF Pro Display'; src: url('/fonts/SF-Pro-Display-UltralightItalic.otf') format('opentype'); font-weight: 100; font-style: italic; font-display: swap; }
-@font-face { font-family: 'SF Pro Display'; src: url('/fonts/SF-Pro-Display-Thin.otf') format('opentype'); font-weight: 200; font-style: normal; font-display: swap; }
-@font-face { font-family: 'SF Pro Display'; src: url('/fonts/SF-Pro-Display-ThinItalic.otf') format('opentype'); font-weight: 200; font-style: italic; font-display: swap; }
-@font-face { font-family: 'SF Pro Display'; src: url('/fonts/SF-Pro-Display-Light.otf') format('opentype'); font-weight: 300; font-style: normal; font-display: swap; }
-@font-face { font-family: 'SF Pro Display'; src: url('/fonts/SF-Pro-Display-LightItalic.otf') format('opentype'); font-weight: 300; font-style: italic; font-display: swap; }
-@font-face { font-family: 'SF Pro Display'; src: url('/fonts/SF-Pro-Display-Regular.otf') format('opentype'); font-weight: 400; font-style: normal; font-display: swap; }
-@font-face { font-family: 'SF Pro Display'; src: url('/fonts/SF-Pro-Display-RegularItalic.otf') format('opentype'); font-weight: 400; font-style: italic; font-display: swap; }
-@font-face { font-family: 'SF Pro Display'; src: url('/fonts/SF-Pro-Display-Medium.otf') format('opentype'); font-weight: 500; font-style: normal; font-display: swap; }
-@font-face { font-family: 'SF Pro Display'; src: url('/fonts/SF-Pro-Display-MediumItalic.otf') format('opentype'); font-weight: 500; font-style: italic; font-display: swap; }
-@font-face { font-family: 'SF Pro Display'; src: url('/fonts/SF-Pro-Display-Semibold.otf') format('opentype'); font-weight: 600; font-style: normal; font-display: swap; }
-@font-face { font-family: 'SF Pro Display'; src: url('/fonts/SF-Pro-Display-SemiboldItalic.otf') format('opentype'); font-weight: 600; font-style: italic; font-display: swap; }
-@font-face { font-family: 'SF Pro Display'; src: url('/fonts/SF-Pro-Display-Bold.otf') format('opentype'); font-weight: 700; font-style: normal; font-display: swap; }
-@font-face { font-family: 'SF Pro Display'; src: url('/fonts/SF-Pro-Display-BoldItalic.otf') format('opentype'); font-weight: 700; font-style: italic; font-display: swap; }
-@font-face { font-family: 'SF Pro Display'; src: url('/fonts/SF-Pro-Display-Heavy.otf') format('opentype'); font-weight: 800; font-style: normal; font-display: swap; }
-@font-face { font-family: 'SF Pro Display'; src: url('/fonts/SF-Pro-Display-HeavyItalic.otf') format('opentype'); font-weight: 800; font-style: italic; font-display: swap; }
-@font-face { font-family: 'SF Pro Display'; src: url('/fonts/SF-Pro-Display-Black.otf') format('opentype'); font-weight: 900; font-style: normal; font-display: swap; }
-@font-face { font-family: 'SF Pro Display'; src: url('/fonts/SF-Pro-Display-BlackItalic.otf') format('opentype'); font-weight: 900; font-style: italic; font-display: swap; }
+@font-face { font-family: 'SF Pro Display'; src: url('/fonts/SF-Pro-Display-Ultralight.woff2') format('woff2'), url('/fonts/SF-Pro-Display-Ultralight.otf') format('opentype'); font-weight: 100; font-style: normal; font-display: swap; }
+@font-face { font-family: 'SF Pro Display'; src: url('/fonts/SF-Pro-Display-UltralightItalic.woff2') format('woff2'), url('/fonts/SF-Pro-Display-UltralightItalic.otf') format('opentype'); font-weight: 100; font-style: italic; font-display: swap; }
+@font-face { font-family: 'SF Pro Display'; src: url('/fonts/SF-Pro-Display-Thin.woff2') format('woff2'), url('/fonts/SF-Pro-Display-Thin.otf') format('opentype'); font-weight: 200; font-style: normal; font-display: swap; }
+@font-face { font-family: 'SF Pro Display'; src: url('/fonts/SF-Pro-Display-ThinItalic.woff2') format('woff2'), url('/fonts/SF-Pro-Display-ThinItalic.otf') format('opentype'); font-weight: 200; font-style: italic; font-display: swap; }
+@font-face { font-family: 'SF Pro Display'; src: url('/fonts/SF-Pro-Display-Light.woff2') format('woff2'), url('/fonts/SF-Pro-Display-Light.otf') format('opentype'); font-weight: 300; font-style: normal; font-display: swap; }
+@font-face { font-family: 'SF Pro Display'; src: url('/fonts/SF-Pro-Display-LightItalic.woff2') format('woff2'), url('/fonts/SF-Pro-Display-LightItalic.otf') format('opentype'); font-weight: 300; font-style: italic; font-display: swap; }
+@font-face { font-family: 'SF Pro Display'; src: url('/fonts/SF-Pro-Display-Regular.woff2') format('woff2'), url('/fonts/SF-Pro-Display-Regular.otf') format('opentype'); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: 'SF Pro Display'; src: url('/fonts/SF-Pro-Display-RegularItalic.woff2') format('woff2'), url('/fonts/SF-Pro-Display-RegularItalic.otf') format('opentype'); font-weight: 400; font-style: italic; font-display: swap; }
+@font-face { font-family: 'SF Pro Display'; src: url('/fonts/SF-Pro-Display-Medium.woff2') format('woff2'), url('/fonts/SF-Pro-Display-Medium.otf') format('opentype'); font-weight: 500; font-style: normal; font-display: swap; }
+@font-face { font-family: 'SF Pro Display'; src: url('/fonts/SF-Pro-Display-MediumItalic.woff2') format('woff2'), url('/fonts/SF-Pro-Display-MediumItalic.otf') format('opentype'); font-weight: 500; font-style: italic; font-display: swap; }
+@font-face { font-family: 'SF Pro Display'; src: url('/fonts/SF-Pro-Display-Semibold.woff2') format('woff2'), url('/fonts/SF-Pro-Display-Semibold.otf') format('opentype'); font-weight: 600; font-style: normal; font-display: swap; }
+@font-face { font-family: 'SF Pro Display'; src: url('/fonts/SF-Pro-Display-SemiboldItalic.woff2') format('woff2'), url('/fonts/SF-Pro-Display-SemiboldItalic.otf') format('opentype'); font-weight: 600; font-style: italic; font-display: swap; }
+@font-face { font-family: 'SF Pro Display'; src: url('/fonts/SF-Pro-Display-Bold.woff2') format('woff2'), url('/fonts/SF-Pro-Display-Bold.otf') format('opentype'); font-weight: 700; font-style: normal; font-display: swap; }
+@font-face { font-family: 'SF Pro Display'; src: url('/fonts/SF-Pro-Display-BoldItalic.woff2') format('woff2'), url('/fonts/SF-Pro-Display-BoldItalic.otf') format('opentype'); font-weight: 700; font-style: italic; font-display: swap; }
+@font-face { font-family: 'SF Pro Display'; src: url('/fonts/SF-Pro-Display-Heavy.woff2') format('woff2'), url('/fonts/SF-Pro-Display-Heavy.otf') format('opentype'); font-weight: 800; font-style: normal; font-display: swap; }
+@font-face { font-family: 'SF Pro Display'; src: url('/fonts/SF-Pro-Display-HeavyItalic.woff2') format('woff2'), url('/fonts/SF-Pro-Display-HeavyItalic.otf') format('opentype'); font-weight: 800; font-style: italic; font-display: swap; }
+@font-face { font-family: 'SF Pro Display'; src: url('/fonts/SF-Pro-Display-Black.woff2') format('woff2'), url('/fonts/SF-Pro-Display-Black.otf') format('opentype'); font-weight: 900; font-style: normal; font-display: swap; }
+@font-face { font-family: 'SF Pro Display'; src: url('/fonts/SF-Pro-Display-BlackItalic.woff2') format('woff2'), url('/fonts/SF-Pro-Display-BlackItalic.otf') format('opentype'); font-weight: 900; font-style: italic; font-display: swap; }
 
 /* ---- SF Pro Rounded — soft/warm accent (replaces Caveat for signoff moments) ---- */
-@font-face { font-family: 'SF Pro Rounded'; src: url('/fonts/SF-Pro-Rounded-Ultralight.otf') format('opentype'); font-weight: 100; font-style: normal; font-display: swap; }
-@font-face { font-family: 'SF Pro Rounded'; src: url('/fonts/SF-Pro-Rounded-Thin.otf') format('opentype'); font-weight: 200; font-style: normal; font-display: swap; }
-@font-face { font-family: 'SF Pro Rounded'; src: url('/fonts/SF-Pro-Rounded-Light.otf') format('opentype'); font-weight: 300; font-style: normal; font-display: swap; }
-@font-face { font-family: 'SF Pro Rounded'; src: url('/fonts/SF-Pro-Rounded-Regular.otf') format('opentype'); font-weight: 400; font-style: normal; font-display: swap; }
-@font-face { font-family: 'SF Pro Rounded'; src: url('/fonts/SF-Pro-Rounded-Medium.otf') format('opentype'); font-weight: 500; font-style: normal; font-display: swap; }
-@font-face { font-family: 'SF Pro Rounded'; src: url('/fonts/SF-Pro-Rounded-Semibold.otf') format('opentype'); font-weight: 600; font-style: normal; font-display: swap; }
-@font-face { font-family: 'SF Pro Rounded'; src: url('/fonts/SF-Pro-Rounded-Bold.otf') format('opentype'); font-weight: 700; font-style: normal; font-display: swap; }
-@font-face { font-family: 'SF Pro Rounded'; src: url('/fonts/SF-Pro-Rounded-Heavy.otf') format('opentype'); font-weight: 800; font-style: normal; font-display: swap; }
-@font-face { font-family: 'SF Pro Rounded'; src: url('/fonts/SF-Pro-Rounded-Black.otf') format('opentype'); font-weight: 900; font-style: normal; font-display: swap; }
+@font-face { font-family: 'SF Pro Rounded'; src: url('/fonts/SF-Pro-Rounded-Ultralight.woff2') format('woff2'), url('/fonts/SF-Pro-Rounded-Ultralight.otf') format('opentype'); font-weight: 100; font-style: normal; font-display: swap; }
+@font-face { font-family: 'SF Pro Rounded'; src: url('/fonts/SF-Pro-Rounded-Thin.woff2') format('woff2'), url('/fonts/SF-Pro-Rounded-Thin.otf') format('opentype'); font-weight: 200; font-style: normal; font-display: swap; }
+@font-face { font-family: 'SF Pro Rounded'; src: url('/fonts/SF-Pro-Rounded-Light.woff2') format('woff2'), url('/fonts/SF-Pro-Rounded-Light.otf') format('opentype'); font-weight: 300; font-style: normal; font-display: swap; }
+@font-face { font-family: 'SF Pro Rounded'; src: url('/fonts/SF-Pro-Rounded-Regular.woff2') format('woff2'), url('/fonts/SF-Pro-Rounded-Regular.otf') format('opentype'); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: 'SF Pro Rounded'; src: url('/fonts/SF-Pro-Rounded-Medium.woff2') format('woff2'), url('/fonts/SF-Pro-Rounded-Medium.otf') format('opentype'); font-weight: 500; font-style: normal; font-display: swap; }
+@font-face { font-family: 'SF Pro Rounded'; src: url('/fonts/SF-Pro-Rounded-Semibold.woff2') format('woff2'), url('/fonts/SF-Pro-Rounded-Semibold.otf') format('opentype'); font-weight: 600; font-style: normal; font-display: swap; }
+@font-face { font-family: 'SF Pro Rounded'; src: url('/fonts/SF-Pro-Rounded-Bold.woff2') format('woff2'), url('/fonts/SF-Pro-Rounded-Bold.otf') format('opentype'); font-weight: 700; font-style: normal; font-display: swap; }
+@font-face { font-family: 'SF Pro Rounded'; src: url('/fonts/SF-Pro-Rounded-Heavy.woff2') format('woff2'), url('/fonts/SF-Pro-Rounded-Heavy.otf') format('opentype'); font-weight: 800; font-style: normal; font-display: swap; }
+@font-face { font-family: 'SF Pro Rounded'; src: url('/fonts/SF-Pro-Rounded-Black.woff2') format('woff2'), url('/fonts/SF-Pro-Rounded-Black.otf') format('opentype'); font-weight: 900; font-style: normal; font-display: swap; }
 
 /* ---- Design tokens ---- */
 :root {

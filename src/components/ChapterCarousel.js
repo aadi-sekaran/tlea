@@ -14,8 +14,11 @@ const CROSSFADE_S = 1.2;
 
 // The rotating strip of n1.jpg, n2.jpg, ... below a chapter's static Hero.
 // Crossfades every 6s with a subtle Ken Burns scale + pan on each slide.
+// Only ever renders two <img> elements (the current frame and the
+// preloaded next one), not the whole photo set, regardless of how many
+// photos the chapter has.
 export default function ChapterCarousel({ images }) {
-  const [idx, setIdx] = useState(0);
+  const [displayIdx, setDisplayIdx] = useState(0);
   const [reducedMotion, setReducedMotion] = useState(false);
 
   useEffect(() => {
@@ -28,7 +31,7 @@ export default function ChapterCarousel({ images }) {
 
   useEffect(() => {
     if (reducedMotion || !images || images.length <= 1) return;
-    const t = setInterval(() => setIdx(i => (i + 1) % images.length), ROTATE_MS);
+    const t = setInterval(() => setDisplayIdx(i => (i + 1) % images.length), ROTATE_MS);
     return () => clearInterval(t);
   }, [reducedMotion, images]);
 
@@ -47,23 +50,39 @@ export default function ChapterCarousel({ images }) {
     );
   }
 
+  const nextIdx = images.length > 1 ? (displayIdx + 1) % images.length : displayIdx;
+  const isEven = displayIdx % 2 === 0;
+  const slotAIdx = isEven ? displayIdx : nextIdx;
+  const slotBIdx = isEven ? nextIdx : displayIdx;
+
   return (
     <div className="chapter-carousel-below">
-      {images.map((src, i) => (
-        <img
-          key={src}
-          src={src}
-          alt=""
-          loading={i === 0 ? 'eager' : 'lazy'}
-          className={`chapter-carousel-slide ${i === idx ? 'active' : ''}`}
-          style={{
-            '--pan-x': `${pans[i].x}%`,
-            '--pan-y': `${pans[i].y}%`,
-            transitionDuration: `${CROSSFADE_S}s`,
-            animationDuration: `${ROTATE_MS / 1000}s`
-          }}
-        />
-      ))}
+      <img
+        key="slotA"
+        src={images[slotAIdx]}
+        alt=""
+        loading="eager"
+        className={`chapter-carousel-slide ${isEven ? 'active' : ''}`}
+        style={{
+          '--pan-x': `${pans[slotAIdx].x}%`,
+          '--pan-y': `${pans[slotAIdx].y}%`,
+          transitionDuration: `${CROSSFADE_S}s`,
+          animationDuration: `${ROTATE_MS / 1000}s`
+        }}
+      />
+      <img
+        key="slotB"
+        src={images[slotBIdx]}
+        alt=""
+        loading="lazy"
+        className={`chapter-carousel-slide ${!isEven ? 'active' : ''}`}
+        style={{
+          '--pan-x': `${pans[slotBIdx].x}%`,
+          '--pan-y': `${pans[slotBIdx].y}%`,
+          transitionDuration: `${CROSSFADE_S}s`,
+          animationDuration: `${ROTATE_MS / 1000}s`
+        }}
+      />
     </div>
   );
 }

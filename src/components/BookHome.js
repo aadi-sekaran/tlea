@@ -39,6 +39,7 @@ export default function BookHome({ chapterPhotos }) {
             <ChapterHero
               images={chapterPhotos[ch.num] || []}
               fallback={ch.heroImg || CHAPTER_POSTER_FALLBACKS[ch.num]}
+              active={i === heroIdx}
             />
             <div className="hero-slide-overlay" />
             <div className="hero-slide-content">

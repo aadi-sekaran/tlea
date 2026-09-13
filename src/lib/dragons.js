@@ -1,6 +1,13 @@
 // Dragon asset paths. Multiple sticker sheets live in /public/dragons/.
 // This registry maps semantic names to SVG paths for use throughout the app.
-
+//
+// EFFICIENCY NOTE (flagged, not removed): nothing in src/ currently imports
+// DRAGON_ASSETS - every page that needs dragons-login.png hardcodes the path
+// itself instead. The four pack-*.svg contact sheets it points at
+// (public/dragons/pack-main.svg etc.) total ~14MB and are not requested by
+// any page as a result. Since browsers only fetch a public/ file when a page
+// actually links to it, this isn't causing runtime lag, just unused weight
+// in the repo. Left in place in case something is meant to wire up to it.
 export const DRAGON_ASSETS = {
   // Login screen dark + light dragon head portraits
   loginPortraits: '/dragons/dragons-login.png',

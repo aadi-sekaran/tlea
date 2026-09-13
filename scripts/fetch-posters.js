@@ -41,7 +41,7 @@ const OVERRIDES = {
   'Tamizh Padam': { kind: 'film', query: 'Thamizh Padam' },
   'Velaiilla Pattadhari': { kind: 'film', query: 'Velaiyilla Pattathari' },
   'With Love': { kind: 'film', query: 'With Love', year: 2026 }, // the 2026 Tamil film, not the 2021 US series or the Bond films
-  'Panchathanthiram': null // Aadi confirmed the 2002 Kamal Haasan film; not findable on TMDB under any spelling tried, left posterless
+  'Panchathanthiram': { kind: 'film', query: 'Panchatanthiram', year: 2002 } // TMDB spells the 2002 Kamal Haasan film with one fewer "h"
 };
 
 function normalize(str) {
