@@ -1090,6 +1090,7 @@ input, textarea { font-family: inherit; }
   display: block;
   width: 100%;
   height: auto;
+  border-radius: 6px;
   margin-bottom: 0.5rem;
 }
 .polaroid-caption {
