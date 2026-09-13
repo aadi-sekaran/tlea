@@ -1,10 +1,10 @@
 // Reads /public/audio/voicenotes/ for voice note recordings at request time.
-// Drop any .mp3/.m4a/.wav/.ogg/.aac file in that folder and it shows up here
-// automatically - no code changes needed.
+// Drop any .mp3/.m4a/.wav/.ogg/.aac/.opus file in that folder and it shows up
+// here automatically - no code changes needed.
 import fs from 'fs';
 import path from 'path';
 
-const AUDIO_EXT_RE = /\.(mp3|m4a|wav|ogg|aac)$/i;
+const AUDIO_EXT_RE = /\.(mp3|m4a|wav|ogg|aac|opus)$/i;
 
 export function getVoiceNotes() {
   try {
