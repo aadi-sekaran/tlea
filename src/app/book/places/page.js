@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import NavAvatar from '@/components/NavAvatar';
+import PlacesMap from '@/components/PlacesMap';
 import { PLACES } from '@/lib/content';
 
 export default function PlacesPage() {
@@ -15,6 +16,9 @@ export default function PlacesPage() {
         <img className="content-header-art" src="/dragons/03_Stickers_Pack/stickers_042.png" alt="" />
         <p className="content-eyebrow">the map of Dublin, ours</p>
         <h1 className="content-title">Our Places</h1>
+
+        <PlacesMap places={PLACES} />
+
         <div className="item-list">
           {PLACES.map(p => (
             <div key={p.name} className="item">

@@ -1552,6 +1552,85 @@ input, textarea { font-family: inherit; }
   line-height: 1.4;
 }
 
+/* ---- Places: stylized map ---- */
+.places-map-wrap {
+  margin-bottom: 2.5rem;
+}
+.places-map-svg {
+  width: 100%;
+  height: auto;
+  max-width: 480px;
+  display: block;
+  margin: 0 auto;
+}
+.places-map-land {
+  fill: var(--sage);
+  opacity: 0.35;
+}
+.places-pin {
+  cursor: pointer;
+  outline: none;
+}
+.places-pin-dot {
+  fill: var(--rose);
+  stroke: white;
+  stroke-width: 2;
+  filter: drop-shadow(0 2px 4px rgba(46, 59, 84, 0.25));
+  transition: r 0.15s ease, fill 0.15s ease;
+}
+.places-pin-num {
+  font-family: var(--font-body);
+  font-size: 9px;
+  font-weight: 600;
+  fill: white;
+  pointer-events: none;
+}
+.places-pin.active .places-pin-dot,
+.places-pin:hover .places-pin-dot {
+  fill: var(--wine);
+  r: 12;
+}
+.places-map-hint {
+  text-align: center;
+  font-family: var(--font-display);
+  font-style: italic;
+  color: var(--text-soft);
+  font-size: 0.9rem;
+  margin-top: 1rem;
+}
+.places-map-card {
+  max-width: 420px;
+  margin: 1rem auto 0;
+  padding: 1.25rem 1.5rem;
+  background: white;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  text-align: center;
+}
+.places-map-card-num {
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--rose);
+  margin-bottom: 0.4rem;
+}
+.places-map-card-name {
+  font-family: var(--font-display);
+  font-style: italic;
+  color: var(--brown);
+  font-size: 1.15rem;
+  margin-bottom: 0.4rem;
+}
+.places-map-card-note {
+  font-family: var(--font-body);
+  color: var(--text);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
 /* ---- Watched: poster grid ---- */
 .watched-section-title {
   margin-top: 2rem;
