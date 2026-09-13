@@ -3,8 +3,14 @@
 import { useEffect, useRef, useState } from 'react';
 import { useRouter } from 'next/navigation';
 
-const CLIP1_SOURCES = [{ src: '/opening/envelope-open.mp4', type: 'video/mp4' }];
-const CLIP2_SOURCES = [{ src: '/opening/letter-transition.mp4', type: 'video/mp4' }];
+const CLIP1_SOURCES = [
+  { src: '/opening/envelope-open.webm', type: 'video/webm' },
+  { src: '/opening/envelope-open.mp4', type: 'video/mp4' }
+];
+const CLIP2_SOURCES = [
+  { src: '/opening/letter-transition.webm', type: 'video/webm' },
+  { src: '/opening/letter-transition.mp4', type: 'video/mp4' }
+];
 
 // Picks a source ourselves instead of relying on sibling <source> fallback:
 // once a browser commits to a <source> by its declared type, it does not
@@ -46,7 +52,6 @@ export default function OpeningSequence() {
 
   const clip1Ref = useRef(null);
   const clip2Ref = useRef(null);
-  const clip2AttachedRef = useRef(false);
   const birthdayInputRef = useRef(null);
 
   useEffect(() => {
@@ -61,20 +66,27 @@ export default function OpeningSequence() {
     attachSources(clip1Ref.current, CLIP1_SOURCES);
   }, []);
 
+  // The bridge video's wrapper is remounted (key={bridgeKey}) each time this
+  // screen is entered, so any source attached to a prior instance is gone by
+  // the time React commits the new one. Attaching here, keyed on bridgeKey,
+  // guarantees it happens against the actual live element.
+  useEffect(() => {
+    if (bridgeKey === 0) return;
+    const clip2 = clip2Ref.current;
+    if (!clip2) return;
+    attachSources(clip2, CLIP2_SOURCES);
+    if (reducedMotion) {
+      setScreen('picker');
+      return;
+    }
+    const p = clip2.play();
+    if (p) p.catch(() => setScreen('picker'));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [bridgeKey]);
+
   function openEnvelope() {
     if (opening) return;
     setOpening(true);
-
-    // Start buffering the bridge video only once the user commits to
-    // opening, so it never competes with the initial page load.
-    if (!clip2AttachedRef.current) {
-      clip2AttachedRef.current = true;
-      const clip2 = clip2Ref.current;
-      if (clip2) {
-        clip2.preload = 'auto';
-        attachSources(clip2, CLIP2_SOURCES);
-      }
-    }
 
     if (reducedMotion) {
       setScreen('picker');
@@ -89,12 +101,6 @@ export default function OpeningSequence() {
   function handleClip1Ended() {
     setScreen('bridge');
     setBridgeKey(k => k + 1);
-    if (reducedMotion) {
-      setScreen('picker');
-      return;
-    }
-    const p = clip2Ref.current?.play();
-    if (p) p.catch(() => setScreen('picker'));
   }
 
   function handleClip2Ended() {
@@ -196,7 +202,7 @@ export default function OpeningSequence() {
         aria-label="The letter opens"
       >
         <div className="os-bridge-stage" key={bridgeKey}>
-          <video ref={clip2Ref} muted playsInline preload="none" aria-hidden="true" onEnded={handleClip2Ended} />
+          <video ref={clip2Ref} muted playsInline preload="auto" aria-hidden="true" onEnded={handleClip2Ended} />
           <div className="os-bridge-veil" />
         </div>
       </section>
