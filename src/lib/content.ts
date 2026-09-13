@@ -384,7 +384,6 @@ export const watched = {
     "Jigarthanda Double X",
     "Chiththa",
     "Lover",
-    "Sabhaapathy",
     "Blue Star",
     "Irugapatru",
     "Theera Kaadhal",

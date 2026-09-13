@@ -426,7 +426,6 @@ export const FILMS = [
   { name: 'Jigarthanda Double X', note: null },
   { name: 'Chiththa', note: null },
   { name: 'Lover', note: null },
-  { name: 'Sabhaapathy', note: null },
   { name: 'Blue Star', note: null },
   { name: 'Irugapatru', note: null },
   { name: 'Theera Kaadhal', note: null },
