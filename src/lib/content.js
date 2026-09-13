@@ -221,6 +221,7 @@ export const CAST = [
   }
 ];
 
+// Nagumo removed from the list (Aadi: not a song I want in the list).
 export const SONGS = [
   {
     n: 1,
@@ -228,6 +229,7 @@ export const SONGS = [
     from: 'Amaran',
     artist: 'G. V. Prakash',
     timestamp: '0:10',
+    trackId: '7tr5DrOhoA4Dolg8X1OnRQ',
     note: "The strings sit down and then her hum comes up out of them, at 0:10. That is the moment I first thought of you, before we were us. Every time this hum starts I am back in the seat with you."
   },
   {
@@ -236,6 +238,7 @@ export const SONGS = [
     from: 'Amaran',
     artist: 'G. V. Prakash, Haricharan, Shweta Mohan, Karthik Netha',
     timestamp: '1:26',
+    trackId: '1kmJ0EvXClJAt0fSSQLX1m',
     note: "'En kadhal enna solla poren' at 1:26. Every time. I do not know how to explain what a Tamil line does when you are trying to keep from crying in public but this one does it."
   },
   {
@@ -244,6 +247,7 @@ export const SONGS = [
     from: null,
     artist: 'Nivas K Prasanna, K. S. Chithra, Sriram Parthasarathy',
     timestamp: '1:56',
+    trackId: '5QoCBy9eUHYkeWpEpzAud9',
     note: "At 1:56 the pause before the last chorus. That gap has more of us in it than the words. I hear it and I hear us in the kitchen not talking, just being."
   },
   {
@@ -252,6 +256,7 @@ export const SONGS = [
     from: null,
     artist: 'Vishal Chandrashekhar, Sai Vignesh, Madhan Karky',
     timestamp: '1:21',
+    trackId: '4DKv9524rd34cCKFmW7Xsb',
     note: "1:21. That is our song at 1:21. You know why. You told me why the first time we listened to it together and I did not know how to reply so I just held your hand instead."
   },
   {
@@ -260,62 +265,61 @@ export const SONGS = [
     from: null,
     artist: 'Vishal Chandrashekhar, Haricharan, Sinduri Vishal',
     timestamp: '1:37',
+    trackId: '6O1aZHTKj8bKhb3N5qB6lF',
     note: "At 1:37, the way Haricharan lands. That is what it feels like to look at you when you do not know I am looking at you. Which is the way I look at you most of the time."
   },
   {
     n: 6,
-    title: 'Nagumo',
-    from: null,
-    artist: 'Hesham Abdul Wahab, Arvind Venugopal',
-    timestamp: '0:24',
-    note: "0:24, the way it opens. Malayalam does something to me that Tamil does not, and this opening does something to me that no other opening does. You are that opening."
-  },
-  {
-    n: 7,
     title: 'Kannal Pesum',
     from: null,
     artist: 'S. P. Balasubrahmanyam',
     timestamp: '0:00',
+    trackId: '4VE07nOfv8CXbmRcubchO6',
     note: "From the very first note. SPB from the first second. I do not need to point to a moment because the whole song is a moment. Play it from 0:00 and you will know."
   },
   {
-    n: 8,
+    n: 7,
     title: 'Nenjam Ellam',
     from: null,
     artist: 'A.R. Rahman, Adnan Sami, Sujatha, Vairamuthu',
     timestamp: '1:43',
+    trackId: '5lmgII1wyydsuqXEOvzpSy',
     note: "1:43. When Adnan Sami comes in over the beat, that is where I would put you if you were a song. There is a version of this song we listened to that I will not describe here but you will remember which one and where."
   },
   {
-    n: 9,
+    n: 8,
     title: 'Until I Found You (with Em Beihold)',
     from: null,
     artist: 'Stephen Sanchez, Em Beihold',
     timestamp: '1:21',
+    trackId: '1Y3LN4zO1Edc2EluIoSPJN',
     note: "At 1:21 when Em Beihold's voice comes in and answers his. That is what our chats look like written out. You answered mine and I answered yours and eventually the answers were the song."
   },
   {
-    n: 10,
+    n: 9,
     title: 'Sahana Saral Thoo',
     from: null,
     artist: 'Udit Narayan, Chinmayi, Vijay Yesudas',
     timestamp: '1:16',
+    trackId: '317JrLcl1s0i6cXmnEWzR8',
     note: "1:16. The Chinmayi entry. Every time. I know I have said 'every time' about most of these but it is because it is true, every time. I do not skip past the intro on this one, I wait for 1:16."
   },
   {
-    n: 11,
+    n: 10,
     title: 'Innum Konjam Neram',
     from: null,
     artist: 'A.R. Rahman, Vijay Prakash, Shweta Mohan, Kabilan',
     timestamp: '4:37',
+    trackId: '5KJSI1MjQeXEBHBYMjgP41',
     note: "You said these one day and said you did not know if you ever would want kids but if you do these are so true. And to see myself fall from that to not being seen as someone worthy of you to someone who you would not be friends with, did just rip my heart. It does every single time I listen to these lines."
   },
   {
-    n: 12,
+    n: 11,
     title: 'Aval',
     from: null,
     artist: 'Santhosh Narayanan, Pradeep Kumar, Priya Hemesh, Vivek',
     timestamp: '0:47',
+    trackId: '4LK8863ScRhhT6hitFfBI5',
     note: "Did not ever sing these lines to you, but definitely means everything I would even say to you."
   }
 ];
@@ -326,6 +330,7 @@ export const FINAL_SONG = {
   from: 'Half Girlfriend',
   artist: 'Mithoon, Manoj Muntashir, Arijit Singh, Shashaa Tirupati',
   timestamp: '2:06',
+  trackId: '3oNVqllTnz7bHrY3f0nICg',
   note: "This is my 13th songs apex song. Every other song was for a season. This one is for after. Whichever way this ends, whichever address you land at, whichever heart you choose next, at 2:06 of this song I want you to know: phir bhi tumko chaahunga.",
   eyebrow: 'the last one'
 };
