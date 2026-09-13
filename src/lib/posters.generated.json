@@ -1,0 +1,516 @@
+{
+  "films": {
+    "Eternal Sunshine of the Spotless Mind": {
+      "posterPath": "/5MwkWH9tYHv3mV9OdYTMR5qreIz.jpg",
+      "matchedTitle": "Eternal Sunshine of the Spotless Mind",
+      "year": "2004",
+      "overview": "Joel Barish, heartbroken that his girlfriend underwent a procedure to erase him from her memory, decides to do the same. However, as he watches his memories of her fade away, he realises that he still loves her, and may be too late to correct his mistake."
+    },
+    "Aaromaley": {
+      "posterPath": "/80YOW8UVr1ublMX2Q638MCdS2Q4.jpg",
+      "matchedTitle": "Aaromaley",
+      "year": "2025",
+      "overview": "Ajith, a romantic dreamer faces reality when forced to work at a matchmaking agency under Anjali,a pragmatic, grounded woman, devoid of dreamy illusions. Their conflicting ideologies become the foundation of a relationship that’s as charming as it is unfiltered."
+    },
+    "Theeran Adhigaaram Ondru": {
+      "posterPath": "/ocRAXgjqCO8n4sVNxjKLqr1waMy.jpg",
+      "matchedTitle": "Theeran Adhigaaram Ondru",
+      "year": "2017",
+      "overview": "A hardnosed cop goes after a gang of ruthless dacoits who have been terrorising residents along the highway for a decade."
+    },
+    "Saba Nayagan": {
+      "posterPath": "/uYIw5Jt4xkcjObDwJqcgeLFP042.jpg",
+      "matchedTitle": "Saba Nayagan",
+      "year": "2023",
+      "overview": "This coming-of-age drama follows Saba, the happy-go-lucky protagonist, through the years leading up to his adulthood and highlighting events of friendship and romance along the way."
+    },
+    "Harry Potter and the Philosopher's Stone": {
+      "posterPath": "/wuMc08IPKEatf9rnMNXvIDxqP4W.jpg",
+      "matchedTitle": "Harry Potter and the Philosopher's Stone",
+      "year": "2001",
+      "overview": "Harry Potter has lived under the stairs at his aunt and uncle's house his whole life. But on his 11th birthday, he learns he's a powerful wizard—with a place waiting for him at the Hogwarts School of Witchcraft and Wizardry. As he learns to harness his newfound powers with the help of the school's kindly headmaster, Harry uncovers the truth about his parents' deaths—and about the villain who's to blame."
+    },
+    "Harry Potter and the Chamber of Secrets": {
+      "posterPath": "/sdEOH0992YZ0QSxgXNIGLq1ToUi.jpg",
+      "matchedTitle": "Harry Potter and the Chamber of Secrets",
+      "year": "2002",
+      "overview": "Cars fly, trees fight back, and a mysterious house-elf comes to warn Harry Potter at the start of his second year at Hogwarts. Adventure and danger await when bloody writing on a wall announces: The Chamber Of Secrets Has Been Opened. To save Hogwarts will require all of Harry, Ron and Hermione's magical abilities and courage."
+    },
+    "Harry Potter and the Prisoner of Azkaban": {
+      "posterPath": "/aWxwnYoe8p2d2fcxOqtvAtJ72Rw.jpg",
+      "matchedTitle": "Harry Potter and the Prisoner of Azkaban",
+      "year": "2004",
+      "overview": "Harry Potter's life is in danger once more as dangerous wizard Sirius Black has escaped from Azkaban Prison and is heading to Hogwarts."
+    },
+    "Harry Potter and the Goblet of Fire": {
+      "posterPath": "/fECBtHlr0RB3foNHDiCBXeg9Bv9.jpg",
+      "matchedTitle": "Harry Potter and the Goblet of Fire",
+      "year": "2005",
+      "overview": "When his name emerges from the Goblet of Fire, Harry Potter becomes a competitor in a grueling battle for glory among three wizarding schools. Signs of Voldemort's return emerge as Harry's friends help him prepare for the Triwizard Tournament."
+    },
+    "Harry Potter and the Order of the Phoenix": {
+      "posterPath": "/5aOyriWkPec0zUDxmHFP9qMmBaj.jpg",
+      "matchedTitle": "Harry Potter and the Order of the Phoenix",
+      "year": "2007",
+      "overview": "When a new professor's methods leave Hogwarts unprepared to fight the rising tide of evil, Harry teaches students how to defend against the dark arts."
+    },
+    "Harry Potter and the Half-Blood Prince": {
+      "posterPath": "/z7uo9zmQdQwU5ZJHFpv2Upl30i1.jpg",
+      "matchedTitle": "Harry Potter and the Half-Blood Prince",
+      "year": "2009",
+      "overview": "Dumbledore tries to prepare Harry for the final battle with Voldemort while Death Eaters wreak havoc in both Muggle and Wizard worlds."
+    },
+    "Harry Potter and the Deathly Hallows – Part 1": {
+      "posterPath": "/iGoXIpQb7Pot00EEdwpwPajheZ5.jpg",
+      "matchedTitle": "Harry Potter and the Deathly Hallows: Part 1",
+      "year": "2010",
+      "overview": "Harry, Ron and Hermione walk away from their last year at Hogwarts to find and destroy the remaining Horcruxes, putting an end to Voldemort's bid for immortality. But with Harry's beloved Dumbledore dead and Voldemort's unscrupulous Death Eaters on the loose, the world is more dangerous than ever."
+    },
+    "Harry Potter and the Deathly Hallows – Part 2": {
+      "posterPath": "/c54HpQmuwXjHq2C9wmoACjxoom3.jpg",
+      "matchedTitle": "Harry Potter and the Deathly Hallows: Part 2",
+      "year": "2011",
+      "overview": "Harry, Ron and Hermione continue their quest to vanquish the evil Voldemort once and for all. Just as things begin to look hopeless for the young wizards, Harry discovers a trio of magical objects that endow him with powers to rival Voldemort's formidable skills."
+    },
+    "Run": {
+      "posterPath": "/ilHG4EayOVoYeKqslspY3pR4wzC.jpg",
+      "matchedTitle": "Run",
+      "year": "2020",
+      "overview": "Chloe, a teenager who is confined to a wheelchair, is homeschooled by her mother, Diane. Chloe soon becomes suspicious of her mother and begins to suspect that she may be harboring a dark secret."
+    },
+    "Viduthalai Part 1": {
+      "posterPath": "/oTxPji8PY3PL0SK9e4mkt2laJKg.jpg",
+      "matchedTitle": "Viduthalai: Part I",
+      "year": "2023",
+      "overview": "Kumaresan, a police constable, gets recruited for an operation implanted to capture Perumal Vaathiyar, who leads a separatist group dedicated to fighting against the authorities for committing atrocities against innocent village women in the name of police interrogations."
+    },
+    "Viduthalai Part 2": {
+      "posterPath": "/l2LVYzhCuwfPfN80v6lic55DIAc.jpg",
+      "matchedTitle": "Viduthalai: Part II",
+      "year": "2024",
+      "overview": "Troubles worsen for Kumaresan after the capture of Perumal, and soon he is confronted with having to make a choice between performing his duties as a police constable, or taking a stand for what is right."
+    },
+    "Aavesham": {
+      "posterPath": "/k5RWPaNjgRcNvGoawYaQHQwyctI.jpg",
+      "matchedTitle": "Aavesham",
+      "year": "2024",
+      "overview": "Three college freshmen in Bangalore befriend an eccentric gangster to get revenge on their senior bullies."
+    },
+    "Mouna Ragam": {
+      "posterPath": "/oXy8bx56Fx53sxozHubeLLDItF7.jpg",
+      "matchedTitle": "Mouna Raagam",
+      "year": "1986",
+      "overview": "Divya, a college student, is forced to marry Chandrakumar due to family pressure. However, she asks for a divorce as a wedding gift, revealing her past."
+    },
+    "Geetha Govindam": {
+      "posterPath": "/sTreb0ajewXqeIqAyZ0IWtafoB5.jpg",
+      "matchedTitle": "Geetha Govindam",
+      "year": "2018",
+      "overview": "Vijay Govind, a young college lecturer who dreams of marriage falls for Geetha, a level-headed woman who's wary of strangers and isn't easy to convince. While things seem to go smoothly, Vijay makes a terrible mistake which not only derails any hope for his love story, but also potential repercussions with his family."
+    },
+    "Veetla Vishesham": {
+      "posterPath": "/ulg3XRanMIZpVtDHIk4K4zCWxWz.jpg",
+      "matchedTitle": "Veetla Vishesham",
+      "year": "2022",
+      "overview": "While Elango struggles to accept the news of his middle-aged mother's pregnancy, the situation jeopardises his relationship with his girlfriend, Sowmya, and his parents face social ridicule."
+    },
+    "Pannaiyarum Padminiyum": {
+      "posterPath": "/ttmmm9CwXX137XcdSZV1X8VLIQO.jpg",
+      "matchedTitle": "Pannaiyarum Padminiyum",
+      "year": "2014",
+      "overview": "A kind and respected village landlord acquires a vintage Premier Padmini car from his friend and cherishes it more than anything else. Over time, the entire village grows attached to the car, forming an emotional bond with it. His wife, however, refuses to ride in it until he learns to drive, so he decides to surprise her with a ride on their wedding anniversary. But before he can fulfill his promise, the car is taken away due to unforeseen circumstances. Will they ever get it back? A deeply emotional tale of love, nostalgia, and the heartfelt connection between an elderly couple and their cherished car."
+    },
+    "Thozha": {
+      "posterPath": "/iXsJEdk1P3V2cm2TSRBuG8ZS1pz.jpg",
+      "matchedTitle": "Oopiri",
+      "year": "2016",
+      "overview": "Impressed by his carefree attitude, quadriplegic multi-billionaire Vikram hires a convict out on parole as his caretaker. What follows is a string of life lessons they learn from each other."
+    },
+    "Tamizh Padam": {
+      "posterPath": "/uHxFRg8EwIft7KSfUUkIpW2F2sp.jpg",
+      "matchedTitle": "Thamizh Padam",
+      "year": "2010",
+      "overview": "A mockumentary comedy which parodies contemporary commercial films in Tamil cinema, mocking stereotypical scenes."
+    },
+    "Laapataa Ladies": {
+      "posterPath": "/yXt07MYeiyQRzS69PMHy0BPjCGP.jpg",
+      "matchedTitle": "Lost Ladies",
+      "year": "2024",
+      "overview": "In 2001, somewhere in rural India, two young brides get accidentally swapped on a train. In the ensuing chaos, they both encounter a host of colourful characters, resulting in hilarious and unexpected consequences."
+    },
+    "Premalu": {
+      "posterPath": "/uPpmBjY3znUqGY8kYwI5xvOrSc0.jpg",
+      "matchedTitle": "Premalu",
+      "year": "2024",
+      "overview": "Sachin, a carefree graduate, crosses paths with Reenu, a spirited IT professional, in Hyderabad. As their friendship deepens, unspoken feelings, career ambitions and life choices challenge their bond."
+    },
+    "Kappal": {
+      "posterPath": "/yI0Uogfz3RpUMvgXrx8pz1h4IJ6.jpg",
+      "matchedTitle": "Kappal",
+      "year": "2014",
+      "overview": "Vaibhav has four close friends and he is pressured to make a promise that they should not marry until their death as marriage will break friendship. But Vaibhav is very keen with having affair with girls but all his love flops due to his friends acts.He goes to Madras to find a girl to love. He finds Sonam and they both like each other. Vaibhav's friends finally come to Madras and knowing his affair with Sonam try to separate them, successfully doing so.Later their friends come to know that Vaibhav is very invested in his love and his friends try to make them rejoin again. The film ends with the success of love."
+    },
+    "Koozhangal": {
+      "posterPath": "/8BkWrWP1L9xbIJMwqwuLb17gYOZ.jpg",
+      "matchedTitle": "Pebbles",
+      "year": "2021",
+      "overview": "A young boy follows his violent and alcoholic father on a quest to find his mother, who has run away from his abuse."
+    },
+    "Mark Antony": {
+      "posterPath": "/3xz1lfMrFlNtZ4H8DQKvYog8ilR.jpg",
+      "matchedTitle": "Mark Antony",
+      "year": "2023",
+      "overview": "Set in 1995, Mark, a skilled mechanic and the son of a former gangster, stumbles upon a phone that has the ability to connect with the past, tries to save his estranged mother from a grim fate. While facing his own family's legacy, Mark must navigate through dangerous consequences of altering the past, as it causes unforeseen repercussions in the present."
+    },
+    "Jigarthanda Double X": {
+      "posterPath": "/rlPTdgLfgsSv8WiQXRZ2AVIDwAi.jpg",
+      "matchedTitle": "Jigarthanda DoubleX",
+      "year": "2023",
+      "overview": "A notorious gangster is incited to transform into a film hero and opts for a filmmaker and their project descends into a scenario they had never anticipated."
+    },
+    "Chiththa": {
+      "posterPath": "/5JdoPaXlLt4fYu2V8Ug12QRiQ89.jpg",
+      "matchedTitle": "Chithha",
+      "year": "2023",
+      "overview": "Easwaran, a young government employee gets the shock of his life when his niece Sundari goes missing. After initially wrongly accused of kidnapping her, he eventually comes to know that a child abuser has kidnapped her and he makes it his mission to rescue Sundari."
+    },
+    "Lover": {
+      "posterPath": "/5rN7wzvM9oAR35sQVNUt8JuTDFS.jpg",
+      "matchedTitle": "Lover",
+      "year": "2024",
+      "overview": "An alcoholic designer struggles to save his six-year relationship while facing personal challenges and misunderstandings. As their bond is tested, he begins to confront his past and question whether love alone is enough to hold them together."
+    },
+    "Blue Star": {
+      "posterPath": "/8agxJ2Wv8EitO1xwF2HgxnyloCI.jpg",
+      "matchedTitle": "Blue Star",
+      "year": "2024",
+      "overview": "The captains of two rival village cricket teams must put their longstanding grudge aside in order to take on the bullies threatening their right to play."
+    },
+    "Irugapatru": {
+      "posterPath": "/bnxW2Pb0k2n7G7atvBs7wnwaCdE.jpg",
+      "matchedTitle": "Irugapatru",
+      "year": "2023",
+      "overview": "Three couples from different economic backgrounds find ways to fix their relationships."
+    },
+    "Theera Kaadhal": {
+      "posterPath": "/qugVhcpyzGCY0n3RHMmWstxFerE.jpg",
+      "matchedTitle": "Theera Kaadhal",
+      "year": "2023",
+      "overview": "Two ex-lovers meet after a long time and their romance gets rekindled briefly. Though they ensure that their newly-found love shouldn't affect their respective families, one of them believes they are meant to be together, leaves the life of other in trouble."
+    },
+    "Fair Play": {
+      "posterPath": "/btExhxzdUZoQagLaYyXgT4KgT2e.jpg",
+      "matchedTitle": "Fair Play",
+      "year": "2023",
+      "overview": "An unexpected promotion at a cutthroat hedge fund pushes a young couple's relationship to the brink, threatening to unravel not only their recent engagement but their lives."
+    },
+    "Leo": {
+      "posterPath": "/2XUHC4lp3tDsgfFLFygNZ2x2Um9.jpg",
+      "matchedTitle": "Leo",
+      "year": "2023",
+      "overview": "Parthiban, a cafe owner, lives with his family in Himachal Pradesh. Things take an absurd turn for him when he gets in the way of a drug cartel."
+    },
+    "The Goat Life": {
+      "posterPath": "/l7z3Skv1xLASnUt0whC4IInaXt0.jpg",
+      "matchedTitle": "The Goat Life",
+      "year": "2024",
+      "overview": "Indian migrant worker Najeeb Muhammad goes to Saudi Arabia to earn money. However, in a twist of fate, he finds himself living a slave-like existence, herding goats in the middle of the desert."
+    },
+    "Manjummel Boys": {
+      "posterPath": "/bswrtewwthpsh6nABiqKevU4UBI.jpg",
+      "matchedTitle": "Manjummel Boys",
+      "year": "2024",
+      "overview": "A carefree vacation turns into a desperate race against time when a group of lifelong friends must unite to save one of their own from a notoriously perilous, uncharted abyss deep within the Guna Caves."
+    },
+    "Parking": {
+      "posterPath": "/xcKk5IILXOzAfY69lvKhhGcIt9J.jpg",
+      "matchedTitle": "Parking",
+      "year": "2023",
+      "overview": "An elderly man and a youngster, fight over a much-coveted parking spot, let their egos get the better of them and the clash brings out their ugliest sides."
+    },
+    "Kaathal – The Core": {
+      "posterPath": "/uPtqA6uwGqL19gXjzSlmQ31XFn.jpg",
+      "matchedTitle": "Kaathal - The Core",
+      "year": "2023",
+      "overview": "Mathew Devassy, a retired bank manager decides to enter local panchayat elections. Unexpectedly, his wife Omana, shocks everyone by filing for divorce, claiming that Mathew is gay."
+    },
+    "How to Train Your Dragon": {
+      "posterPath": "/ygGmAO60t8GyqUo9xYeYxSZAR3b.jpg",
+      "matchedTitle": "How to Train Your Dragon",
+      "year": "2010",
+      "overview": "As the son of a Viking leader on the cusp of manhood, shy Hiccup Horrendous Haddock III faces a rite of passage: he must kill a dragon to prove his warrior mettle. But after downing a feared dragon, he realizes that he no longer wants to destroy it, and instead befriends the beast – which he names Toothless – much to the chagrin of his warrior father."
+    },
+    "How to Train Your Dragon 2": {
+      "posterPath": "/d13Uj86LdbDLrfDoHR5aDOFYyJC.jpg",
+      "matchedTitle": "How to Train Your Dragon 2",
+      "year": "2014",
+      "overview": "Five years after uniting the dragons and Vikings of Berk, Hiccup and Toothless soar beyond their homeland, charting the vast unknown. During one of their adventures, the pair discover a secret cave that houses hundreds of wild dragons—and a mysterious dragon rider with a startling connection to Hiccup. And as the ruthless conqueror Drago Bludvist rises to seize control of both dragons and people alike, Hiccup must step into his role as a true leader and, alongside his friends and Toothless, protect Berk from a devastating war."
+    },
+    "How to Train Your Dragon: The Hidden World": {
+      "posterPath": "/xvx4Yhf0DVH8G4LzNISpMfFBDy2.jpg",
+      "matchedTitle": "How to Train Your Dragon: The Hidden World",
+      "year": "2019",
+      "overview": "As Hiccup fulfills his dream of creating a peaceful dragon utopia, Toothless’ discovery of an untamed, elusive mate draws the Night Fury away. When danger mounts at home and Hiccup’s reign as village chief is tested, both dragon and rider must make impossible decisions to save their kind."
+    },
+    "How to Train Your Dragon: Homecoming": {
+      "posterPath": "/kXj2Qrfm994yLeuADqbOieU1mUH.jpg",
+      "matchedTitle": "How to Train Your Dragon: Homecoming",
+      "year": "2019",
+      "overview": "It's been ten years since the dragons moved to the Hidden World, and even though Toothless doesn't live in New Berk anymore, Hiccup continues the holiday traditions he once shared with his best friend. But the Vikings of New Berk were beginning to forget about their friendship with dragons. Hiccup, Astrid, and Gobber know just what to do to keep the dragons in the villagers' hearts. And across the sea, the dragons have a plan of their own..."
+    },
+    "Sita Ramam": {
+      "posterPath": "/t1O94ZBzsQXJihtVkrsStRLyUDR.jpg",
+      "matchedTitle": "Sita Ramam",
+      "year": "2022",
+      "overview": "Afreen, a rebellious Pakistani student sets ablaze the car of an Indian in London. Angered Afreen returns to Pakistan to ask for money from her grandfather that she has to pay in a month's time as damages. However, she gets to know that he is no more and the only thing he has left for her is a letter-delivering task, written by Ram to Sita. As Afreen sets out to find Ram, there begins her journey of discovering the secret behind the 20-year-old letter."
+    },
+    "Sivaji": {
+      "posterPath": "/t5oPb8q91gdClkyJG2hxyebEglv.jpg",
+      "matchedTitle": "Sivaji: The Boss",
+      "year": "2007",
+      "overview": "A wealthy engineer arrives in India with the mission of serving the nation and investing in the country's welfare but is met with strong opposition from corrupt officials and politicians. After being faced with insurmountable hardships, he decides to take drastic measures."
+    },
+    "Amaran": {
+      "posterPath": "/eCB06m1KUGilEOlIzb40nkQhVY0.jpg",
+      "matchedTitle": "Amaran",
+      "year": "2024",
+      "overview": "A heroic true story of Major Mukund Varadarajan, an Indian Army officer who displayed extraordinary bravery during a counterterrorism mission in Kashmir’s Shopian district. The film captures his courage in protecting his nation and the devotion of his wife Indhu Rebecaa Varghese."
+    },
+    "Ghilli": {
+      "posterPath": "/aUvUohnBgX5sbuMKNyKDAPAoVNc.jpg",
+      "matchedTitle": "Ghilli",
+      "year": "2004",
+      "overview": "Muthu Pandi, a village strongman, decides to marry Dhanalakshmi, and begins his quest by eliminating everyone who opposes their union - starting with both her brothers. In desperation, Dhanalakshmi decides to escape from the village, and in the process is unwittingly assisted by a university Kabaddi player Velu."
+    },
+    "Thiruvilaiyaadal Aarambam": {
+      "posterPath": "/9FJcjUBLSTYlARdPid3hNPPmEwZ.jpg",
+      "matchedTitle": "Thiruvilaiyaadal Aarambam",
+      "year": "2006",
+      "overview": "Guru hatches several plans to separate Priya and her lover Thirukumaran. However, Thirukumaran successfully manages to escape from Guru's evil plans and traps him in another problem."
+    },
+    "Velaiilla Pattadhari": {
+      "posterPath": "/fQ8JzXRf68xlzyquLn7TEe3S2Nh.jpg",
+      "matchedTitle": "Velaiyilla Pattathari",
+      "year": "2014",
+      "overview": "Raghuvaran, who is unemployed for years, gets his dream job but a powerful rival is keen to put him down. Can he take on his adversary?"
+    },
+    "Singam": {
+      "posterPath": "/g7bsLSuEg3FuCY1o7uSzbxMUJLB.jpg",
+      "matchedTitle": "Singam",
+      "year": "2010",
+      "overview": "The story, set in the backdrop of Nallore, a small town in Thoothukudi District, revolves around Sub-Inspector Durai Singam, a brave and just policeman who serves in his hometown primarily to fulfill his father’s wish. Durai Singam settles every dispute in his town patiently with his words of wisdom and resorts to force only when the situation demands it. Kavya, a city girl who comes on vacation to Nallore, falls in love with Durai Singam. Erimalai, Durai Singam's bumbling colleague and friend, often accompanies him."
+    },
+    "Singam II": {
+      "posterPath": "/6ENAxfZz4IY2NPu89R1SGObjiWF.jpg",
+      "matchedTitle": "Singam 2",
+      "year": "2013",
+      "overview": "Picking up the storyline from where Singam ended, Duraisingam has gone undercover after meeting the Home Minister and is working as an NCC officer in a school in Thoothukudi. The only people who know about this operation are the Chief Minister and Home Minister apart from himself."
+    },
+    "Vel": {
+      "posterPath": "/6mUp9lW0qYzySB5znUxZA2oYVbe.jpg",
+      "matchedTitle": "Vel",
+      "year": "2007",
+      "overview": "Two sons that are separated as children grow up in drastically different environments."
+    },
+    "Panchathanthiram": {
+      "posterPath": "/ofTPB176uIsjGTdsZbQrVE86yxA.jpg",
+      "matchedTitle": "Panchatanthiram",
+      "year": "2002",
+      "overview": "Ram's friends hire Maggie, a call girl, to help him get over his wife, who mistakenly believes him to be a philanderer. However, they get in trouble when Maggie ends up dead."
+    },
+    "Her": {
+      "posterPath": "/eCOtqtfvn7mxGl6nfmq4b1exJRc.jpg",
+      "matchedTitle": "Her",
+      "year": "2013",
+      "overview": "In the not so distant future, Theodore, a lonely writer, purchases a newly developed operating system designed to meet the user's every need. To Theodore's surprise, a romantic relationship develops between him and his operating system. This unconventional love story blends science fiction and romance in a sweet tale that explores the nature of love and the ways that technology isolates and connects us all."
+    },
+    "About Time": {
+      "posterPath": "/ls6zswrOZVhCXQBh96DlbnLBajM.jpg",
+      "matchedTitle": "About Time",
+      "year": "2013",
+      "overview": "The night after another unsatisfactory New Year's party, Tim's father reveals to him that the men in their family have the ability to travel through time. They can't change history, but they can change what happens and has happened in their own lives. Thus begins the start of a lesson in learning to appreciate life itself as it is, as it comes, and most importantly, the people living alongside us."
+    },
+    "A Man Called Otto": {
+      "posterPath": "/130H1gap9lFfiTF9iDrqNIkFvC9.jpg",
+      "matchedTitle": "A Man Called Otto",
+      "year": "2022",
+      "overview": "When a lively young family moves in next door, grumpy widower Otto Anderson meets his match in a quick-witted, pregnant woman named Marisol, leading to an unlikely friendship that turns his world upside down."
+    },
+    "Parandhu Po": {
+      "posterPath": "/jrkiG3xdfyRDd2OLJ6zQ5cOIZZ5.jpg",
+      "matchedTitle": "Parandhu Po",
+      "year": "2025",
+      "overview": "Gokul’s financial reach far exceeds his reality, but juggling unpayable loans and dodging debt collectors, he tries his best to provide for his pampered son, Anbu. With his mother away on business, Anbu persuades his father to go on a motorcycle trip through the countryside – a welcome break from everyday hustle, that helps Gokul realise that his son’s tantrums have a far deeper root than he thought."
+    },
+    "Coolie": {
+      "posterPath": "/kr36awqmziEI5mfUElsHB0pj9zP.jpg",
+      "matchedTitle": "Coolie",
+      "year": "2025",
+      "overview": "Deva, once living a quiet life, is shaken when his close friend dies under suspicious circumstances. Determined to uncover the truth, he infiltrates a powerful gang operating in the shadows. As he investigates, Deva becomes entangled in a dangerous web of crime, betrayal, and secrets from his own past, forcing him to confront powerful enemies while protecting the ones he loves."
+    },
+    "Vettaiyan": {
+      "posterPath": "/1q0dAC3OJZVKQcV2dG5sGvdUGqN.jpg",
+      "matchedTitle": "Vettaiyan",
+      "year": "2024",
+      "overview": "A sought-after Supercop gets caught in a series of unexpected events when he encounters a suspect who is accused of being involved in a murder case."
+    },
+    "Maharaja": {
+      "posterPath": "/s0m4TM1XRAftQStgKpw024RvkJo.jpg",
+      "matchedTitle": "Maharaja",
+      "year": "2024",
+      "overview": "A barber seeks vengeance after his home is burglarized, cryptically telling police his \"Lakshmi\" has been taken, leaving them uncertain if it's a person or object, jeer at his request until they learn what they're really looking for."
+    },
+    "Maareesan": {
+      "posterPath": "/c7JGfFgMnNuyF2Q4FSu7Kgip3mK.jpg",
+      "matchedTitle": "Maareesan",
+      "year": "2025",
+      "overview": "A petty thief embarks on a road trip with an elderly man suffering from memory loss under deceptive pretenses. As they journey across Tamil Nadu, the promise of an easy con unravels into a quietly shifting connection, with both men hiding secrets of their own."
+    },
+    "Aan Paavam Pollathathu": {
+      "posterPath": "/5eZzBvETRK8uDz3mUK0Feio2T5C.jpg",
+      "matchedTitle": "Aan Paavam Pollathathu",
+      "year": "2025",
+      "overview": "A year into their marriage, unable to distinguish between toxicity and mere misunderstandings, Sakthi decides to part ways with Siva. The couple navigate their separation, and whether they ultimately proceed with divorce forms the emotional climax."
+    },
+    "Dude": {
+      "posterPath": "/oLUbL4RtynlTtKd1byseeOCkIZO.jpg",
+      "matchedTitle": "Dude",
+      "year": "2025",
+      "overview": "Childhood friends Agan and Kural are inseparable. When Kural encounters romantic troubles, Agan must balance his hidden feelings for her with his desire to ensure her happiness."
+    },
+    "With Love": {
+      "posterPath": "/mKVSozOhy9to5AFfIX1tsDDFrFK.jpg",
+      "matchedTitle": "With Love",
+      "year": "2026",
+      "overview": "Sathya reluctantly agrees to a blind date arranged by his sister and meets Monisha. They discover they attended the same school years ago. Bonding over shared memories and old crushes, they reconnect with their past and grow closer."
+    },
+    "DNA": {
+      "posterPath": "/82eWyEvVP01sV5DvBer9QyNgCh2.jpg",
+      "matchedTitle": "DNA",
+      "year": "2025",
+      "overview": "A young woman with borderline personality disorder, fights a lonely battle when she believes her newborn baby was swapped with someone else’s minutes after her delivery. Her loving husband, who initially doubts, eventually believes and starts investigating with an experienced cop."
+    },
+    "Nilavuku En Mel Ennadi Kobam": {
+      "posterPath": "/j5krlz9U40ZWaspQXa5CtQUikXl.jpg",
+      "matchedTitle": "Nilavuku En Mel Ennadi Kobam",
+      "year": "2025",
+      "overview": "Prabhu, a young chef, is ready to move forward with an arranged marriage when his past love, Nila, unexpectedly reenters his life, challenging his plans and emotions."
+    },
+    "12th Fail": {
+      "posterPath": "/eebUPRI4Z5e1Z7Hev4JZAwMIFkX.jpg",
+      "matchedTitle": "12th Fail",
+      "year": "2023",
+      "overview": "Based on the true story of IPS officer Manoj Kumar Sharma, 12th Fail sheds limelight on fearlessly embracing the idea of restarting the academic journey despite the setbacks and challenges and reclaiming one's destiny at a place where millions of students attempt the world's toughest competitive exam: UPSC."
+    },
+    "Oh My Kadavule": {
+      "posterPath": "/wuQwtFEm4DlzK3EnZ5VWefVXZvG.jpg",
+      "matchedTitle": "Oh My Kadavule",
+      "year": "2020",
+      "overview": "Arjun is conveniently married to his best friend Anu and their marriage turns out to be a nightmare since he is not really in love with her. When things get tough Arjun gets a second chance in life that could change his path and perspective altogether."
+    },
+    "Dragon": {
+      "posterPath": "/vKNJPuejtE6Xrp6RK6LKsQcbL8L.jpg",
+      "matchedTitle": "Dragon",
+      "year": "2025",
+      "overview": "Raghavan transforms from a school topper into a “bad boy” to score girls in college, but ends up a heartbroken dropout. He then cons his way into a successful finance career, but the lies keep building and maintaining the facade proves tricky."
+    },
+    "Love Today": {
+      "posterPath": "/iRfIti4RhDFZ11UyCmz5Mk5wtGI.jpg",
+      "matchedTitle": "Love Today",
+      "year": "2022",
+      "overview": "A young couple is made to exchange their phones for a day. What follows is a hilarious and emotional sequence of events that puts their lives in misery."
+    }
+  },
+  "series": {
+    "Made in Heaven": {
+      "posterPath": "/leBOnbO2aLyfhMEdgO9tMlwcCY.jpg",
+      "matchedTitle": "Made in Heaven",
+      "year": "2019",
+      "overview": "The story of two wedding planners in Delhi, where tradition jostles with modern aspirations against the backdrop of big fat Indian weddings revealing many secrets and lies."
+    },
+    "Game of Thrones": {
+      "posterPath": "/1XS1oqL89opfnbLl8WnZY1O1uJx.jpg",
+      "matchedTitle": "Game of Thrones",
+      "year": "2011",
+      "overview": "Seven noble families fight for control of the mythical land of Westeros. Friction between the houses leads to full-scale war. All while a very ancient evil awakens in the farthest north. Amidst the war, a neglected military order of misfits, the Night's Watch, is all that stands between the realms of men and icy horrors beyond."
+    },
+    "Dexter": {
+      "posterPath": "/q8dWfc4JwQuv3HayIZeO84jAXED.jpg",
+      "matchedTitle": "Dexter",
+      "year": "2006",
+      "overview": "Dexter Morgan, a blood spatter pattern analyst for the Miami Metro Police also leads a secret life as a serial killer, hunting down criminals who have slipped through the cracks of justice."
+    },
+    "Kim's Convenience": {
+      "posterPath": "/82Vue6MPuYZzlpggR65cvWdBdy.jpg",
+      "matchedTitle": "Kim's Convenience",
+      "year": "2016",
+      "overview": "The funny, heartfelt story of The Kims, a Korean-Canadian family, running a convenience store in downtown Toronto. Mr. and Mrs. Kim ('Appa' and 'Umma') immigrated to Toronto in the '80s to set up shop near Regent Park and had two kids, Jung and Janet who are now young adults. However, when Jung was 16, he and Appa had a major falling out involving a physical fight, stolen money and Jung leaving home. Father and son have been estranged since."
+    },
+    "Bridgerton": {
+      "posterPath": "/uXTg565ahu9RwonCX1V2Hex1NU6.jpg",
+      "matchedTitle": "Bridgerton",
+      "year": "2020",
+      "overview": "Wealth, lust, and betrayal set in the backdrop of Regency era England, seen through the eyes of the powerful Bridgerton family."
+    },
+    "You": {
+      "posterPath": "/oANi0vEE92nuijiZQgPZ88FSxqQ.jpg",
+      "matchedTitle": "You",
+      "year": "2018",
+      "overview": "A dangerously charming, obsessive man goes to extreme measures to insert himself into the lives of women who fascinate him."
+    },
+    "Baby Reindeer": {
+      "posterPath": "/tN9OcbkAOPwHSr1sgMornZtQZBx.jpg",
+      "matchedTitle": "Baby Reindeer",
+      "year": "2024",
+      "overview": "When a struggling comedian shows one act of kindness to a vulnerable woman, it sparks a suffocating obsession which threatens to wreck both their lives."
+    },
+    "Adolescence": {
+      "posterPath": "/20i4nShZZg1g1VFHSB8xpaYM4r7.jpg",
+      "matchedTitle": "Adolescence",
+      "year": "2025",
+      "overview": "When a 13-year-old is accused of the murder of a classmate, his family, therapist and the detective in charge are all left asking: what really happened?"
+    },
+    "Heart Beat": {
+      "posterPath": "/aHEr565AkKrwC7Q18u3OEjGavyj.jpg",
+      "matchedTitle": "Heart Beat",
+      "year": "2024",
+      "overview": "RK Multispeciality Hospital is a beacon of hope and healing. Its doctors are resilient even when they have to deal with medical and personal challenges."
+    },
+    "Brooklyn Nine-Nine": {
+      "posterPath": "/mpjlDzVjp7oyHUe2LaF9ltKe6f1.jpg",
+      "matchedTitle": "Brooklyn Nine-Nine",
+      "year": "2013",
+      "overview": "A single-camera ensemble comedy following the lives of an eclectic group of detectives in a New York precinct, including one slacker who is forced to shape up when he gets a new boss."
+    },
+    "Georgie & Mandy's First Marriage": {
+      "posterPath": "/3z2mYFxUkzanb2eeIcVyfJq0G3q.jpg",
+      "matchedTitle": "Georgie & Mandy's First Marriage",
+      "year": "2024",
+      "overview": "Georgie and Mandy raise their young family in Texas while navigating the challenges of adulthood, parenting, and marriage."
+    },
+    "The Neighborhood": {
+      "posterPath": "/uItUViUsFAY7wzufTS2zWNbuuAm.jpg",
+      "matchedTitle": "The Neighborhood",
+      "year": "2018",
+      "overview": "The nicest guy in the Midwest moves his family into a tough neighborhood in Los Angeles where not everyone appreciates his extreme neighborliness. That includes their new next-door neighbor Calvin."
+    },
+    "Suzhal – The Vortex": {
+      "posterPath": "/z6IJi7xmAMmKdbzSnwguIXLIVjN.jpg",
+      "matchedTitle": "Suzhal - The Vortex",
+      "year": "2022",
+      "overview": "A minor girl goes missing in a small town in Tamilnadu and an investigation follows. A sub inspector investigating a missing girl's case in a uncovers some shocking revelations and dirty truths those threaten to shake up the cultural societal fabric."
+    },
+    "Vadhandhi – The Fable of Velonie": {
+      "posterPath": "/2EgR5kgv4yHbJpR3GutxzbGd4rw.jpg",
+      "matchedTitle": "Vadhandhi",
+      "year": "2022",
+      "overview": "Vivek, a diligent cop, takes charge of the investigation of the murder of a beautiful young girl, Velonie. The rumours about her that spring up post her death threatens to irrevocably damage Velonie's image, Vivek must wade through a web of half-truths and confusing leads to solve the case."
+    },
+    "Kuttram Purindhavan": {
+      "posterPath": "/2ELw8en4H2PayT6B80kPAUGULXt.jpg",
+      "matchedTitle": "Kuttram Purindhavan",
+      "year": "2025",
+      "overview": "In a small-town, when a girl goes missing, Retiree Baskaran takes extreme measures to protect his grandson, Esther is consumed by guilt, and powerless constable Gautham races to find the truth. Secrets surface, leading to an uneasy alliance between Baskaran and Gautham, to a final showdown, justice is served, but guilt leaves some with closure and others haunted."
+    }
+  }
+}

@@ -1,7 +1,9 @@
 import Link from 'next/link';
 import NavAvatar from '@/components/NavAvatar';
+import SafeImg from '@/components/SafeImg';
 import { readSession } from '@/lib/session';
 import { getReleaseStatus, daysRemaining } from '@/lib/release-timer';
+import { RELEASE_HERO_ART } from '@/lib/dragons';
 import ReleaseTimer from '@/components/ReleaseTimer';
 
 export default async function ReleasePage() {
@@ -18,8 +20,7 @@ export default async function ReleasePage() {
         <NavAvatar />
       </div>
       <div className="release-shell">
-        {/* asset: public/dragons/02_Flying_Poses/flying_012.png */}
-        <img className="content-header-art" src="/dragons/02_Flying_Poses/flying_012.png" alt="" />
+        <SafeImg srcs={RELEASE_HERO_ART} alt="" className="content-header-art" />
         <p className="content-eyebrow">the way out, if you want it</p>
         <h1 className="content-title">Release</h1>
         <p className="release-explain">

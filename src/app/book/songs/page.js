@@ -13,7 +13,7 @@ export default function SongsPage() {
       <div className="content-page">
         {/* asset: public/dragons/03_Stickers_Pack/stickers_060.png */}
         <img className="content-header-art" src="/dragons/03_Stickers_Pack/stickers_060.png" alt="" />
-        <p className="content-eyebrow">thirteen songs, one for each part</p>
+        <p className="content-eyebrow">eleven songs, one for each part</p>
         <h1 className="content-title">Songs</h1>
         <p className="content-intro">
           Each of these has a moment. A single second where I would want you to stop and listen.
@@ -24,15 +24,25 @@ export default function SongsPage() {
           {SONGS.map(s => (
             <div key={s.n} className="song-card">
               <div className="song-num">Song {s.n}</div>
-              <div className="song-title">
-                {s.title}
-                {s.timestamp && (
-                  <span className="song-timestamp-badge">at {s.timestamp}</span>
-                )}
-              </div>
+              <div className="song-title">{s.title}</div>
               <div className="song-artist">
                 {s.from ? `from "${s.from}" · ` : ''}{s.artist}
               </div>
+              {s.trackId && (
+                <iframe
+                  className="song-embed"
+                  src={`https://open.spotify.com/embed/track/${s.trackId}?utm_source=generator&theme=0`}
+                  width="100%"
+                  height="80"
+                  frameBorder="0"
+                  allow="encrypted-media"
+                  style={{ borderRadius: '12px' }}
+                  title={`${s.title} on Spotify`}
+                />
+              )}
+              {s.timestamp && (
+                <span className="song-timestamp-badge song-timestamp-badge-below">at {s.timestamp}</span>
+              )}
               <p className="song-note">{s.note}</p>
             </div>
           ))}

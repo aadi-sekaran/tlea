@@ -1,6 +1,8 @@
 'use client';
 
 import { useState } from 'react';
+import SafeImg from '@/components/SafeImg';
+import { TIMECAPSULE_SEALED_ART } from '@/lib/dragons';
 
 export default function TimeCapsuleSeal({ author, existingLetter, unlocksOn }) {
   const [body, setBody] = useState(existingLetter?.body || '');
@@ -12,8 +14,7 @@ export default function TimeCapsuleSeal({ author, existingLetter, unlocksOn }) {
   if (sealed) {
     return (
       <div className="tc-status">
-        {/* asset: public/dragons/01_Main_Pack/main_067.png (sleeping pair, tent scene) */}
-        <img className="tc-icon" src="/dragons/01_Main_Pack/main_067.png" alt="" />
+        <SafeImg srcs={TIMECAPSULE_SEALED_ART} alt="" className="tc-icon" />
         <p className="tc-lock-msg">Your letter is sealed.</p>
         <p className="tc-lock-sub">Unlocks {unlocksOn}.</p>
         {photoUrls.length > 0 && (

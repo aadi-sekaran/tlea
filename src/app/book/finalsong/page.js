@@ -16,6 +16,18 @@ export default function FinalSongPage() {
         <p className="finalsong-artist">
           {FINAL_SONG.from ? `from "${FINAL_SONG.from}" · ` : ''}{FINAL_SONG.artist}
         </p>
+        {FINAL_SONG.trackId && (
+          <iframe
+            className="song-embed finalsong-embed"
+            src={`https://open.spotify.com/embed/track/${FINAL_SONG.trackId}?utm_source=generator&theme=0`}
+            width="100%"
+            height="80"
+            frameBorder="0"
+            allow="encrypted-media"
+            style={{ borderRadius: '12px' }}
+            title={`${FINAL_SONG.title} on Spotify`}
+          />
+        )}
         <p className="finalsong-time">at {FINAL_SONG.timestamp}</p>
         <p className="finalsong-note">{FINAL_SONG.note}</p>
         <div className="finalsong-buttons">

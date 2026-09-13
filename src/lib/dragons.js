@@ -1,6 +1,13 @@
 // Dragon asset paths. Multiple sticker sheets live in /public/dragons/.
 // This registry maps semantic names to SVG paths for use throughout the app.
-
+//
+// EFFICIENCY NOTE (flagged, not removed): nothing in src/ currently imports
+// DRAGON_ASSETS - every page that needs dragons-login.png hardcodes the path
+// itself instead. The four pack-*.svg contact sheets it points at
+// (public/dragons/pack-main.svg etc.) total ~14MB and are not requested by
+// any page as a result. Since browsers only fetch a public/ file when a page
+// actually links to it, this isn't causing runtime lag, just unused weight
+// in the repo. Left in place in case something is meant to wire up to it.
 export const DRAGON_ASSETS = {
   // Login screen dark + light dragon head portraits
   loginPortraits: '/dragons/dragons-login.png',
@@ -45,3 +52,60 @@ export const SECTION_TILE_ART = {
   sunset: '/dragons/01_Main_Pack/main_066.png',           // Final Song — night sky scene
   sleeping: '/dragons/02_Flying_Poses/flying_012.png'     // Release — a dragon flying off
 };
+
+// ═══════════════════════════════════════════════════════════════════
+// Dragon batch 2, in public/dragons/scenes/. 18 delivered so far, 28 more
+// trickling in over the next 48 hours. Every lookup below is a candidate
+// list: use with <SafeImg srcs={...} /> so a missing file just falls
+// back down the chain instead of breaking the page.
+// ═══════════════════════════════════════════════════════════════════
+
+export const COVER_ENVELOPE = ['/dragons/scenes/cover-envelope.png', '/dragons/01_Main_Pack/main_074.png'];
+
+// Small top-left icon per section tile on the browse home, keyed by SECTIONS slug.
+export const TILE_ICON_ART = {
+  cast: ['/dragons/scenes/tile-icon-cast.png'],
+  songs: ['/dragons/scenes/tile-icon-songs.png'],
+  watched: ['/dragons/scenes/tile-icon-watched.png'],
+  places: ['/dragons/scenes/tile-icon-places.png'],
+  trips: ['/dragons/scenes/tile-icon-trips.png'],
+  dictionary: ['/dragons/scenes/tile-icon-dictionary.png'],
+  firsts: ['/dragons/scenes/tile-icon-firsts.png'],
+  ledger: ['/dragons/scenes/tile-icon-ledger.png'],
+  onthisday: ['/dragons/scenes/tile-icon-ontd.png'],
+  polaroids: ['/dragons/scenes/tile-icon-polaroids.png'],
+  timecapsule: ['/dragons/scenes/tile-icon-timecapsule.png'],
+  finalsong: ['/dragons/scenes/tile-icon-finalsong.png']
+  // foreword, lineandreply, release: no tile icon yet, tile renders without one.
+};
+
+// Divider between the chapter synopsis and the prose, keyed by chapter num.
+export const CHAPTER_MARKS = {
+  1: ['/dragons/scenes/chapter-01-mark.png'],
+  2: ['/dragons/scenes/chapter-02-mark.png'],
+  3: ['/dragons/scenes/chapter-03-mark.png'],
+  4: ['/dragons/scenes/chapter-04-mark.png'],
+  5: ['/dragons/scenes/chapter-05-mark.png'],
+  6: ['/dragons/scenes/chapter-06-mark.png'],
+  7: ['/dragons/scenes/chapter-07-mark.png']
+};
+
+export const FAREWELL_SIGNOFF_ART = [
+  '/dragons/scenes/farewell-hero.png',
+  '/dragons/scenes/farewell-outro.png',
+  '/dragons/scenes/finalsong-cliff.png'
+];
+
+export const TIMECAPSULE_SEALED_ART = ['/dragons/scenes/timecapsule-sealed.png', '/dragons/01_Main_Pack/main_067.png'];
+export const RELEASE_HERO_ART = ['/dragons/scenes/release-flying.png', '/dragons/02_Flying_Poses/flying_012.png'];
+export const FINALSONG_HERO_ART = ['/dragons/scenes/finalsong-cliff.png'];
+
+export const HEADER_ART = {
+  onthisday: ['/dragons/scenes/ontd-header.png', '/dragons/01_Main_Pack/main_062.png'],
+  watched: ['/dragons/scenes/watched-header.png', '/dragons/01_Main_Pack/main_099.png'],
+  dictionary: ['/dragons/scenes/dictionary-header.png', '/dragons/01_Main_Pack/main_017.png'],
+  trips: ['/dragons/scenes/trips-header.png', '/dragons/01_Main_Pack/main_080.png']
+};
+
+export const ERROR_ART = ['/dragons/scenes/error-oops.png'];
+export const LOADING_ART = ['/dragons/scenes/loading-flying.png', '/dragons/02_Flying_Poses/flying_001.png'];
