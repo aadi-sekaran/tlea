@@ -9,7 +9,7 @@ export async function POST(request) {
   const darkPw = process.env.DARK_PASSWORD;
   const lightPw = process.env.LIGHT_PASSWORD;
   const expected = role === 'dark' ? darkPw : role === 'light' ? lightPw : null;
-  if (!expected || password.trim() !== expected.trim()) {
+  if (!expected || password.trim().toLowerCase() !== expected.trim().toLowerCase()) {
     return NextResponse.json({ error: 'wrong' }, { status: 401 });
   }
   await createSession(role);

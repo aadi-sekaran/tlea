@@ -1,9 +1,12 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 export default function PolaroidLightbox({ polaroids }) {
   const [openIdx, setOpenIdx] = useState(-1);
+  const [activeIdx, setActiveIdx] = useState(0);
+  const trackRef = useRef(null);
+  const itemRefs = useRef([]);
 
   useEffect(() => {
     function onKey(e) {
@@ -16,26 +19,58 @@ export default function PolaroidLightbox({ polaroids }) {
     return () => window.removeEventListener('keydown', onKey);
   }, [openIdx, polaroids.length]);
 
+  // Tracks which polaroid is centered in the horizontal scroller, for the
+  // "n / total" pagination counter.
+  useEffect(() => {
+    const track = trackRef.current;
+    if (!track) return;
+
+    const ratios = new Map();
+    const observer = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          const idx = Number(entry.target.dataset.idx);
+          ratios.set(idx, entry.intersectionRatio);
+        });
+        let bestIdx = 0;
+        let bestRatio = -1;
+        ratios.forEach((ratio, idx) => {
+          if (ratio > bestRatio) {
+            bestRatio = ratio;
+            bestIdx = idx;
+          }
+        });
+        setActiveIdx(bestIdx);
+      },
+      { root: track, rootMargin: '0px -42% 0px -42%', threshold: [0, 0.25, 0.5, 0.75, 1] }
+    );
+
+    itemRefs.current.forEach(el => el && observer.observe(el));
+    return () => observer.disconnect();
+  }, [polaroids.length]);
+
   return (
     <>
-      <div className="polaroids-grid">
+      <p className="polaroids-caption">The little moments that started a big everything. ♡</p>
+      <div className="polaroid-carousel" ref={trackRef}>
         {polaroids.map((p, i) => (
           <button
             key={i}
-            className="polaroid"
+            ref={el => { itemRefs.current[i] = el; }}
+            data-idx={i}
+            className="polaroid-item"
             onClick={() => setOpenIdx(i)}
             aria-label={`Open polaroid ${i + 1}`}
           >
             <img
-              className="polaroid-img"
               src={p.src}
               alt={p.caption || `Polaroid ${i + 1}`}
               loading={i < 4 ? 'eager' : 'lazy'}
             />
-            <div className="polaroid-caption">{p.caption || ''}</div>
           </button>
         ))}
       </div>
+      <p className="polaroids-pagination">{activeIdx + 1} / {polaroids.length}</p>
       <div
         className={`lightbox ${openIdx >= 0 ? 'open' : ''}`}
         onClick={e => {

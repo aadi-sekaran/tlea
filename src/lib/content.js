@@ -278,7 +278,8 @@ export const CAST = [
   }
 ];
 
-// Nagumo removed from the list (Aadi: not a song I want in the list).
+// Nagumo removed from the list (Aadi: not a song I want in the list — said
+// again, emphatically, when re-dictating these notes for v4.6).
 export const SONGS = [
   {
     n: 1,
@@ -287,7 +288,7 @@ export const SONGS = [
     artist: 'G. V. Prakash',
     timestamp: '0:10',
     trackId: '7tr5DrOhoA4Dolg8X1OnRQ',
-    note: "The strings sit down and then her hum comes up out of them, at 0:10. That is the moment I first thought of you, before we were us. Every time this hum starts I am back in the seat with you."
+    note: "That is you Kannama for me, that is the life I wanted that is the music you are to me. You are that."
   },
   {
     n: 2,
@@ -296,7 +297,7 @@ export const SONGS = [
     artist: 'G. V. Prakash, Haricharan, Shweta Mohan, Karthik Netha',
     timestamp: '1:26',
     trackId: '1kmJ0EvXClJAt0fSSQLX1m',
-    note: "'En kadhal enna solla poren' at 1:26. Every time. I do not know how to explain what a Tamil line does when you are trying to keep from crying in public but this one does it."
+    note: "The meaning of the entire song is how I feel about you. The song may not be perfect, but you are."
   },
   {
     n: 3,
@@ -305,7 +306,7 @@ export const SONGS = [
     artist: 'Nivas K Prasanna, K. S. Chithra, Sriram Parthasarathy',
     timestamp: '1:56',
     trackId: '5QoCBy9eUHYkeWpEpzAud9',
-    note: "At 1:56 the pause before the last chorus. That gap has more of us in it than the words. I hear it and I hear us in the kitchen not talking, just being."
+    note: "That is our song, like our song whenever I try to be playfully pull you closer to me when you are pissed or whenever I try to be naughty with you. It's just, after a fight, after a small quarrel, looking at you and singing this song gives me everything."
   },
   {
     n: 4,
@@ -314,7 +315,7 @@ export const SONGS = [
     artist: 'Vishal Chandrashekhar, Sai Vignesh, Madhan Karky',
     timestamp: '1:21',
     trackId: '4DKv9524rd34cCKFmW7Xsb',
-    note: "1:21. That is our song at 1:21. You know why. You told me why the first time we listened to it together and I did not know how to reply so I just held your hand instead."
+    note: "This is one of the most romantic and every single time I look into your eyes, this is a song I want to sing to you."
   },
   {
     n: 5,
@@ -323,7 +324,7 @@ export const SONGS = [
     artist: 'Vishal Chandrashekhar, Haricharan, Sinduri Vishal',
     timestamp: '1:37',
     trackId: '6O1aZHTKj8bKhb3N5qB6lF',
-    note: "At 1:37, the way Haricharan lands. That is what it feels like to look at you when you do not know I am looking at you. Which is the way I look at you most of the time."
+    note: "This song just reminds me of the times we used to dance together. I used to just hold your hips and, not dance exactly, but just vibe to it and look into my eyes. That is all I think about when I listen to this song."
   },
   {
     n: 6,
@@ -332,7 +333,8 @@ export const SONGS = [
     artist: 'S. P. Balasubrahmanyam',
     timestamp: '0:00',
     trackId: '4VE07nOfv8CXbmRcubchO6',
-    note: "From the very first note. SPB from the first second. I do not need to point to a moment because the whole song is a moment. Play it from 0:00 and you will know."
+    badge: 'the apology song',
+    note: "This is the first ever song I sang to you. This will always be my apology song. Hasn't been that effective recently, but this is one of the reasons you partly fell for me. But yeah, I think it is a good thing that it stopped working because we would still be together if it was working, you know. Thank goodness the apology song is not working."
   },
   {
     n: 7,
@@ -341,7 +343,7 @@ export const SONGS = [
     artist: 'A.R. Rahman, Adnan Sami, Sujatha, Vairamuthu',
     timestamp: '1:43',
     trackId: '5lmgII1wyydsuqXEOvzpSy',
-    note: "1:43. When Adnan Sami comes in over the beat, that is where I would put you if you were a song. There is a version of this song we listened to that I will not describe here but you will remember which one and where."
+    note: "This has been our sex song. Nothing but just the times we made love when we were staying in Proby. This is the only thing which reminds me of those sweet, sweet times."
   },
   {
     n: 8,
@@ -350,7 +352,7 @@ export const SONGS = [
     artist: 'Stephen Sanchez, Em Beihold',
     timestamp: '1:21',
     trackId: '1Y3LN4zO1Edc2EluIoSPJN',
-    note: "At 1:21 when Em Beihold's voice comes in and answers his. That is what our chats look like written out. You answered mine and I answered yours and eventually the answers were the song."
+    note: "This is the song, if you remember, this is the first song I ever dedicated to you. And funny thing, this is our climax and this is how we are. At least I am."
   },
   {
     n: 9,
@@ -359,7 +361,7 @@ export const SONGS = [
     artist: 'Udit Narayan, Chinmayi, Vijay Yesudas',
     timestamp: '1:16',
     trackId: '317JrLcl1s0i6cXmnEWzR8',
-    note: "1:16. The Chinmayi entry. Every time. I know I have said 'every time' about most of these but it is because it is true, every time. I do not skip past the intro on this one, I wait for 1:16."
+    note: "This song is the most number of times I've ever, like, ever looked into your eyes and have sung this song. My God I cant resist myself"
   },
   {
     n: 10,
@@ -368,7 +370,7 @@ export const SONGS = [
     artist: 'A.R. Rahman, Vijay Prakash, Shweta Mohan, Kabilan',
     timestamp: '4:37',
     trackId: '5KJSI1MjQeXEBHBYMjgP41',
-    note: "You said these one day and said you did not know if you ever would want kids but if you do these are so true. And to see myself fall from that to not being seen as someone worthy of you to someone who you would not be friends with, did just rip my heart. It does every single time I listen to these lines."
+    note: "This song was first when we were walking in the beach and we were singing. And this song came up and we talked how we wanted our lives to be. But then it is not. It is sad, but it feels good to think about all those times with you. you even said those lines about the kids to me, but I would never be worthy of it."
   },
   {
     n: 11,
@@ -377,19 +379,18 @@ export const SONGS = [
     artist: 'Santhosh Narayanan, Pradeep Kumar, Priya Hemesh, Vivek',
     timestamp: '0:47',
     trackId: '4LK8863ScRhhT6hitFfBI5',
-    note: "Did not ever sing these lines to you, but definitely means everything I would even say to you."
+    note: "Every time I wanted to apologise to you to start again but never ever cuz I thought I would never have to ask that. But never got to and here we are sharing last few moments of our life together. Didn't sing these lines to you but means everything"
   }
 ];
 
 // Track 13 lives on its own page — the Final Song
 export const FINAL_SONG = {
-  title: 'Phir Bhi Tumko Chaahunga',
-  from: 'Half Girlfriend',
-  artist: 'Mithoon, Manoj Muntashir, Arijit Singh, Shashaa Tirupati',
-  timestamp: '2:06',
   trackId: '3oNVqllTnz7bHrY3f0nICg',
-  note: "This is my final song. Every other song was for a season. This one is for after. Whichever way this ends, whichever address you land at, whichever heart you choose next, at 2:06 of this song I want you to know: phir bhi tumko chaahunga.",
-  eyebrow: 'the last one'
+  title: 'Main Phir Bhi Tumko Chaahunga',
+  label: 'the closing note',
+  prose: `Exactly at 26th second of the songs. These are some lines from Main Phir Bhi Tumko Chahunga that I don't think I will ever be able to hear the same way again: "Aise zaroori ho mujhko tum... Tere darr pe hi reh jaaunga." I want to dedicate these lines to you because after everything we've lived through, they don't feel like lyrics to me anymore. They feel like something I have to actually live from the next week, the day we officially are no longer together. You became part of the smallest things in my life without me even noticing when it happened, from visiting me for an evening till being my partner for 3 years. The person I wanted to tell things to first, the person whose face I looked for when something funny happened or to be fair, anything happened, the person whose toothbrush was beside mine, whose things were around the house, whose name became part of my everyday conversations. Three years of memories don't disappear just because we decide that we can't continue. I can accept that we need to let each other go, but I don't know how to make my heart understand that the person who was part of almost every version of my life for the last three years is suddenly supposed to become someone I don't get to have anymore.
+
+And that's what makes these lines hurt so much. "Main phir bhi tumko chahunga." I don't mean that as a promise that I'll wait for you or that I want you to come back or even that I can't accept what we're doing, I swear I have no intention at all of asking you to stay, I have seen enough of me hurting you and I can't do it ever again. I mean that even after we leave each other, there will still be a part of me that loves you. I'll remember the girl who first made me nervous, the girl I waited an hour early to meet, the girl who fell asleep on my shoulder, the girl I travelled with, fought with, laughed with, built a home with, and somehow grew up beside. I'll remember the good days, the days I wish I could change and the days that if I had the power to absolutely erase from our memories. And maybe one of the hardest things about letting you go is knowing that I can't actually erase any of it and I have to the limit used up all my retries. I don't want to forget you just so this hurts less. I would rather carry the pain of having loved you than pretend these three years didn't change me. So if one day these memories hurt less for you than they do for me, I hope you still remember that there was once someone who loved you so deeply that even when he finally understood he had to let you go, he couldn't make himself stop loving the life he had with you.`
 };
 
 export const SPOTIFY_PLAYLIST = 'https://open.spotify.com/playlist/3VJ9qmmguSXJ1SdR5YaqWg';
@@ -509,30 +510,40 @@ export const PLACES = [
 export const TRIPS = [
   {
     name: 'Edinburgh',
+    img: 'edinburgh.jpg',
+    caption: 'the first flight together',
     dates: 'April 5 — April 8, 2025',
     body: 'Our first international trip together. Landed on the 8th. Everything felt new, and old, and ours.',
     special: false
   },
   {
     name: 'Wexford & Waterford',
+    img: 'waterford-wexford.jpg',
+    caption: 'kayaking, and the drive back',
     dates: 'September 19 — September 20, 2025',
     body: 'Second anniversary trip. Kayaking with sea caves that we approached like professionals for our first time. Long drive in the car together. It was so much fun.',
     special: false
   },
   {
     name: 'Cork',
+    img: 'cork.jpg',
+    caption: 'Namak, and the honesty',
     dates: 'July 20 — July 21, 2026',
     body: 'Right after the FIFA World Cup finals. The last road trip inside Ireland. We talked about how it was going to be the last. The first time we went drinking alone together. It was not romantic like the others, but it was special because it was honest.',
     special: false
   },
   {
     name: 'Iceland',
+    img: 'iceland.jpg',
+    caption: 'the final one',
     dates: 'September 15 — September 20, 2026',
     body: 'The final one. Your birthday on the 15th. Our anniversary on the 19th. This book was hand-delivered to you here.',
     special: true
   },
   {
     name: 'Milan & Venice',
+    img: null,
+    caption: 'After. Because we still wanted to.',
     dates: 'October 9 — October 12, 2026',
     body: 'After. Because we still wanted to.',
     special: false

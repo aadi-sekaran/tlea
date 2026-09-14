@@ -11,11 +11,8 @@ export default function FinalSongPage() {
         <NavAvatar />
       </div>
       <div className="finalsong">
-        <p className="finalsong-eyebrow">{FINAL_SONG.eyebrow}</p>
+        <p className="finalsong-eyebrow">{FINAL_SONG.label}</p>
         <h1 className="finalsong-title">{FINAL_SONG.title}</h1>
-        <p className="finalsong-artist">
-          {FINAL_SONG.from ? `from "${FINAL_SONG.from}" · ` : ''}{FINAL_SONG.artist}
-        </p>
         {FINAL_SONG.trackId && (
           <iframe
             className="song-embed finalsong-embed"
@@ -23,13 +20,16 @@ export default function FinalSongPage() {
             width="100%"
             height="80"
             frameBorder="0"
-            allow="encrypted-media"
-            style={{ borderRadius: '12px' }}
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+            loading="lazy"
             title={`${FINAL_SONG.title} on Spotify`}
           />
         )}
-        <p className="finalsong-time">at {FINAL_SONG.timestamp}</p>
-        <p className="finalsong-note">{FINAL_SONG.note}</p>
+        <div className="finalsong-prose">
+          {FINAL_SONG.prose.split('\n\n').map((para, i) => (
+            <p key={i} className="finalsong-note">{para}</p>
+          ))}
+        </div>
         <div className="finalsong-buttons">
           <a
             href={SPOTIFY_PLAYLIST}

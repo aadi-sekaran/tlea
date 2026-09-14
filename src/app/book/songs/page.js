@@ -23,11 +23,9 @@ export default function SongsPage() {
         <div className="songs-list" style={{ padding: 0, maxWidth: 'unset' }}>
           {SONGS.map(s => (
             <div key={s.n} className="song-card">
-              <div className="song-num">Song {s.n}</div>
               <div className="song-title">{s.title}</div>
-              <div className="song-artist">
-                {s.from ? `from "${s.from}" · ` : ''}{s.artist}
-              </div>
+              {s.from && <div className="song-source">from {s.from}</div>}
+              {s.badge && <span className="song-badge">{s.badge}</span>}
               {s.trackId && (
                 <iframe
                   className="song-embed"
@@ -35,13 +33,10 @@ export default function SongsPage() {
                   width="100%"
                   height="80"
                   frameBorder="0"
-                  allow="encrypted-media"
-                  style={{ borderRadius: '12px' }}
+                  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                  loading="lazy"
                   title={`${s.title} on Spotify`}
                 />
-              )}
-              {s.timestamp && (
-                <span className="song-timestamp-badge song-timestamp-badge-below">at {s.timestamp}</span>
               )}
               <p className="song-note">{s.note}</p>
             </div>
