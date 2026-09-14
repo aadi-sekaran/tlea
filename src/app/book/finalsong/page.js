@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import BackToContents from '@/components/BackToContents';
 import NavAvatar from '@/components/NavAvatar';
 import { FINAL_SONG, SPOTIFY_PLAYLIST } from '@/lib/content';
 
@@ -6,7 +7,7 @@ export default function FinalSongPage() {
   return (
     <div className="book-shell">
       <div className="top-nav">
-        <Link href="/book" className="nav-back">← contents</Link>
+        <BackToContents />
         <span className="nav-title">The Final Song</span>
         <NavAvatar />
       </div>

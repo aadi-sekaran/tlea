@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import BackToContents from '@/components/BackToContents';
 import NavAvatar from '@/components/NavAvatar';
 import { SONGS, SPOTIFY_PLAYLIST, SONGLINK_PLAYLIST } from '@/lib/content';
 
@@ -6,7 +7,7 @@ export default function SongsPage() {
   return (
     <div className="book-shell">
       <div className="top-nav">
-        <Link href="/book" className="nav-back">← contents</Link>
+        <BackToContents />
         <span className="nav-title">Songs</span>
         <NavAvatar />
       </div>
@@ -25,6 +26,7 @@ export default function SongsPage() {
             <div key={s.n} className="song-card">
               <div className="song-title">{s.title}</div>
               {s.from && <div className="song-source">from {s.from}</div>}
+              {s.timestamp && <div className="song-timestamp">the moment: {s.timestamp}</div>}
               {s.badge && <span className="song-badge">{s.badge}</span>}
               {s.trackId && (
                 <iframe

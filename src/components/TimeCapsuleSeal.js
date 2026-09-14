@@ -1,8 +1,36 @@
 'use client';
 
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import SafeImg from '@/components/SafeImg';
 import { TIMECAPSULE_SEALED_ART } from '@/lib/dragons';
+
+// Resizes/compresses a picked photo client-side so it doesn't blow up the
+// letter row, then hands back a data URL we can store and render directly.
+function fileToDataUrl(file, maxDim = 1600, quality = 0.82) {
+  return new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    reader.onerror = () => reject(new Error('could not read that file'));
+    reader.onload = () => {
+      const img = new Image();
+      img.onerror = () => reject(new Error('could not read that image'));
+      img.onload = () => {
+        let { width, height } = img;
+        if (width > maxDim || height > maxDim) {
+          const scale = maxDim / Math.max(width, height);
+          width = Math.round(width * scale);
+          height = Math.round(height * scale);
+        }
+        const canvas = document.createElement('canvas');
+        canvas.width = width;
+        canvas.height = height;
+        canvas.getContext('2d').drawImage(img, 0, 0, width, height);
+        resolve(canvas.toDataURL('image/jpeg', quality));
+      };
+      img.src = reader.result;
+    };
+    reader.readAsDataURL(file);
+  });
+}
 
 export default function TimeCapsuleSeal({ author, existingLetter, unlocksOn }) {
   const [body, setBody] = useState(existingLetter?.body || '');
@@ -10,6 +38,24 @@ export default function TimeCapsuleSeal({ author, existingLetter, unlocksOn }) {
   const [sealing, setSealing] = useState(false);
   const [sealed, setSealed] = useState(!!existingLetter?.sealed_at);
   const [error, setError] = useState('');
+  const [uploading, setUploading] = useState(false);
+  const fileInputRef = useRef(null);
+
+  async function handleFiles(fileList) {
+    const files = Array.from(fileList || []);
+    if (files.length === 0) return;
+    setUploading(true);
+    setError('');
+    try {
+      const dataUrls = await Promise.all(files.map(f => fileToDataUrl(f)));
+      setPhotoUrls(prev => [...prev, ...dataUrls]);
+    } catch (e) {
+      setError(e.message);
+    } finally {
+      setUploading(false);
+      if (fileInputRef.current) fileInputRef.current.value = '';
+    }
+  }
 
   if (sealed) {
     return (
@@ -69,43 +115,78 @@ export default function TimeCapsuleSeal({ author, existingLetter, unlocksOn }) {
         placeholder="Write to your future self, or to me, or to both."
       />
       <div className="tc-photo-upload">
-        Photo attach: use the URL of a photo you have uploaded to the site.
+        Attach a photo, from your files or your gallery.
         <br />
         <input
-          type="text"
-          placeholder="/polaroids/03.jpg"
-          onKeyDown={e => {
-            if (e.key === 'Enter' && e.currentTarget.value.trim()) {
-              setPhotoUrls([...photoUrls, e.currentTarget.value.trim()]);
-              e.currentTarget.value = '';
-            }
-          }}
-          style={{
-            width: '100%',
-            marginTop: '0.5rem',
-            padding: '0.5rem',
-            borderRadius: '6px',
-            border: '1px solid var(--border)',
-            background: 'var(--ivory)'
-          }}
+          ref={fileInputRef}
+          type="file"
+          accept="image/*"
+          multiple
+          capture="environment"
+          disabled={uploading}
+          onChange={e => handleFiles(e.target.files)}
+          style={{ marginTop: '0.5rem' }}
         />
+        {uploading && <p style={{ fontSize: '0.8rem', color: 'var(--text-soft)', marginTop: '0.4rem' }}>adding photo...</p>}
+
         {photoUrls.length > 0 && (
-          <ul style={{ marginTop: '0.5rem', textAlign: 'left', paddingLeft: '1rem' }}>
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.6rem', marginTop: '0.75rem' }}>
             {photoUrls.map((url, i) => (
-              <li key={i} style={{ fontSize: '0.8rem' }}>
-                {url}{' '}
+              <div key={i} style={{ position: 'relative' }}>
+                <img
+                  src={url}
+                  alt=""
+                  style={{ width: 84, height: 84, objectFit: 'cover', borderRadius: '8px', border: '1px solid var(--border)' }}
+                />
                 <button
                   onClick={() => setPhotoUrls(photoUrls.filter((_, j) => j !== i))}
-                  style={{ color: 'var(--rose)', marginLeft: '0.5rem' }}
+                  aria-label="remove photo"
+                  style={{
+                    position: 'absolute',
+                    top: -8,
+                    right: -8,
+                    width: 22,
+                    height: 22,
+                    borderRadius: '50%',
+                    background: 'var(--rose)',
+                    color: 'white',
+                    fontSize: '0.75rem',
+                    lineHeight: 1,
+                    border: 'none'
+                  }}
                 >
-                  remove
+                  ✕
                 </button>
-              </li>
+              </div>
             ))}
-          </ul>
+          </div>
         )}
+
+        <details style={{ marginTop: '0.75rem' }}>
+          <summary style={{ fontSize: '0.8rem', color: 'var(--text-soft)', cursor: 'pointer' }}>
+            Or paste the URL of a photo already on the site
+          </summary>
+          <input
+            type="text"
+            placeholder="/polaroids/03.jpg"
+            onKeyDown={e => {
+              if (e.key === 'Enter' && e.currentTarget.value.trim()) {
+                setPhotoUrls([...photoUrls, e.currentTarget.value.trim()]);
+                e.currentTarget.value = '';
+              }
+            }}
+            style={{
+              width: '100%',
+              marginTop: '0.5rem',
+              padding: '0.5rem',
+              borderRadius: '6px',
+              border: '1px solid var(--border)',
+              background: 'var(--ivory)'
+            }}
+          />
+        </details>
       </div>
-      <button className="tc-save-btn" onClick={seal} disabled={sealing}>
+      <button className="tc-save-btn" onClick={seal} disabled={sealing || uploading}>
         {sealing ? 'sealing...' : 'Save and seal'}
       </button>
       {error && <p className="tc-warning" style={{ color: 'var(--rose)' }}>{error}</p>}
