@@ -67,8 +67,8 @@ export const CHAPTERS = [
     title: 'How it began',
     dates: 'February 2023 — September 18, 2023',
     teaser: 'A Facebook message. A closed coffee shop. A drive home the wrong way. And months of daily talk that built into something neither of them could name yet, until September 18th.',
-    heroImg: '/paintings/chapter-01-hero.jpg',
-    posterImg: '/paintings/chapter-01-hero.jpg',
+    heroImg: '/dragons/scenes/chapter-01-mark.png',
+    posterImg: '/dragons/scenes/chapter-01-mark.png',
     tint: 'reader-tint-1',
     prose: [
       `There was a guy who genuinely didn't know what was coming for him in Ireland. All he wanted, going in, was to study there, live there a couple of years, maybe more, and figure the rest out later, India or Ireland, he hadn't decided. He'd just come out of a long relationship and wasn't looking for another one. He wanted to be alone, actually alone, and that was a real part of why he took the room at Proby in the first place.`,

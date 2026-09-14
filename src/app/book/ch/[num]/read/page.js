@@ -4,8 +4,10 @@ import { notFound } from 'next/navigation';
 import NavAvatar from '@/components/NavAvatar';
 import SectionDivider from '@/components/SectionDivider';
 import SafeImg from '@/components/SafeImg';
+import ChapterCarousel from '@/components/ChapterCarousel';
 import { CHAPTERS } from '@/lib/content';
 import { CHAPTER_MARKS } from '@/lib/dragons';
+import { getChapterPhotos } from '@/lib/chapterPhotos';
 
 // No generateStaticParams: NavAvatar reads the session per-request, which
 // static generation would otherwise bake in empty forever.
@@ -17,6 +19,8 @@ export default function ChapterReader({ params }) {
   const prev = CHAPTERS.find(c => c.num === num - 1);
   const next = CHAPTERS.find(c => c.num === num + 1);
   const isUnwritten = ch.prose.length === 0;
+  const { hero, rotation } = getChapterPhotos(num);
+  const realPhotos = [hero, ...rotation].filter(Boolean);
 
   return (
     <div className="book-shell">
@@ -30,7 +34,11 @@ export default function ChapterReader({ params }) {
           <p className="reader-eyebrow">chapter {ch.romanNum}</p>
           <h1 className="reader-title">{ch.title}</h1>
 
-          <SafeImg srcs={CHAPTER_MARKS[num] || []} alt="" className="chapter-mark" />
+          {realPhotos.length > 0 ? (
+            <ChapterCarousel images={realPhotos} />
+          ) : (
+            <SafeImg srcs={CHAPTER_MARKS[num] || []} alt="" className="chapter-mark" />
+          )}
 
           {isUnwritten ? (
             <div className="empty-state">

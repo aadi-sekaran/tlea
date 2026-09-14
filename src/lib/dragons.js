@@ -23,7 +23,7 @@ export const DRAGON_ASSETS = {
 // Single illustrations, not the raw multi-icon sprite sheets (pack-*.svg) —
 // those are contact-sheet-style source files, not usable as one image.
 export const CHAPTER_POSTER_FALLBACKS = {
-  1: '/paintings/chapter-01-hero.jpg',
+  1: '/dragons/scenes/chapter-01-mark.png',
   2: '/dragons/scenes/chapter-02-mark.png',
   3: '/dragons/scenes/chapter-03-mark.png',
   4: '/dragons/scenes/chapter-04-mark.png',
@@ -82,7 +82,7 @@ export const TILE_ICON_ART = {
 
 // Divider between the chapter synopsis and the prose, keyed by chapter num.
 export const CHAPTER_MARKS = {
-  1: ['/paintings/chapter-01-hero.jpg'],
+  1: ['/dragons/scenes/chapter-01-mark.png'],
   2: ['/dragons/scenes/chapter-02-mark.png'],
   3: ['/dragons/scenes/chapter-03-mark.png'],
   4: ['/dragons/scenes/chapter-04-mark.png'],

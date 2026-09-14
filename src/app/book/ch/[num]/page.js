@@ -6,6 +6,7 @@ import { CHAPTER_POSTER_FALLBACKS } from '@/lib/dragons';
 import { getChapterPhotos } from '@/lib/chapterPhotos';
 import SafeImg from '@/components/SafeImg';
 import ChapterCarousel from '@/components/ChapterCarousel';
+import ChapterPhotoStrip from '@/components/ChapterPhotoStrip';
 import NavAvatar from '@/components/NavAvatar';
 
 // No generateStaticParams: NavAvatar reads the session per-request, which
@@ -19,7 +20,8 @@ export default function ChapterDetail({ params }) {
   const next = CHAPTERS.find(c => c.num === num + 1);
 
   const { hero, rotation } = getChapterPhotos(num);
-  const heroSrcs = [hero, ch.heroImg, CHAPTER_POSTER_FALLBACKS[num]].filter(Boolean);
+  const realPhotos = [hero, ...rotation].filter(Boolean);
+  const heroSrcs = [ch.heroImg, CHAPTER_POSTER_FALLBACKS[num]].filter(Boolean);
 
   return (
     <div className="book-shell">
@@ -30,7 +32,11 @@ export default function ChapterDetail({ params }) {
       </div>
 
       <div className="chapter-hero">
-        <SafeImg srcs={heroSrcs} alt="" className="chapter-hero-still" />
+        {realPhotos.length > 0 ? (
+          <ChapterPhotoStrip images={realPhotos} />
+        ) : (
+          <SafeImg srcs={heroSrcs} alt="" className="chapter-hero-still" />
+        )}
         <div className="chapter-hero-overlay" />
         <div className="chapter-hero-content">
           <div className="chapter-hero-num">Chapter {ch.romanNum}</div>
