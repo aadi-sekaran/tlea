@@ -681,7 +681,7 @@ export const LASTS = [
 
 // Numbers band at top of Ledger page
 export const NUMBERS = [
-  { value: '50', label: 'days between message one and first I love you' },
+  { value: '246', label: 'days between message one and first I love you' },
   { value: '6 mo', label: 'of Chennai before Ireland ever existed' },
   { value: '283', label: 'I love yous. 189 mine, 94 hers.' },
   { value: '250', label: 'porikkis. 212 hers, 38 mine.' },

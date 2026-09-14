@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import BackToContents from '@/components/BackToContents';
 import { notFound } from 'next/navigation';
 import NavAvatar from '@/components/NavAvatar';
 import SectionDivider from '@/components/SectionDivider';
@@ -20,7 +21,7 @@ export default function ChapterReader({ params }) {
   return (
     <div className="book-shell">
       <div className="top-nav">
-        <Link href={`/book/ch/${num}`} className="nav-back">← chapter</Link>
+        <BackToContents />
         <span className="nav-title">Chapter {ch.romanNum}</span>
         <NavAvatar />
       </div>

@@ -30,6 +30,11 @@ export default async function ReleasePage() {
           If that's not what you want either, tell me, and I will take it all down that day.
         </p>
         <ReleaseTimer initialStatus={timer} initialDays={days} />
+        <SafeImg
+          srcs={['/dragons/02_Flying_Poses/flying_012.png']}
+          alt=""
+          className="foreword-accent"
+        />
       </div>
     </div>
   );

@@ -23,7 +23,7 @@ export const DRAGON_ASSETS = {
 // Single illustrations, not the raw multi-icon sprite sheets (pack-*.svg) —
 // those are contact-sheet-style source files, not usable as one image.
 export const CHAPTER_POSTER_FALLBACKS = {
-  1: '/dragons/scenes/chapter-01-mark.png',
+  1: '/paintings/chapter-01-hero.jpg',
   2: '/dragons/scenes/chapter-02-mark.png',
   3: '/dragons/scenes/chapter-03-mark.png',
   4: '/dragons/scenes/chapter-04-mark.png',
@@ -43,7 +43,7 @@ export const SECTION_TILE_ART = {
   nest: '/dragons/03_Stickers_Pack/stickers_042.png',     // Places — flowers
   adventure: '/dragons/01_Main_Pack/main_080.png',        // Trips — adventure box
   bubble: '/dragons/01_Main_Pack/main_017.png',           // Dictionary — question bubble
-  clock: '/dragons/02_Flying_Poses/flying_004.png',       // Firsts & Lasts — dragon in motion
+  clock: '/dragons/scenes/tile-icon-firsts.png',          // Firsts & Lasts — moved here from the top-left badge
   heart: '/dragons/01_Main_Pack/main_047.png',            // Ledger — heart
   moon: '/dragons/01_Main_Pack/main_062.png',             // On This Day — crescent moon
   bubble2: '/dragons/01_Main_Pack/main_064.png',          // Line and Reply — chat bubble
@@ -71,7 +71,6 @@ export const TILE_ICON_ART = {
   places: ['/dragons/scenes/tile-icon-places.png'],
   trips: ['/dragons/scenes/tile-icon-trips.png'],
   dictionary: ['/dragons/scenes/tile-icon-dictionary.png'],
-  firsts: ['/dragons/scenes/tile-icon-firsts.png'],
   ledger: ['/dragons/scenes/tile-icon-ledger.png'],
   onthisday: ['/dragons/scenes/tile-icon-ontd.png'],
   polaroids: ['/dragons/scenes/tile-icon-polaroids.png'],
@@ -83,7 +82,7 @@ export const TILE_ICON_ART = {
 
 // Divider between the chapter synopsis and the prose, keyed by chapter num.
 export const CHAPTER_MARKS = {
-  1: ['/dragons/scenes/chapter-01-mark.png'],
+  1: ['/paintings/chapter-01-hero.jpg'],
   2: ['/dragons/scenes/chapter-02-mark.png'],
   3: ['/dragons/scenes/chapter-03-mark.png'],
   4: ['/dragons/scenes/chapter-04-mark.png'],
@@ -107,7 +106,12 @@ export const HEADER_ART = {
   watched: ['/dragons/scenes/watched-header.png', '/dragons/01_Main_Pack/main_099.png'],
   dictionary: ['/dragons/scenes/dictionary-header.png', '/dragons/01_Main_Pack/main_017.png'],
   trips: ['/dragons/scenes/trips-header.png', '/dragons/01_Main_Pack/main_080.png'],
-  voicenotes: ['/dragons/scenes/voicenotes-header.png', '/dragons/03_Stickers_Pack/stickers_060.png']
+  voicenotes: ['/dragons/scenes/voicenotes-header.png', '/dragons/03_Stickers_Pack/stickers_060.png'],
+  firsts: ['/dragons/scenes/firsts-header.png', '/dragons/02_Flying_Poses/flying_004.png'],
+  ledger: ['/dragons/scenes/ledger-header.png', '/dragons/01_Main_Pack/main_047.png'],
+  places: ['/dragons/scenes/places-header.png', '/dragons/03_Stickers_Pack/stickers_042.png'],
+  polaroids: ['/dragons/scenes/polaroids-header.png', '/dragons/03_Stickers_Pack/stickers_050.png'],
+  songs: ['/dragons/scenes/songs-header.png', '/dragons/03_Stickers_Pack/stickers_060.png']
 };
 
 export const ERROR_ART = ['/dragons/scenes/error-oops.png'];

@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import BackToContents from '@/components/BackToContents';
 import NavAvatar from '@/components/NavAvatar';
 import SafeImg from '@/components/SafeImg';
 import { FAREWELL } from '@/lib/content';
@@ -8,12 +9,17 @@ export default function FarewellPage() {
   return (
     <div className="book-shell">
       <div className="top-nav">
-        <Link href="/book/apology" className="nav-back">← the last apology</Link>
+        <BackToContents />
         <span className="nav-title">A Farewell Letter</span>
         <NavAvatar />
       </div>
       <div className="reader reader-tint-farewell">
         <div className="reader-inner">
+          <SafeImg
+            srcs={['/dragons/03_Stickers_Pack/stickers_012.png']}
+            alt=""
+            className="reader-header-accent"
+          />
           <p className="reader-eyebrow">{FAREWELL.eyebrow}</p>
           <h1 className="reader-title">{FAREWELL.title}</h1>
           <div className="reader-body">
@@ -26,8 +32,8 @@ export default function FarewellPage() {
             <Link href="/book/apology" className="chapter-nav-btn">
               ← the last apology
             </Link>
-            <Link href="/book/finalsong" className="chapter-nav-btn">
-              the final song →
+            <Link href="/book" className="chapter-nav-btn">
+              back to the beginning →
             </Link>
           </div>
         </div>

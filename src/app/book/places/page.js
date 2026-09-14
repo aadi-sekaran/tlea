@@ -1,7 +1,9 @@
 import BackToContents from '@/components/BackToContents';
 import NavAvatar from '@/components/NavAvatar';
+import SafeImg from '@/components/SafeImg';
 import PlacesMap from '@/components/PlacesMap';
 import { PLACES } from '@/lib/content';
+import { HEADER_ART } from '@/lib/dragons';
 
 export default function PlacesPage() {
   return (
@@ -12,8 +14,7 @@ export default function PlacesPage() {
         <NavAvatar />
       </div>
       <div className="content-page">
-        {/* asset: public/dragons/03_Stickers_Pack/stickers_042.png */}
-        <img className="content-header-art" src="/dragons/03_Stickers_Pack/stickers_042.png" alt="" />
+        <SafeImg srcs={HEADER_ART.places} alt="" className="content-header-art" />
         <p className="content-eyebrow">the map of Dublin, ours</p>
         <h1 className="content-title">Our Places</h1>
 

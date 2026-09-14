@@ -1,6 +1,8 @@
 import BackToContents from '@/components/BackToContents';
 import NavAvatar from '@/components/NavAvatar';
+import SafeImg from '@/components/SafeImg';
 import PolaroidLightbox from '@/components/PolaroidLightbox';
+import { HEADER_ART, LOADING_ART } from '@/lib/dragons';
 import fs from 'fs';
 import path from 'path';
 
@@ -40,14 +42,12 @@ export default function PolaroidsPage() {
         <NavAvatar />
       </div>
       <div className="content-page">
-        {/* asset: public/dragons/03_Stickers_Pack/stickers_050.png */}
-        <img className="content-header-art" src="/dragons/03_Stickers_Pack/stickers_050.png" alt="" />
+        <SafeImg srcs={HEADER_ART.polaroids} alt="" className="content-header-art" />
         <p className="content-eyebrow">moments printed</p>
         <h1 className="content-title">Polaroids</h1>
         {polaroids.length === 0 ? (
           <div className="empty-state">
-            {/* asset: public/dragons/01_Main_Pack/main_001.png */}
-            <img className="empty-state-art" src="/dragons/01_Main_Pack/main_001.png" alt="" />
+            <SafeImg srcs={LOADING_ART} alt="" className="empty-state-art" />
             <p className="empty-state-text">
               The polaroids are being photographed. Come back soon.
             </p>
