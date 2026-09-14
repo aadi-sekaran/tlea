@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
-import { CHAPTERS, SECTIONS, ON_THIS_DAY, LAST_APOLOGY, FAREWELL } from '@/lib/content';
+import { CHAPTERS, SECTIONS, ON_THIS_DAY, LAST_APOLOGY, FAREWELL, FOREWORD } from '@/lib/content';
 import { CHAPTER_POSTER_FALLBACKS, SECTION_TILE_ART, TILE_ICON_ART } from '@/lib/dragons';
 import ChapterHero from '@/components/ChapterHero';
 import SafeImg from '@/components/SafeImg';
@@ -52,6 +52,15 @@ export default function BookHome({ chapterPhotos }) {
             </div>
           </div>
         ))}
+      </div>
+
+      {/* Foreword, before everything else, right below the slideshow */}
+      <div className="farewell-feature-wrap">
+        <Link href="/book/foreword" className="farewell-feature-card foreword-feature-card">
+          <p className="farewell-feature-eyebrow">Before you begin · Foreword</p>
+          <h2 className="farewell-feature-title">{FOREWORD.title}</h2>
+          <span className="farewell-feature-cta">Read the foreword →</span>
+        </Link>
       </div>
 
       {todaysMemory && (
@@ -123,6 +132,15 @@ export default function BookHome({ chapterPhotos }) {
             </Link>
           ))}
         </div>
+      </div>
+
+      {/* Release, its own rectangle, separate and last on the page */}
+      <div className="release-feature-wrap">
+        <Link href="/book/release" className="release-feature-card">
+          <p className="release-feature-eyebrow">The way out, if you want it</p>
+          <h2 className="release-feature-title">Release</h2>
+          <span className="release-feature-cta">Open →</span>
+        </Link>
       </div>
     </div>
   );

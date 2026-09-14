@@ -95,6 +95,7 @@ export default function OpeningSequence() {
     if (state !== 'idle') return;
     setState('opening');
     setOpened(true);
+    try { window.dispatchEvent(new CustomEvent('tlea:play-bg-music')); } catch {}
 
     if (reducedMotion || videoBroken.current) {
       setTimeout(() => settle(true), 260);

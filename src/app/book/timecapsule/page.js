@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import BackToContents from '@/components/BackToContents';
 import NavAvatar from '@/components/NavAvatar';
 import { readSession } from '@/lib/session';
 import { getMyLetter } from '@/lib/timecapsule';
@@ -12,7 +12,7 @@ export default async function TimeCapsulePage() {
   return (
     <div className="book-shell">
       <div className="top-nav">
-        <Link href="/book" className="nav-back">← contents</Link>
+        <BackToContents />
         <span className="nav-title">Time Capsule</span>
         <NavAvatar />
       </div>

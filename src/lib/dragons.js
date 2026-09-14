@@ -23,13 +23,13 @@ export const DRAGON_ASSETS = {
 // Single illustrations, not the raw multi-icon sprite sheets (pack-*.svg) —
 // those are contact-sheet-style source files, not usable as one image.
 export const CHAPTER_POSTER_FALLBACKS = {
-  1: '/dragons/01_Main_Pack/main_007.png',
-  2: '/dragons/01_Main_Pack/main_007.png',
-  3: '/dragons/01_Main_Pack/main_007.png',
-  4: '/dragons/01_Main_Pack/main_007.png',
-  5: '/dragons/01_Main_Pack/main_007.png',
-  6: '/dragons/01_Main_Pack/main_007.png',
-  7: '/dragons/01_Main_Pack/main_065.png'
+  1: '/dragons/scenes/chapter-01-mark.png',
+  2: '/dragons/scenes/chapter-02-mark.png',
+  3: '/dragons/scenes/chapter-03-mark.png',
+  4: '/dragons/scenes/chapter-04-mark.png',
+  5: '/dragons/scenes/chapter-05-mark.png',
+  6: '/dragons/scenes/chapter-06-mark.png',
+  7: '/dragons/scenes/chapter-07-mark.png'
 };
 
 // Section-tile art on the browse home, keyed by each section's `dragon` hint
@@ -76,8 +76,9 @@ export const TILE_ICON_ART = {
   onthisday: ['/dragons/scenes/tile-icon-ontd.png'],
   polaroids: ['/dragons/scenes/tile-icon-polaroids.png'],
   timecapsule: ['/dragons/scenes/tile-icon-timecapsule.png'],
-  finalsong: ['/dragons/scenes/tile-icon-finalsong.png']
-  // foreword, lineandreply, release: no tile icon yet, tile renders without one.
+  finalsong: ['/dragons/scenes/tile-icon-finalsong.png'],
+  lineandreply: ['/dragons/scenes/tile-icon-lineandreply.png', '/dragons/01_Main_Pack/main_064.png'],
+  voicenotes: ['/dragons/scenes/tile-icon-voicenotes.png', '/dragons/03_Stickers_Pack/stickers_060.png']
 };
 
 // Divider between the chapter synopsis and the prose, keyed by chapter num.

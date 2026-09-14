@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import BackToContents from '@/components/BackToContents';
 import NavAvatar from '@/components/NavAvatar';
 import PolaroidLightbox from '@/components/PolaroidLightbox';
 import fs from 'fs';
@@ -35,7 +35,7 @@ export default function PolaroidsPage() {
   return (
     <div className="book-shell">
       <div className="top-nav">
-        <Link href="/book" className="nav-back">← contents</Link>
+        <BackToContents />
         <span className="nav-title">Polaroids</span>
         <NavAvatar />
       </div>

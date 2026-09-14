@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import BackToContents from '@/components/BackToContents';
 import { notFound } from 'next/navigation';
 import { CHAPTERS } from '@/lib/content';
 import { CHAPTER_POSTER_FALLBACKS } from '@/lib/dragons';
@@ -23,7 +24,7 @@ export default function ChapterDetail({ params }) {
   return (
     <div className="book-shell">
       <div className="top-nav">
-        <Link href="/book" className="nav-back">← contents</Link>
+        <BackToContents />
         <span className="nav-title">Chapter {ch.romanNum}</span>
         <NavAvatar />
       </div>

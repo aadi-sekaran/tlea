@@ -60,6 +60,9 @@ export default function VoiceNotesPlayer({ notes }) {
         controls
         preload="metadata"
         className="voicenotes-audio"
+        onPlay={() => window.dispatchEvent(new CustomEvent('tlea:voicenote-playing', { detail: { playing: true } }))}
+        onPause={() => window.dispatchEvent(new CustomEvent('tlea:voicenote-playing', { detail: { playing: false } }))}
+        onEnded={() => window.dispatchEvent(new CustomEvent('tlea:voicenote-playing', { detail: { playing: false } }))}
       />
       {current.caption && <p className="voicenotes-caption">{current.caption}</p>}
       <div style={{ display: 'flex', gap: '0.75rem', marginTop: '1rem' }}>

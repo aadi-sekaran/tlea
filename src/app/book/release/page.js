@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import BackToContents from '@/components/BackToContents';
 import NavAvatar from '@/components/NavAvatar';
 import SafeImg from '@/components/SafeImg';
 import { readSession } from '@/lib/session';
@@ -15,7 +15,7 @@ export default async function ReleasePage() {
   return (
     <div className="book-shell">
       <div className="top-nav">
-        <Link href="/book" className="nav-back">← contents</Link>
+        <BackToContents />
         <span className="nav-title">Release</span>
         <NavAvatar />
       </div>

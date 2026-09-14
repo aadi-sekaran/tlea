@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import BackToContents from '@/components/BackToContents';
 import NavAvatar from '@/components/NavAvatar';
 import { CAST } from '@/lib/content';
 
@@ -6,7 +6,7 @@ export default function CastPage() {
   return (
     <div className="book-shell">
       <div className="top-nav">
-        <Link href="/book" className="nav-back">← contents</Link>
+        <BackToContents />
         <span className="nav-title">The Cast</span>
         <NavAvatar />
       </div>

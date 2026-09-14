@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import Link from 'next/link';
+import BackToContents from '@/components/BackToContents';
 import { FIRSTS, LASTS } from '@/lib/content';
 
 export default function FirstsPage() {
@@ -12,7 +12,7 @@ export default function FirstsPage() {
   return (
     <div className="book-shell">
       <div className="top-nav">
-        <Link href="/book" className="nav-back">← contents</Link>
+        <BackToContents />
         <span className="nav-title">Firsts & Lasts</span>
         <span />
       </div>

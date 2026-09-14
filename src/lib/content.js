@@ -266,7 +266,7 @@ export const CAST = [
     role: 'the one who wrote this',
     dragon: '/dragons/dragons-login.png',
     dragonSide: 'dark',
-    bio: 'Called Ammu. Chennai to Dublin, June 2023 onwards. Says I love you more than she does. Says porikki less than she does. Wrote every word here.'
+    bio: 'Called Ammu. Chennai to Dublin, June 2023 onwards. Says I love you more than she does. Says porikki less than she does. Wrote every word here. Was happily taken by the other ammu but sadily is going to be apart. Makes mistakes more than he could ever recover from, but loves his ammu more than anything in the world. Would move the seven mountains and travel the seven seas to make her happy but just not the things she wants.'
   },
   {
     id: 'krithika',
@@ -274,7 +274,7 @@ export const CAST = [
     role: 'the one it is for',
     dragon: '/dragons/dragons-login.png',
     dragonSide: 'light',
-    bio: 'Also called Ammu. Says porikki more than any word in her vocabulary. Signs off with miss you love you like it is one word. Reads this now.'
+    bio: 'Also called Ammu. Says porikki more than any word in her vocabulary. Signs off with miss you love you like it is one word. Reads this now. Easily distracted, most often found eating cakes. Loves her ammu. A very practical, emotionally mature badass. Baddie, Cutie Patootie, Tootie Frooti, and now a Blooty Boo.'
   }
 ];
 
@@ -510,7 +510,7 @@ export const PLACES = [
 export const TRIPS = [
   {
     name: 'Edinburgh',
-    img: 'edinburgh.jpg',
+    img: 'edinburgh.png',
     caption: 'the first flight together',
     dates: 'April 5 — April 8, 2025',
     body: 'Our first international trip together. Landed on the 8th. Everything felt new, and old, and ours.',
@@ -518,7 +518,7 @@ export const TRIPS = [
   },
   {
     name: 'Wexford & Waterford',
-    img: 'waterford-wexford.jpg',
+    img: 'waterford-wexford.png',
     caption: 'kayaking, and the drive back',
     dates: 'September 19 — September 20, 2025',
     body: 'Second anniversary trip. Kayaking with sea caves that we approached like professionals for our first time. Long drive in the car together. It was so much fun.',
@@ -526,7 +526,7 @@ export const TRIPS = [
   },
   {
     name: 'Cork',
-    img: 'cork.jpg',
+    img: 'cork.png',
     caption: 'Namak, and the honesty',
     dates: 'July 20 — July 21, 2026',
     body: 'Right after the FIFA World Cup finals. The last road trip inside Ireland. We talked about how it was going to be the last. The first time we went drinking alone together. It was not romantic like the others, but it was special because it was honest.',
@@ -534,7 +534,7 @@ export const TRIPS = [
   },
   {
     name: 'Iceland',
-    img: 'iceland.jpg',
+    img: 'iceland.png',
     caption: 'the final one',
     dates: 'September 15 — September 20, 2026',
     body: 'The final one. Your birthday on the 15th. Our anniversary on the 19th. This book was hand-delivered to you here.',
@@ -542,10 +542,18 @@ export const TRIPS = [
   },
   {
     name: 'Milan & Venice',
-    img: null,
+    img: 'venice.png',
     caption: 'After. Because we still wanted to.',
     dates: 'October 9 — October 12, 2026',
     body: 'After. Because we still wanted to.',
+    special: false
+  },
+  {
+    name: 'Pradeep Kumar Concert',
+    img: 'pradeep.png',
+    caption: 'the concert we went to together',
+    dates: 'October 25, 2026',
+    body: 'A Pradeep Kumar concert, both of us there, singing along to the songs that already meant something to us.',
     special: false
   }
 ];
@@ -562,8 +570,16 @@ export const DICTIONARY = [
       { term: 'Mu', def: 'shorthand for Ammu when I am typing fast' },
       { term: 'Thangam', def: 'gold' },
       { term: 'Thangamma', def: 'gold-a' },
-      { term: 'Chinnu', def: 'little one' },
-      { term: 'Girl', def: 'when it needs to be plain' }
+      { term: 'Baddie', def: null },
+      { term: 'Tootie Frooti', def: null },
+      { term: 'Cutie Patootie', def: null },
+      { term: 'Blooty Boo', def: null },
+      { term: 'Saddie', def: null },
+      { term: 'Azhagi', def: 'beautiful one' },
+      { term: 'Azhagu Thangam', def: 'beautiful gold' },
+      { term: 'Pattu Kutty', def: 'silk little one' },
+      { term: 'Ammoooo Kutty', def: null },
+      { term: 'Thanga Kutty', def: 'little gold' }
     ]
   },
   {
@@ -572,17 +588,15 @@ export const DICTIONARY = [
       { term: 'Porikki', def: 'said 212 times. rascal, mischief-maker, love word.' },
       { term: 'Ammu', def: 'we share the name, the dragons handle the difference' },
       { term: 'Good boi', def: 'from Sept 29 2023 onwards' },
-      { term: 'Passenger princess', def: 'from Sept 28 2023 onwards' },
       { term: 'Chellam', def: null },
-      { term: 'Puppy', def: null },
-      { term: 'Da', def: 'when the tone is more serious' },
+      { term: 'Ammoooo', def: null },
       { term: 'Aadi', def: 'when the tone is even more serious' }
     ]
   },
   {
     shelf: 'What we call each other',
     entries: [
-      { term: 'Miss you love you', def: 'the ritual goodnight, one word by now' },
+      { term: 'Missu kissu love you', def: 'the ritual goodnight, one word by now' },
       { term: 'Chellam', def: 'both ways, freely' },
       { term: 'Ammu', def: 'both are Ammu' }
     ]
@@ -668,19 +682,20 @@ export const LASTS = [
 // Numbers band at top of Ledger page
 export const NUMBERS = [
   { value: '50', label: 'days between message one and first I love you' },
-  { value: '3 mo', label: 'of Chennai before Ireland ever existed' },
+  { value: '6 mo', label: 'of Chennai before Ireland ever existed' },
   { value: '283', label: 'I love yous. 189 mine, 94 hers.' },
   { value: '250', label: 'porikkis. 212 hers, 38 mine.' },
   { value: '204', label: 'miss yous' },
   { value: '4', label: 'homes' },
   { value: '399', label: 'nights at Potters Hill' },
   { value: 'D04 E489', label: 'the first address that was ours' },
-  { value: 'Sept 19', label: 'every year, always' }
+  { value: 'Sept 19', label: 'every year, always' },
+  { value: '3', label: 'years together' },
+  { value: '∞', label: 'years Ammu will be in Aadi\'s heart' }
 ];
 
 // Care-acts. To be populated via the Ledger interview.
 export const LEDGER = [
-  { who: 'Aadi', date: 'Feb 14 2024', what: 'Booked Apache for our first Valentine\'s. Walked all the way there in the cold because you wanted the surprise.' },
   { who: 'Krithika', date: 'Dec 27 2023', what: 'Got me flowers when I was bed-ridden sick. Was one of the reasons the sick lifted.' },
   { who: 'Aadi', date: 'Mar 1 2024', what: 'Walked to your room after work in the snow day, folded your laundry and brought it home so you did not have to.' },
   { who: 'Krithika', date: 'Oct 26 2023 onwards', what: 'Plucked my eyebrows before every big day. Became the ritual before every outing.' },
@@ -833,7 +848,6 @@ export const LINE_AND_REPLY = [
 
 // Section grid on Contents home
 export const SECTIONS = [
-  { slug: 'foreword', title: 'Foreword', sub: 'a note before you begin', dragon: 'letter' },
   { slug: 'cast', title: 'The Cast', sub: 'two dragons, one story', dragon: 'hug' },
   { slug: 'songs', title: 'Songs', sub: 'eleven songs, one for each part', dragon: 'note' },
   { slug: 'watched', title: 'What We Watched', sub: 'films and series we lived inside', dragon: 'stars' },
@@ -847,6 +861,5 @@ export const SECTIONS = [
   { slug: 'polaroids', title: 'Polaroids', sub: 'moments printed', dragon: 'stamp' },
   { slug: 'voicenotes', title: 'Voice Notes', sub: 'random recordings, hers and mine', dragon: 'mic' },
   { slug: 'timecapsule', title: 'Time Capsule', sub: 'a letter for a year from now', dragon: 'jar' },
-  { slug: 'finalsong', title: 'The Final Song', sub: 'the final one', dragon: 'sunset' },
-  { slug: 'release', title: 'Release', sub: 'the way out, if you want it', dragon: 'sleeping' }
+  { slug: 'finalsong', title: 'The Final Song', sub: 'the final one', dragon: 'sunset' }
 ];

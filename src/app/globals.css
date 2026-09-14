@@ -584,6 +584,54 @@ input, textarea { font-family: inherit; }
   color: white;
   opacity: 0.9;
 }
+.foreword-feature-card {
+  background: linear-gradient(135deg, var(--brown), var(--rose));
+}
+
+/* ---- Release feature rectangle: its own block, separate and last on the home page ---- */
+.release-feature-wrap {
+  max-width: 960px;
+  margin: 3rem auto 0;
+  padding: 2rem 2rem 4rem;
+  border-top: 1px solid var(--border);
+}
+.release-feature-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  border-radius: var(--radius);
+  padding: 1.75rem 2rem;
+  background: var(--paper, #fdf8f2);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.release-feature-card:hover { transform: translateY(-2px); box-shadow: var(--shadow); }
+.release-feature-eyebrow {
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-soft);
+  margin-bottom: 0.35rem;
+}
+.release-feature-title {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 400;
+  font-size: 1.4rem;
+  color: var(--brown);
+}
+.release-feature-cta {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--brown);
+  white-space: nowrap;
+}
 
 /* ---- Chapter detail ---- */
 .chapter-hero {
@@ -976,6 +1024,13 @@ input, textarea { font-family: inherit; }
   text-transform: uppercase;
   color: var(--text-soft);
   margin-bottom: 0.75rem;
+}
+.song-timestamp {
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--rose);
+  margin-bottom: 0.6rem;
 }
 .song-badge {
   display: inline-block;
