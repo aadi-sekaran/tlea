@@ -443,3 +443,113 @@ export const watched = {
     "Kuttram Purindhavan",
   ],
 };
+
+// ═══════════════════════════════════════════════════════════════════
+// SONGS — eleven tracks, one for each part. Nagumo removed (Aadi:
+// not a song I want in the list). Track 13 is finalSong, below.
+// ═══════════════════════════════════════════════════════════════════
+
+export const songs = [
+  {
+    n: 1,
+    title: "Sai Pallavi's Intro",
+    from: "Amaran",
+    trackId: "7tr5DrOhoA4Dolg8X1OnRQ",
+    timestamp: "0:10",
+    note: "That is you Kannama for me, that is the life I wanted that is the music you are to me. You are that.",
+  },
+  {
+    n: 2,
+    title: "Hey Minnale",
+    from: "Amaran",
+    trackId: "1kmJ0EvXClJAt0fSSQLX1m",
+    timestamp: "1:26",
+    note: "The meaning of the entire song is how I feel about you. The song may not be perfect, but you are.",
+  },
+  {
+    n: 3,
+    title: "Konji Pesida Venaam",
+    from: null,
+    trackId: "5QoCBy9eUHYkeWpEpzAud9",
+    timestamp: "1:56",
+    note: "That is our song, like our song whenever I try to be playfully pull you closer to me when you are pissed or whenever I try to be naughty with you. It's just, after a fight, after a small quarrel, looking at you and singing this song gives me everything.",
+  },
+  {
+    n: 4,
+    title: "Kurumugil",
+    from: null,
+    trackId: "4DKv9524rd34cCKFmW7Xsb",
+    timestamp: "1:21",
+    note: "This is one of the most romantic and every single time I look into your eyes, this is a song I want to sing to you.",
+  },
+  {
+    n: 5,
+    title: "Kannukkulle",
+    from: null,
+    trackId: "6O1aZHTKj8bKhb3N5qB6lF",
+    timestamp: "1:37",
+    note: "This song just reminds me of the times we used to dance together. I used to just hold your hips and, not dance exactly, but just vibe to it and look into my eyes. That is all I think about when I listen to this song.",
+  },
+  {
+    n: 6,
+    title: "Kannal Pesum",
+    from: null,
+    trackId: "4VE07nOfv8CXbmRcubchO6",
+    timestamp: "0:00",
+    badge: "the apology song",
+    note: "This is the first ever song I sang to you. This will always be my apology song. Hasn't been that effective recently, but this is one of the reasons you partly fell for me. But yeah, I think it is a good thing that it stopped working because we would still be together if it was working, you know. Thank goodness the apology song is not working.",
+  },
+  {
+    n: 7,
+    title: "Nenjam Ellam",
+    from: null,
+    trackId: "5lmgII1wyydsuqXEOvzpSy",
+    timestamp: "1:43",
+    note: "This has been our sex song. Nothing but just the times we made love when we were staying in Proby. This is the only thing which reminds me of those sweet, sweet times.",
+  },
+  {
+    n: 8,
+    title: "Until I Found You (with Em Beihold)",
+    from: null,
+    trackId: "1Y3LN4zO1Edc2EluIoSPJN",
+    timestamp: "1:21",
+    note: "This is the song, if you remember, this is the first song I ever dedicated to you. And funny thing, this is our climax and this is how we are. At least I am.",
+  },
+  {
+    n: 9,
+    title: "Sahana Saral Thoo",
+    from: null,
+    trackId: "317JrLcl1s0i6cXmnEWzR8",
+    timestamp: "1:16",
+    note: "This song is the most number of times I've ever, like, ever looked into your eyes and have sung this song. My God I cant resist myself",
+  },
+  {
+    n: 10,
+    title: "Innum Konjam Neram",
+    from: null,
+    trackId: "5KJSI1MjQeXEBHBYMjgP41",
+    timestamp: "4:37",
+    note: "This song was first when we were walking in the beach and we were singing. And this song came up and we talked how we wanted our lives to be. But then it is not. It is sad, but it feels good to think about all those times with you. you even said those lines about the kids to me, but I would never be worthy of it.",
+  },
+  {
+    n: 11,
+    title: "Aval",
+    from: null,
+    trackId: "4LK8863ScRhhT6hitFfBI5",
+    timestamp: "0:47",
+    note: "Every time I wanted to apologise to you to start again but never ever cuz I thought I would never have to ask that. But never got to and here we are sharing last few moments of our life together. Didn't sing these lines to you but means everything",
+  },
+];
+
+// ═══════════════════════════════════════════════════════════════════
+// FINAL SONG — Track 13, its own page. Route: /book/finalsong
+// ═══════════════════════════════════════════════════════════════════
+
+export const finalSong = {
+  trackId: "3oNVqllTnz7bHrY3f0nICg",
+  title: "Main Phir Bhi Tumko Chaahunga",
+  label: "the closing note",
+  prose: `These are some lines from Main Phir Bhi Tumko Chahunga that I don't think I will ever be able to hear the same way again: "Aise zaroori ho mujhko tum... Tere darr pe hi reh jaaunga." I want to dedicate these lines to you because after everything we've lived through, they don't feel like lyrics to me anymore. They feel like something I have to actually live from the next week, the day we officially are no longer together. You became part of the smallest things in my life without me even noticing when it happened, from visiting me for an evening till being my partner for 3 years. The person I wanted to tell things to first, the person whose face I looked for when something funny happened or to be fair, anything happened, the person whose toothbrush was beside mine, whose things were around the house, whose name became part of my everyday conversations. Three years of memories don't disappear just because we decide that we can't continue. I can accept that we need to let each other go, but I don't know how to make my heart understand that the person who was part of almost every version of my life for the last three years is suddenly supposed to become someone I don't get to have anymore.
+
+And that's what makes these lines hurt so much. "Main phir bhi tumko chahunga." I don't mean that as a promise that I'll wait for you or that I want you to come back or even that I can't accept what we're doing, I swear I have no intention at all of asking you to stay, I have seen enough of me hurting you and I can't do it ever again. I mean that even after we leave each other, there will still be a part of me that loves you. I'll remember the girl who first made me nervous, the girl I waited an hour early to meet, the girl who fell asleep on my shoulder, the girl I travelled with, fought with, laughed with, built a home with, and somehow grew up beside. I'll remember the good days, the days I wish I could change and the days that if I had the power to absolutely erase from our memories. And maybe one of the hardest things about letting you go is knowing that I can't actually erase any of it and I have to the limit used up all my retries. I don't want to forget you just so this hurts less. I would rather carry the pain of having loved you than pretend these three years didn't change me. So if one day these memories hurt less for you than they do for me, I hope you still remember that there was once someone who loved you so deeply that even when he finally understood he had to let you go, he couldn't make himself stop loving the life he had with you.`,
+};

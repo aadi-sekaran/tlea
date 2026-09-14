@@ -17,7 +17,7 @@ function oneLiner(entry, poster) {
   return text;
 }
 
-function PosterGrid({ items, kind }) {
+function PosterGrid({ items, kind, addLabel }) {
   return (
     <div className="watched-grid">
       {items.map(entry => {
@@ -39,6 +39,13 @@ function PosterGrid({ items, kind }) {
           </div>
         );
       })}
+      <div className="watched-card">
+        <div className="watched-add-tile">
+          <span className="watched-add-plus">+</span>
+          <span className="watched-add-label">{addLabel}</span>
+        </div>
+        <div className="watched-add-caption">from now, whatever comes next</div>
+      </div>
     </div>
   );
 }
@@ -57,10 +64,10 @@ export default function WatchedPage() {
         <h1 className="content-title">What We Watched</h1>
 
         <h2 className="watched-section-title">Films</h2>
-        <PosterGrid items={FILMS} kind="films" />
+        <PosterGrid items={FILMS} kind="films" addLabel="add a movie" />
 
         <h2 className="watched-section-title" style={{ marginTop: '3rem' }}>Series</h2>
-        <PosterGrid items={SERIES} kind="series" />
+        <PosterGrid items={SERIES} kind="series" addLabel="add a series" />
       </div>
     </div>
   );
