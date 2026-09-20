@@ -535,7 +535,7 @@ export const TRIPS = [
   {
     name: 'Iceland',
     img: 'iceland.png',
-    caption: 'the final one',
+    caption: 'The best one yet! Loved every single moment with you!',
     dates: 'September 15 — September 20, 2026',
     body: 'The final one. Your birthday on the 15th. Our anniversary on the 19th. This book was hand-delivered to you here.',
     special: true
