@@ -466,7 +466,8 @@ export const FILMS = [
   { name: '12th Fail', note: null },
   { name: 'Oh My Kadavule', note: null },
   { name: 'Dragon', note: null },
-  { name: 'Love Today', note: null }
+  { name: 'Love Today', note: null },
+  { name: 'Modha Rathri', note: null }
 ];
 
 export const SERIES = [
