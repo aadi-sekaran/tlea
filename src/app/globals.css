@@ -1851,13 +1851,59 @@ input, textarea { font-family: inherit; }
   aspect-ratio: 2/3;
   border-radius: var(--radius);
   border: 1.5px dashed rgba(223, 166, 174, 0.3);
+  background: none;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 0.35rem;
   margin-bottom: 0.5rem;
+  cursor: pointer;
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+.watched-add-tile:hover {
+  border-color: var(--rose);
+  background: rgba(223, 166, 174, 0.08);
+}
+.watched-add-form {
   cursor: default;
+  padding: 0.75rem;
+}
+.watched-add-input {
+  width: 100%;
+  border: 1px solid rgba(223, 166, 174, 0.4);
+  border-radius: calc(var(--radius) / 2);
+  padding: 0.4rem 0.6rem;
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  color: var(--brown);
+  background: var(--cream);
+  text-align: center;
+}
+.watched-add-input:focus {
+  outline: none;
+  border-color: var(--rose);
+}
+.watched-add-submit {
+  font-family: var(--font-display);
+  font-style: italic;
+  color: var(--rose);
+  background: none;
+  border: 1px solid rgba(223, 166, 174, 0.4);
+  border-radius: calc(var(--radius) / 2);
+  padding: 0.3rem 0.9rem;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+.watched-add-submit:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+.watched-add-error {
+  font-family: var(--font-body);
+  color: var(--rose);
+  font-size: 0.7rem;
+  text-align: center;
 }
 .watched-add-plus {
   font-family: var(--font-display);
