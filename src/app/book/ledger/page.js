@@ -1,18 +1,19 @@
-import Link from 'next/link';
+import BackToContents from '@/components/BackToContents';
 import NavAvatar from '@/components/NavAvatar';
+import SafeImg from '@/components/SafeImg';
 import { NUMBERS, LEDGER } from '@/lib/content';
+import { HEADER_ART } from '@/lib/dragons';
 
 export default function LedgerPage() {
   return (
     <div className="book-shell">
       <div className="top-nav">
-        <Link href="/book" className="nav-back">← contents</Link>
+        <BackToContents />
         <span className="nav-title">The Ledger</span>
         <NavAvatar />
       </div>
       <div className="content-page">
-        {/* asset: public/dragons/01_Main_Pack/main_047.png */}
-        <img className="content-header-art" src="/dragons/01_Main_Pack/main_047.png" alt="" />
+        <SafeImg srcs={HEADER_ART.ledger} alt="" className="content-header-art" />
         <p className="content-eyebrow">the shape of us, in numbers and small acts</p>
         <h1 className="content-title">The Ledger</h1>
 

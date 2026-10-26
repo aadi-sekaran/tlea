@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import BackToContents from '@/components/BackToContents';
 import { redirect } from 'next/navigation';
 import { readSession, isAadi } from '@/lib/session';
 import { adminReadAll } from '@/lib/timecapsule';
@@ -15,7 +16,7 @@ export default async function TimeCapsuleAdminPage() {
   return (
     <div className="book-shell">
       <div className="top-nav">
-        <Link href="/book/timecapsule" className="nav-back">← capsule</Link>
+        <BackToContents />
         <span className="nav-title">Admin</span>
         <span />
       </div>

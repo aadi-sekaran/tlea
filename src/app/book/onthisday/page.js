@@ -1,6 +1,6 @@
 'use client';
 
-import Link from 'next/link';
+import BackToContents from '@/components/BackToContents';
 import SafeImg from '@/components/SafeImg';
 import { ON_THIS_DAY } from '@/lib/content';
 import { HEADER_ART } from '@/lib/dragons';
@@ -24,7 +24,7 @@ export default function OnThisDayPage() {
   return (
     <div className="book-shell">
       <div className="top-nav">
-        <Link href="/book" className="nav-back">← contents</Link>
+        <BackToContents />
         <span className="nav-title">On This Day</span>
         <span />
       </div>

@@ -1,17 +1,24 @@
 import Link from 'next/link';
+import BackToContents from '@/components/BackToContents';
 import NavAvatar from '@/components/NavAvatar';
+import SafeImg from '@/components/SafeImg';
 import { LAST_APOLOGY } from '@/lib/content';
 
 export default function ApologyPage() {
   return (
     <div className="book-shell">
       <div className="top-nav">
-        <Link href="/book/ch/7/read" className="nav-back">← chapter VII</Link>
+        <BackToContents />
         <span className="nav-title">The Last Apology</span>
         <NavAvatar />
       </div>
       <div className="reader reader-tint-apology">
         <div className="reader-inner">
+          <SafeImg
+            srcs={['/dragons/01_Main_Pack/main_007.png']}
+            alt=""
+            className="reader-header-accent"
+          />
           <p className="reader-eyebrow">{LAST_APOLOGY.eyebrow}</p>
           <h1 className="reader-title">{LAST_APOLOGY.title}</h1>
           <div className="reader-body">
@@ -32,6 +39,12 @@ export default function ApologyPage() {
               </p>
             )}
           </div>
+
+          <SafeImg
+            srcs={['/dragons/03_Stickers_Pack/stickers_011.png']}
+            alt=""
+            className="foreword-accent"
+          />
 
           <div className="chapter-next-prev" style={{ marginTop: '3rem' }}>
             <Link href="/book/ch/7/read" className="chapter-nav-btn">

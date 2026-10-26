@@ -6,37 +6,65 @@ export default function BgMusicPlayer() {
   const audioRef = useRef(null);
   const [playing, setPlaying] = useState(false);
   const [mounted, setMounted] = useState(false);
+  const duckedRef = useRef(false);
 
   useEffect(() => {
     setMounted(true);
-    // Do not autoplay. Wait for user tap.
-    // Restore last choice from localStorage.
-    try {
-      const stored = localStorage.getItem('tlea_bgmusic');
-      if (stored === 'on') {
-        // Still need a user gesture to actually start on mobile. We hint but do not force.
-      }
-    } catch {}
   }, []);
 
-  function toggle() {
+  function play() {
     const audio = audioRef.current;
     if (!audio) return;
-    if (playing) {
-      audio.pause();
-      setPlaying(false);
-      try { localStorage.setItem('tlea_bgmusic', 'off'); } catch {}
-    } else {
-      audio.volume = 0.35;
-      audio.loop = true;
-      audio.play().then(() => {
-        setPlaying(true);
-        try { localStorage.setItem('tlea_bgmusic', 'on'); } catch {}
-      }).catch(err => {
-        console.warn('audio play blocked', err);
-      });
-    }
+    audio.volume = 0.35;
+    audio.loop = true;
+    audio.play().then(() => {
+      setPlaying(true);
+      try { localStorage.setItem('tlea_bgmusic', 'on'); } catch {}
+    }).catch(err => {
+      console.warn('audio play blocked', err);
+    });
   }
+
+  function pause() {
+    const audio = audioRef.current;
+    if (!audio) return;
+    audio.pause();
+    setPlaying(false);
+    try { localStorage.setItem('tlea_bgmusic', 'off'); } catch {}
+  }
+
+  function toggle() {
+    if (playing) pause();
+    else play();
+  }
+
+  // The seal click (opening sequence) starts the music, and any voice note
+  // playing/pausing ducks it — muted while a note plays, restored right
+  // after, without touching the user's own on/off choice.
+  useEffect(() => {
+    function onSealOpen() {
+      play();
+    }
+    function onVoiceNote(e) {
+      const audio = audioRef.current;
+      if (!audio) return;
+      if (e.detail?.playing) {
+        if (!audio.paused && !audio.muted) {
+          duckedRef.current = true;
+          audio.muted = true;
+        }
+      } else if (duckedRef.current) {
+        duckedRef.current = false;
+        audio.muted = false;
+      }
+    }
+    window.addEventListener('tlea:play-bg-music', onSealOpen);
+    window.addEventListener('tlea:voicenote-playing', onVoiceNote);
+    return () => {
+      window.removeEventListener('tlea:play-bg-music', onSealOpen);
+      window.removeEventListener('tlea:voicenote-playing', onVoiceNote);
+    };
+  }, []);
 
   if (!mounted) return null;
 

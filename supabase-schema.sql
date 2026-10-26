@@ -52,5 +52,15 @@ create table if not exists login_events (
   created_at timestamptz not null default now()
 );
 
+-- Watched list additions (films/series added from the site, beyond the built-in list)
+create table if not exists watched_items (
+  id uuid primary key default gen_random_uuid(),
+  kind text not null check (kind in ('film', 'series')),
+  name text not null,
+  added_by text not null,
+  created_at timestamptz not null default now()
+);
+create index if not exists idx_watched_items_kind on watched_items(kind);
+
 -- Row Level Security: disable (this is a private single-tenant app, service role key handles all access)
 -- If you want RLS on, add policies. For a two-person private site, service role is fine.

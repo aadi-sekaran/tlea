@@ -43,7 +43,8 @@ const OVERRIDES = {
   'With Love': { kind: 'film', query: 'With Love', year: 2026 }, // the 2026 Tamil film, not the 2021 US series or the Bond films
   'Panchathanthiram': { kind: 'film', query: 'Panchatanthiram', year: 2002 }, // TMDB spells the 2002 Kamal Haasan film with one fewer "h"
   'How to Train Your Dragon': { kind: 'film', query: 'How to Train Your Dragon', year: 2010 }, // the original animated film, not the 2025 live-action remake
-  'Thozha': { kind: 'film', query: 'Oopiri', year: 2016 } // Aadi watched the Tamil dub (titled Thozha), which TMDB doesn't list separately from the Telugu original
+  'Thozha': { kind: 'film', query: 'Oopiri', year: 2016 }, // Aadi watched the Tamil dub (titled Thozha), which TMDB doesn't list separately from the Telugu original
+  'Modha Rathri': { kind: 'film', query: 'Modha Rathri', year: 2026 }
 };
 
 function normalize(str) {

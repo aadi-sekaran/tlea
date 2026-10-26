@@ -1,8 +1,10 @@
 'use client';
 
 import { useState } from 'react';
-import Link from 'next/link';
+import BackToContents from '@/components/BackToContents';
+import SafeImg from '@/components/SafeImg';
 import { FIRSTS, LASTS } from '@/lib/content';
+import { HEADER_ART } from '@/lib/dragons';
 
 export default function FirstsPage() {
   const [tab, setTab] = useState('firsts');
@@ -12,13 +14,12 @@ export default function FirstsPage() {
   return (
     <div className="book-shell">
       <div className="top-nav">
-        <Link href="/book" className="nav-back">← contents</Link>
+        <BackToContents />
         <span className="nav-title">Firsts & Lasts</span>
         <span />
       </div>
       <div className="content-page">
-        {/* asset: public/dragons/02_Flying_Poses/flying_004.png */}
-        <img className="content-header-art" src="/dragons/02_Flying_Poses/flying_004.png" alt="" />
+        <SafeImg srcs={HEADER_ART.firsts} alt="" className="content-header-art" />
         <p className="content-eyebrow">a timeline of us</p>
         <h1 className="content-title">Firsts & Lasts</h1>
 
