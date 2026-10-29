@@ -3,14 +3,34 @@
 import { useEffect, useState } from 'react';
 
 const PERKS = [
-  'All seven chapters, unabridged',
+  'All seven chapters, restored and unabridged',
   'Eleven songs, plus the final one',
   'Unlimited thadavi thariya',
   'Konjify on demand, no daily limit',
-  'Lifetime supply of Daata pistachio milk cake*'
+  'Lifetime supply of Daata pistachio milk cake*',
+  'One very sorry Ammu, at no extra cost'
 ];
 
-const PROCESSING_STEPS = ['Contacting your bank…', 'Checking your feelings…', 'Converting kisses to euro…'];
+const PROCESSING_STEPS = [
+  'Contacting your bank…',
+  'Checking your feelings…',
+  'Still a bit angry. Understandable…',
+  'Counting every sorry I owe you…',
+  'That is a lot of sorrys…',
+  'Converting kisses to euro…',
+  'Applying pistachio milk cake discount…',
+  'Asking the chihuahua for a loan…'
+];
+
+const ENTER_STEPS = [
+  'Undeleting everything…',
+  'Putting the chapters back in order…',
+  'Re-tuning all eleven songs…',
+  'Dusting off the polaroids…',
+  'Okay. It is all yours again.'
+];
+
+const STEP_MS = 950;
 
 function formatLeft(ms) {
   const total = Math.max(0, Math.floor(ms / 1000));
@@ -21,7 +41,7 @@ function formatLeft(ms) {
 }
 
 export default function Paywall({ until }) {
-  const [state, setState] = useState('idle'); // idle | processing | declined | broke
+  const [state, setState] = useState('idle'); // idle | processing | declined | broke | entering
   const [step, setStep] = useState(0);
   const [left, setLeft] = useState(null);
 
@@ -35,15 +55,19 @@ export default function Paywall({ until }) {
   }, [until]);
 
   useEffect(() => {
-    if (state !== 'processing') return;
+    if (state !== 'processing' && state !== 'entering') return;
+    const steps = state === 'processing' ? PROCESSING_STEPS : ENTER_STEPS;
     setStep(0);
-    const a = setTimeout(() => setStep(1), 900);
-    const b = setTimeout(() => setStep(2), 1800);
-    const c = setTimeout(() => setState('declined'), 2700);
-    return () => { clearTimeout(a); clearTimeout(b); clearTimeout(c); };
+    const timers = steps.slice(1).map((_, i) => setTimeout(() => setStep(i + 1), STEP_MS * (i + 1)));
+    timers.push(setTimeout(() => {
+      if (state === 'processing') setState('declined');
+      else goIn();
+    }, STEP_MS * steps.length));
+    return () => timers.forEach(clearTimeout);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [state]);
 
-  function enter() {
+  function goIn() {
     const end = Date.parse(until || '');
     const maxAge = end ? Math.max(60, Math.floor((end - Date.now()) / 1000)) : 172800;
     document.cookie = `tlea_paid=1; Max-Age=${maxAge}; Path=/; SameSite=Lax`;
@@ -65,9 +89,11 @@ export default function Paywall({ until }) {
         </div>
 
         <h1 className="pay-title">Ammu, ten thousand yuuurooo</h1>
+        <p className="pay-note">I&apos;m sorry. For the fight, and for deleting this.</p>
         <p className="pay-sub">
-          The Last Ever Apology, Truly has gone premium. Turns out apologising this beautifully
-          was never going to be free.
+          I took down the one thing I made just for you, and that wasn&apos;t fair to you. It&apos;s
+          all back now, every chapter, every song. But bringing a website back from the dead
+          turns out to be expensive.
         </p>
 
         <div className="pay-plan">
@@ -77,7 +103,7 @@ export default function Paywall({ until }) {
           </div>
           <div className="pay-price">
             <span className="pay-price-amount">€10,000</span>
-            <span className="pay-price-term">one time, non-negotiable</span>
+            <span className="pay-price-term">resurrection fee, non-negotiable</span>
           </div>
           <ul className="pay-perks">
             {PERKS.map(p => (
@@ -98,10 +124,12 @@ export default function Paywall({ until }) {
             </>
           )}
 
-          {state === 'processing' && (
+          {(state === 'processing' || state === 'entering') && (
             <div className="pay-processing">
               <span className="pay-spinner" aria-hidden="true" />
-              <span>{PROCESSING_STEPS[step]}</span>
+              <span key={`${state}-${step}`} className="pay-step">
+                {(state === 'processing' ? PROCESSING_STEPS : ENTER_STEPS)[step]}
+              </span>
             </div>
           )}
 
@@ -116,8 +144,10 @@ export default function Paywall({ until }) {
                   The chihuahua understands. <span>His wallet looks like that too.</span>
                 </p>
               )}
-              <p className="pay-result-hand">Fine. This one&apos;s on the house.</p>
-              <button type="button" className="pay-btn" onClick={enter}>
+              <p className="pay-result-hand">
+                Fine. This one&apos;s on the house. I owe you way more than ten thousand anyway.
+              </p>
+              <button type="button" className="pay-btn" onClick={() => setState('entering')}>
                 Come in, Ammu →
               </button>
             </div>
@@ -125,7 +155,7 @@ export default function Paywall({ until }) {
         </div>
 
         <p className="pay-accepts">
-          We accept <span>hugs</span> · <span>kisses</span> · <span>pistachio milk cake</span> · <span>IOUs</span>
+          We accept <span>hugs</span> · <span>kisses</span> · <span>pistachio milk cake</span> · <span>forgiveness</span>
         </p>
 
         {left !== null && left > 0 && (
@@ -134,7 +164,7 @@ export default function Paywall({ until }) {
 
         <p className="pay-fine">
           *Pistachio milk cake subject to availability in Bray. Prices include VAT, emotional
-          damage and three years of interest. No refunds.
+          damage and three years of interest. Apology non-refundable.
         </p>
       </div>
     </div>
