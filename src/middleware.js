@@ -22,7 +22,25 @@ export async function middleware(request) {
     });
   }
 
+  // Prank paywall: active until PAYWALL_UNTIL (ISO time), then switches itself
+  // off. The paywall page sets tlea_paid once she gets past it.
+  const paywallUntil = Date.parse(process.env.PAYWALL_UNTIL || '');
   if (
+    paywallUntil > Date.now() &&
+    !request.cookies.get('tlea_paid') &&
+    !pathname.startsWith('/api/') &&
+    !pathname.startsWith('/paywall') &&
+    !pathname.startsWith('/_next') &&
+    !pathname.startsWith('/fonts') &&
+    !['/icon.png', '/apple-icon.png', '/manifest.webmanifest'].includes(pathname)
+  ) {
+    const url = request.nextUrl.clone();
+    url.pathname = '/paywall';
+    return NextResponse.rewrite(url);
+  }
+
+  if (
+    pathname.startsWith('/paywall') ||
     PUBLIC_PATHS.includes(pathname) ||
     pathname.startsWith('/_next') ||
     pathname.startsWith('/fonts') ||
